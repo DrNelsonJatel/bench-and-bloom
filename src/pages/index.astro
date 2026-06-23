@@ -19,12 +19,10 @@ const pillars = [
 ];
 
 const recipes = [
-  { kicker: 'The classic', title: 'Lavender Gin Fizz', body: 'Gin, lemon, a measure of Bench & Bloom, soda. Floral, bright, endlessly drinkable.' },
-  { kicker: 'The elevated one', title: 'Lavender French 75', body: 'Gin, lemon, lavender syrup, topped with sparkling wine. The dinner-party pour.' },
-  { kicker: 'Mocktail or cocktail', title: 'Lavender Lemonade', body: 'Fresh lemon and lavender syrup over ice. Add gin, or leave it for everyone at the table.' },
+  { kicker: 'The classic', title: 'Lavender Gin Fizz', href: '/recipes/lavender-gin-fizz', body: 'Gin, lemon, a measure of Bench & Bloom, soda. Floral, bright, endlessly drinkable.' },
+  { kicker: 'The elevated one', title: 'Lavender French 75', href: '/recipes/lavender-french-75', body: 'Gin, lemon, lavender syrup, topped with sparkling wine. The dinner-party pour.' },
+  { kicker: 'Mocktail or cocktail', title: 'Lavender Lemonade', href: '/recipes/lavender-lemonade', body: 'Fresh lemon and lavender syrup over ice. Add gin, or leave it for everyone at the table.' },
 ];
-
-// The recipe hub is a Phase 1 build. These tiles preview it; they are not yet links.
 ---
 
 <Base>
@@ -41,7 +39,7 @@ const recipes = [
         {AMAZON_URL
           ? <a class="btn btn-primary" href={AMAZON_URL} target="_blank" rel="noopener">Buy on Amazon.ca</a>
           : <a class="btn btn-primary" href="#launch">Be first to pour it</a>}
-        <a class="btn btn-secondary" href="#recipes">See the recipes</a>
+        <a class="btn btn-secondary" href="/recipes">See the recipes</a>
       </div>
     </div>
     <svg class="hero__sprig" viewBox="0 0 200 360" aria-hidden="true" fill="none">
@@ -87,6 +85,7 @@ const recipes = [
           {AMAZON_URL
             ? <a class="btn btn-primary" href={AMAZON_URL} target="_blank" rel="noopener">Buy on Amazon.ca</a>
             : <span class="btn" aria-disabled="true">Coming soon on Amazon.ca</span>}
+          <a class="btn btn-secondary" href="/syrup">More about the syrup</a>
         </div>
       </div>
       <div class="split__media" role="img" aria-label="Bench & Bloom lavender syrup, photo coming soon">
@@ -100,17 +99,19 @@ const recipes = [
     <p class="eyebrow">Mix it</p>
     <h2>Made for the glass.</h2>
     <p class="lede">
-      Gin is the anchor, but every pour works as a mocktail too. The full recipe hub is on its way.
+      Gin is the anchor, but every pour works as a mocktail too. Start with the base syrup,
+      then take it anywhere.
     </p>
     <div class="cards">
       {recipes.map((r) => (
-        <article class="card">
+        <a class="card card--link" href={r.href}>
           <p class="eyebrow">{r.kicker}</p>
           <h3>{r.title}</h3>
           <p>{r.body}</p>
-        </article>
+        </a>
       ))}
     </div>
+    <p class="center" style="margin-top:2rem;"><a class="btn btn-secondary" href="/recipes">See all recipes</a></p>
   </section>
 
   <!-- Our Farm -->
@@ -130,6 +131,7 @@ const recipes = [
         <p>
           A roadside stand is in the works. For now, the syrup travels to you through Amazon.ca.
         </p>
+        <div class="cta-row"><a class="btn btn-secondary" href="/farm">Read our story</a></div>
       </div>
     </div>
   </section>

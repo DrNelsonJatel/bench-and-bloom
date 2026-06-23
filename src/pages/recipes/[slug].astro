@@ -1,0 +1,110 @@
+---
+import Base from '../../layouts/Base.astro';
+import BuyButton from '../../components/BuyButton.astro';
+import { getCollection, render } from 'astro:content';
+import { SITE } from '../../consts';
+
+export async function getStaticPaths() {
+  const recipes = await getCollection('recipes');
+  return recipes.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { data } = entry;
+const { Content } = await render(entry);
+
+// Resolve related slugs to titles for the cross-links.
+const all = await getCollection('recipes');
+const related = (data.related ?? [])
+  .map((slug) => all.find((r) => r.id === slug))
+  .filter(Boolean);
+
+const categoryFor = (kind: string) =>
+  kind === 'anchor' ? 'Syrup' : kind === 'mocktail' ? 'Beverage' : 'Cocktail';
+
+const recipeLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Recipe',
+  name: data.title,
+  description: data.description,
+  author: { '@type': 'Organization', name: SITE.title },
+  recipeCategory: categoryFor(data.kind),
+  recipeCuisine: 'Cocktail',
+  keywords: ['lavender syrup', data.title, data.spirit].filter(Boolean).join(', '),
+  recipeYield: data.servings,
+  prepTime: data.prepTime,
+  totalTime: data.totalTime,
+  recipeIngredient: data.ingredients,
+  recipeInstructions: data.steps.map((text) => ({ '@type': 'HowToStep', text })),
+};
+// Drop undefined keys so the JSON-LD stays clean.
+Object.keys(recipeLd).forEach((k) => recipeLd[k] === undefined && delete recipeLd[k]);
+
+const eyebrow = data.kind === 'anchor' ? 'The base' : data.kind === 'mocktail' ? 'Mocktail or cocktail' : data.spirit ?? 'Cocktail';
+---
+
+<Base title={data.title} description={data.description}>
+  <article>
+    <section class="hero">
+      <div class="wrap hero__inner">
+        <p class="eyebrow">{eyebrow}</p>
+        <h1>{data.title}</h1>
+        <p class="hero__lede">{data.description}</p>
+      </div>
+    </section>
+
+    <section class="section wrap recipe">
+      <div class="recipe__grid">
+        <div class="recipe__card">
+          <h2>Ingredients</h2>
+          {data.servings && <p class="recipe__meta">Makes {data.servings}</p>}
+          <ul class="recipe__ingredients">
+            {data.ingredients.map((i) => <li>{i}</li>)}
+          </ul>
+          <h2>Method</h2>
+          <ol class="recipe__steps">
+            {data.steps.map((s) => <li>{s}</li>)}
+          </ol>
+        </div>
+
+        <div class="recipe__notes">
+          <Content />
+          <div class="recipe__cta">
+            <p class="recipe__cta-line">Skip the steeping. Ours is already dialled in.</p>
+            <BuyButton />
+          </div>
+        </div>
+      </div>
+
+      {related.length > 0 && (
+        <nav class="recipe__related" aria-label="Related recipes">
+          <p class="eyebrow">Next pour</p>
+          <ul>
+            {related.map((r) => <li><a href={`/recipes/${r.id}`}>{r.data.title}</a></li>)}
+          </ul>
+        </nav>
+      )}
+    </section>
+  </article>
+
+  <script type="application/ld+json" set:html={JSON.stringify(recipeLd)} />
+</Base>
+
+<style>
+  .recipe__grid { display: grid; gap: clamp(1.5rem, 5vw, 3rem); grid-template-columns: 1fr; align-items: start; }
+  @media (min-width: 820px) { .recipe__grid { grid-template-columns: 0.85fr 1.15fr; } }
+  .recipe__card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: clamp(1.25rem, 4vw, 2rem); }
+  .recipe__card h2 { font-size: 1.2rem; color: var(--lavender-deep); margin-top: 1.25rem; }
+  .recipe__card h2:first-child { margin-top: 0; }
+  .recipe__meta { color: var(--ink-soft); font-size: 0.9rem; margin-top: -0.25rem; }
+  .recipe__ingredients { list-style: none; padding: 0; margin: 0 0 0.5rem; }
+  .recipe__ingredients li { padding: 0.4rem 0; border-bottom: 1px solid var(--line); }
+  .recipe__steps { margin: 0; padding-left: 1.2rem; }
+  .recipe__steps li { padding: 0.3rem 0; }
+  .recipe__notes :global(a) { color: var(--lavender-deep); }
+  .recipe__cta { margin-top: 2rem; padding-top: 1.5rem; border-top: 2px solid var(--gold); }
+  .recipe__cta-line { font-family: var(--font-display); font-size: 1.15rem; color: var(--ink); }
+  .recipe__related { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid var(--line); }
+  .recipe__related ul { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 1.25rem; }
+  .recipe__related a { font-family: var(--font-display); font-size: 1.1rem; }
+</style>

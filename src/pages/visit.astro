@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE, VISIT } from '../consts';
+
+const title = 'Visit';
+const description =
+  'Bench & Bloom is a small lavender farm on the Naramata Bench near Penticton, BC. ' +
+  'A roadside stand is planned for the bloom season.';
+---
+
+<Base title={title} description={description}>
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="eyebrow">Naramata Bench, BC</p>
+      <h1>Find us on the bench.</h1>
+      <p class="hero__lede">
+        We are a small, working lavender farm on the Naramata Bench, in the heart of
+        Okanagan wine country near Penticton.
+      </p>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    {VISIT.standOpen ? (
+      <div class="split">
+        <div>
+          <p class="eyebrow">The stand</p>
+          <h2 class="mt-0">Come say hello.</h2>
+          {VISIT.hours && <p><strong>Open:</strong> {VISIT.hours}</p>}
+          <p>{VISIT.note}</p>
+        </div>
+        <div class="split__media" role="img" aria-label="The roadside lavender stand, photo coming soon">
+          Stand photo &mdash; coming this bloom
+        </div>
+      </div>
+    ) : (
+      <div class="capture center">
+        <p class="eyebrow">For now</p>
+        <h2 class="mt-0">A working farm, not yet open to visitors.</h2>
+        <p style="margin-inline:auto;">{VISIT.note}</p>
+        <p style="margin-inline:auto;">
+          Want to know the moment the stand opens, or when the syrup reaches Amazon.ca?
+          <a href="/#launch">Join the launch list.</a>
+        </p>
+      </div>
+    )}
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap center">
+      <p class="eyebrow">While you are in the area</p>
+      <h2>Make a day of the bench.</h2>
+      <p class="lede" style="margin-inline:auto;">
+        The Naramata Bench is forty-odd wineries, the Kettle Valley Rail trail and some of
+        the best patios in the valley. Pour a <a href="/recipes/lavender-french-75">Lavender
+        French 75</a> with a local sparkling wine when you get home.
+      </p>
+    </div>
+  </section>
+</Base>

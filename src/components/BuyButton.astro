@@ -1,0 +1,16 @@
+---
+// One place for the Amazon CTA. While AMAZON_URL is empty it renders a
+// non-clickable "coming soon" state, so no page ever ships a dead link.
+import { AMAZON_URL } from '../consts';
+
+interface Props {
+  label?: string;
+  soon?: string;
+  block?: boolean;
+}
+const { label = 'Buy on Amazon.ca', soon = 'Coming soon on Amazon.ca', block = false } = Astro.props;
+const cls = block ? 'btn btn-primary' : 'btn btn-primary';
+---
+{AMAZON_URL
+  ? <a class={cls} href={AMAZON_URL} target="_blank" rel="noopener">{label}</a>
+  : <span class="btn" aria-disabled="true">{soon}</span>}

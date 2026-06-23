@@ -1,0 +1,65 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+
+const title = 'Our Farm';
+const description =
+  'Bench & Bloom is a half-acre lavender farm on the Naramata Bench above Okanagan Lake. ' +
+  'One variety, one harvest a year, made in small batches.';
+---
+
+<Base title={title} description={description}>
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="eyebrow">{SITE.descriptor}</p>
+      <h1>A half-acre on the bench.</h1>
+      <p class="hero__lede">
+        We grow lavender on a small plot on the Naramata Bench, the same warm, dry slopes
+        that ripen the Okanagan&rsquo;s wine.
+      </p>
+    </div>
+  </section>
+
+  <section class="section wrap split">
+    <div class="split__media" role="img" aria-label="The lavender field on the Naramata Bench, photo coming soon">
+      Field photo &mdash; coming this bloom
+    </div>
+    <div>
+      <p class="eyebrow">The place</p>
+      <h2>Wine country, in lavender.</h2>
+      <p>
+        The Naramata Bench is a narrow shelf of land above Okanagan Lake, lined with
+        wineries and orchards. The heat, the light and the long dry summers that make the
+        grapes also suit lavender. Our half-acre sits among it, a small operation by
+        design.
+      </p>
+      <p>
+        We grow a single variety, <strong>Grosso</strong>, and harvest once a year in the
+        heat of midsummer. Everything is made in small batches we can stand behind.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">How it is made</p>
+        <h2>From row to bottle.</h2>
+        <p>
+          We cut the lavender by hand at peak bloom, dry the bundles, and strip the buds.
+          Those buds, never an essential oil, are what we steep into the syrup. We watch the
+          steep closely, because the difference between floral and soapy is a matter of
+          minutes.
+        </p>
+        <p>
+          A roadside stand is in the works for the bloom season. For now, the syrup travels
+          to you through Amazon.ca. <a href="/syrup">Read more about the syrup</a>, or
+          <a href="/visit">plan a visit</a>.
+        </p>
+      </div>
+      <div class="split__media" role="img" aria-label="Hands harvesting lavender, photo coming soon">
+        Harvest photo &mdash; coming this bloom
+      </div>
+    </div>
+  </section>
+</Base>

@@ -26,12 +26,12 @@ export const CLOSER = 'Made on the Naramata Bench.';
 // a broken link, so nothing ships half-finished.
 export const AMAZON_URL = '';
 
-// Single-page teaser for v0: nav anchors to homepage sections. When the multi-page
-// build lands (Phase 1), swap these for real routes (/syrup, /recipes, /farm).
+// Primary navigation (real routes, Phase 1).
 export const NAV = [
-  { href: '#syrup', label: 'The Syrup' },
-  { href: '#recipes', label: 'Recipes' },
-  { href: '#story', label: 'Our Farm' },
+  { href: '/syrup', label: 'The Syrup' },
+  { href: '/recipes', label: 'Recipes' },
+  { href: '/farm', label: 'Our Farm' },
+  { href: '/visit', label: 'Visit' },
 ] as const;
 
 // Social handles. EMPTY until claimed (the exact @benchandbloom is taken; a
@@ -39,6 +39,16 @@ export const NAV = [
 export const SOCIAL = {
   instagram: '',
   facebook: '',
+} as const;
+
+// Visit / Find Us. Production-only for now. Flip standOpen to true and fill the
+// fields when the roadside stand opens, and the Visit page switches itself on.
+export const VISIT = {
+  standOpen: false,
+  hours: '', // e.g. 'Fridays to Sundays, 10am to 4pm, July to August'
+  note:
+    'A small roadside lavender stand is planned for the bloom season. Dates will be ' +
+    'posted here and sent to the launch list first.',
 } as const;
 
 // Launch email capture (the cocktail recipe-card lead magnet + launch list).
