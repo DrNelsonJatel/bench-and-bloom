@@ -14,9 +14,7 @@ export const SITE = {
     'Small-batch lavender simple syrup, grown and made on the Naramata Bench. ' +
     'Real lavender buds steeped and strained, no essential oils, built to stand ' +
     'up to gin, citrus and sparkling wine.',
-  // PENDING: a real 1200x630 OG share image (generate from a hero photo once shot).
-  // Empty for now so we never reference a 404.
-  ogImage: '',
+  ogImage: '/images/og-default.jpg',
 } as const;
 
 export const CLOSER = 'Made on the Naramata Bench.';

@@ -9,7 +9,7 @@ const description =
 ---
 
 <Base title={title} description={description}>
-  <section class="hero">
+  <section class="hero hero--photo" style="--hero-img:url('/images/field-rows-evening.jpg')">
     <div class="wrap hero__inner">
       <p class="eyebrow">{SITE.descriptor}</p>
       <h1>A half-acre on the bench.</h1>
@@ -21,9 +21,9 @@ const description =
   </section>
 
   <section class="section wrap split">
-    <div class="split__media" role="img" aria-label="The lavender field on the Naramata Bench, photo coming soon">
-      Field photo &mdash; coming this bloom
-    </div>
+    <img class="media" src="/images/lavender-field-rows-2.jpg" width="1400" height="1050"
+      loading="lazy" decoding="async"
+      alt="Rows of lavender on the Naramata Bench under a blue sky, orchard behind" />
     <div>
       <p class="eyebrow">The place</p>
       <h2>Wine country, in lavender.</h2>
@@ -57,9 +57,9 @@ const description =
           <a href="/visit">plan a visit</a>.
         </p>
       </div>
-      <div class="split__media" role="img" aria-label="Hands harvesting lavender, photo coming soon">
-        Harvest photo &mdash; coming this bloom
-      </div>
+      <img class="media" src="/images/harvest-on-the-tractor.jpg" width="1400" height="1050"
+        loading="lazy" decoding="async"
+        alt="Harvesting cut lavender on the John Deere, the Okanagan valley behind" />
     </div>
   </section>
 </Base>

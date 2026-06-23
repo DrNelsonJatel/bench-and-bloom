@@ -123,6 +123,24 @@ img { max-width: 100%; height: auto; display: block; }
 .hero__sprig { position: absolute; right: -2rem; top: 50%; transform: translateY(-50%); width: min(38vw, 22rem); opacity: 0.5; pointer-events: none; }
 @media (max-width: 720px) { .hero__sprig { display: none; } }
 
+/* Photo hero: real image behind, paper overlay fading left-to-right keeps text legible.
+   Set the image per page with inline style="--hero-img:url('/images/x.jpg')". */
+.hero--photo {
+  background-image:
+    linear-gradient(to right, rgba(250,246,240,0.94), rgba(250,246,240,0.74) 42%, rgba(250,246,240,0.32)),
+    var(--hero-img);
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 680px) {
+  .hero--photo {
+    background-image: linear-gradient(rgba(250,246,240,0.90), rgba(250,246,240,0.82)), var(--hero-img);
+  }
+}
+
+/* Real photos in split / feature media slots. */
+.media { width: 100%; height: auto; display: block; border-radius: var(--radius); border: 1px solid var(--line); }
+
 /* Pillars */
 .pillars { display: grid; gap: var(--gap); grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
 .pillar { padding-top: 1.25rem; border-top: 2px solid var(--gold); }

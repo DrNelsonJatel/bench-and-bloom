@@ -27,7 +27,7 @@ const recipes = [
 
 <Base>
   <!-- Hero -->
-  <section class="hero">
+  <section class="hero hero--photo" style="--hero-img:url('/images/hero-lavender-golden-hour.jpg')">
     <div class="wrap hero__inner">
       <p class="eyebrow">{SITE.descriptor}</p>
       <h1>Small-batch lavender syrup, grown and made on the Naramata Bench.</h1>
@@ -42,16 +42,6 @@ const recipes = [
         <a class="btn btn-secondary" href="/recipes">See the recipes</a>
       </div>
     </div>
-    <svg class="hero__sprig" viewBox="0 0 200 360" aria-hidden="true" fill="none">
-      <path d="M100 360 V120" stroke="#8B9A7D" stroke-width="3" stroke-linecap="round"/>
-      <g fill="#7C6A9C">
-        <ellipse cx="100" cy="40" rx="10" ry="14"/>
-        <ellipse cx="84" cy="62" rx="9" ry="13"/><ellipse cx="116" cy="62" rx="9" ry="13"/>
-        <ellipse cx="100" cy="78" rx="10" ry="14"/>
-        <ellipse cx="82" cy="100" rx="9" ry="13"/><ellipse cx="118" cy="100" rx="9" ry="13"/>
-        <ellipse cx="100" cy="116" rx="10" ry="14"/>
-      </g>
-    </svg>
   </section>
 
   <!-- Pillars -->
@@ -88,9 +78,9 @@ const recipes = [
           <a class="btn btn-secondary" href="/syrup">More about the syrup</a>
         </div>
       </div>
-      <div class="split__media" role="img" aria-label="Bench & Bloom lavender syrup, photo coming soon">
-        Bottle photo &mdash; coming this bloom
-      </div>
+      <img class="media" src="/images/lavender-closeup.jpg" width="1400" height="1050"
+        loading="lazy" decoding="async"
+        alt="Grosso lavender in bloom at golden hour on the Naramata Bench" />
     </div>
   </section>
 
@@ -117,9 +107,9 @@ const recipes = [
   <!-- Our Farm -->
   <section id="story" class="section section--surface">
     <div class="wrap split">
-      <div class="split__media" role="img" aria-label="The half-acre lavender field on the Naramata Bench, photo coming soon">
-        Field photo &mdash; coming this bloom
-      </div>
+      <img class="media" src="/images/lavender-field-rows.jpg" width="1400" height="1050"
+        loading="lazy" decoding="async"
+        alt="Rows of lavender on the half-acre farm, with orchard and bench hills behind" />
       <div>
         <p class="eyebrow">Our farm</p>
         <h2>A half-acre on the bench.</h2>

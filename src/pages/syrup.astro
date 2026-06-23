@@ -21,7 +21,7 @@ const productLd = {
 ---
 
 <Base title={title} description={description}>
-  <section class="hero">
+  <section class="hero hero--photo" style="--hero-img:url('/images/lavender-closeup.jpg')">
     <div class="wrap hero__inner">
       <p class="eyebrow">{SITE.descriptor}</p>
       <h1>Lavender simple syrup, made for the glass.</h1>
@@ -49,9 +49,9 @@ const productLd = {
         sparkling wine, where a softer lavender would simply disappear.
       </p>
     </div>
-    <div class="split__media" role="img" aria-label="Bench & Bloom lavender syrup bottle, photo coming soon">
-      Bottle photo &mdash; coming this bloom
-    </div>
+    <img class="media" src="/images/lavender-bundle-lake.jpg" width="1125" height="1500"
+      loading="lazy" decoding="async"
+      alt="A freshly cut bundle of Grosso lavender on the deck, Okanagan Lake in the distance" />
   </section>
 
   <section class="section section--surface">

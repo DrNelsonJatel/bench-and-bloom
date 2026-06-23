@@ -18,3 +18,4 @@ node_modules/
 
 # planning artifacts stay local (not shipped)
 build/
+.vercel

@@ -13,7 +13,7 @@ const description =
 ---
 
 <Base title={title} description={description}>
-  <section class="hero">
+  <section class="hero hero--photo" style="--hero-img:url('/images/lavender-bees.jpg')">
     <div class="wrap hero__inner">
       <p class="eyebrow">Mix it</p>
       <h1>Lavender, made for the glass.</h1>
@@ -33,9 +33,9 @@ const description =
           <p>{anchor.data.description}</p>
           <span class="feature__link">Read the how-to</span>
         </div>
-        <div class="feature__media" aria-hidden="true">
-          <span>Steeping photo &mdash; coming this bloom</span>
-        </div>
+        <img class="media" src="/images/harvest-field.jpg" width="1400" height="1050"
+          loading="lazy" decoding="async"
+          alt="Cut lavender hauled from the field, on its way to becoming syrup" />
       </a>
     </section>
   )}
