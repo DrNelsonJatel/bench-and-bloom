@@ -29,6 +29,7 @@ export const NAV = [
   { href: '/syrup', label: 'The Syrup' },
   { href: '/recipes', label: 'Recipes' },
   { href: '/farm', label: 'Our Farm' },
+  { href: '/naramata', label: 'Naramata' },
   { href: '/visit', label: 'Visit' },
 ] as const;
 

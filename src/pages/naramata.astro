@@ -1,0 +1,186 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../consts';
+
+const title = 'The Naramata Bench';
+const description =
+  'The Naramata Bench is a narrow shelf of orchard and vineyard above Okanagan Lake, ' +
+  'between Penticton and the village of Naramata, BC. The warm, dry slopes that ripen ' +
+  'the wine give Bench & Bloom lavender its bold aroma.';
+
+// Region map centred on the Bench (Penticton -> Naramata, east shore of Okanagan Lake).
+// OpenStreetMap embed: no API key, no tracking cookies, lazy-loaded. We mark the region,
+// not the working farm (it is not open to visitors).
+const mapBbox = '-119.72,49.45,-119.50,49.63';
+const mapMarker = '49.5945,-119.5946';
+const mapSrc = `https://www.openstreetmap.org/export/embed.html?bbox=${mapBbox}&layer=mapnik&marker=${mapMarker}`;
+const mapLink = `https://www.openstreetmap.org/?mlat=49.5945&mlon=-119.5946#map=12/49.55/-119.60`;
+
+// Landscape gallery — the beauty of the bench.
+const gallery = [
+  {
+    src: '/images/vineyard-lake.jpg', w: 1500, h: 1125,
+    alt: 'Vineyard rows on the Naramata Bench dropping toward the blue of Okanagan Lake',
+    caption: 'Vineyard and lake, east shore.',
+  },
+  {
+    src: '/images/field-rows-evening.jpg', w: 1400, h: 1050,
+    alt: 'Rows of lavender on the bench in the low gold light of evening',
+    caption: 'Lavender rows at golden hour.',
+  },
+  {
+    src: '/images/hero-lavender-golden-hour.jpg', w: 1800, h: 1350,
+    alt: 'A field of lavender glowing in golden-hour light above Okanagan Lake',
+    caption: 'Midsummer bloom, full violet.',
+  },
+  {
+    src: '/images/lavender-bundle-lake.jpg', w: 1400, h: 1050,
+    alt: 'A cut bundle of lavender held against the backdrop of Okanagan Lake',
+    caption: 'A fresh-cut bundle above the water.',
+  },
+  {
+    src: '/images/lavender-field-rows.jpg', w: 1400, h: 1050,
+    alt: 'Long rows of lavender running toward the orchard and bench hills',
+    caption: 'Rows running to the orchard line.',
+  },
+  {
+    src: '/images/farm-bench-sky.jpg', w: 1500, h: 1125,
+    alt: 'The Naramata Bench under a wide open Okanagan sky',
+    caption: 'Big bench sky over the farm.',
+  },
+];
+---
+
+<Base title={title} description={description}>
+  <section class="hero hero--photo" style="--hero-img:url('/images/farm-bench-sky.jpg')">
+    <div class="wrap hero__inner">
+      <p class="eyebrow">{SITE.descriptor}</p>
+      <h1>The Naramata Bench.</h1>
+      <p class="hero__lede">
+        A narrow shelf of orchard and vineyard above Okanagan Lake &mdash; the warm, dry
+        slopes that ripen the wine, and grow our lavender.
+      </p>
+    </div>
+  </section>
+
+  <section class="section wrap split">
+    <img class="media" src="/images/vineyard-lake.jpg" width="1500" height="1125"
+      loading="lazy" decoding="async"
+      alt="Vineyard on the Naramata Bench above the blue of Okanagan Lake, with the hills behind" />
+    <div>
+      <p class="eyebrow">The place</p>
+      <h2 class="mt-0">A shelf of land above the lake.</h2>
+      <p>
+        The Naramata Bench is a narrow terrace on the east shore of Okanagan Lake, running
+        north from Penticton to the village of <strong>Naramata</strong>. Glacial soils, long
+        dry summers, cool lake nights and that bright valley light make it one of British
+        Columbia&rsquo;s best-loved stretches of wine country &mdash; lined with wineries,
+        orchards and cherry rows.
+      </p>
+      <p>
+        The same conditions that ripen the grapes suit lavender beautifully. Our half-acre of
+        <strong>Grosso</strong> sits right in among the vines, and the syrup carries the place
+        it comes from.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap">
+      <div class="center map-intro">
+        <p class="eyebrow">Where it is</p>
+        <h2 class="mt-0">Between Penticton and Naramata.</h2>
+        <p style="margin-inline:auto;">
+          The Bench follows the east side of Okanagan Lake, a short drive north of Penticton.
+          We are a working farm and not yet open to visitors &mdash; the map shows the region,
+          not the gate.
+        </p>
+      </div>
+
+      <figure class="map-figure">
+        <div class="map-frame">
+          <iframe
+            title="Map of the Naramata Bench on the east shore of Okanagan Lake, BC"
+            src={mapSrc}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+        <figcaption>
+          The Naramata Bench, east shore of Okanagan Lake &#183;
+          <a href={mapLink} target="_blank" rel="noopener">View larger map</a>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <div class="center">
+      <p class="eyebrow">The bench in bloom</p>
+      <h2 class="mt-0">Worth the drive, worth the bottle.</h2>
+    </div>
+    <div class="gallery">
+      {gallery.map((g) => (
+        <figure class="gallery__item">
+          <img class="media" src={g.src} width={g.w} height={g.h}
+            loading="lazy" decoding="async" alt={g.alt} />
+          <figcaption>{g.caption}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap center capture">
+      <p class="eyebrow">From the bench</p>
+      <h2 class="mt-0">Taste where it grows.</h2>
+      <p style="margin-inline:auto;">
+        Our small-batch lavender syrup is grown and made here on the Naramata Bench.
+        <a href="/farm">Meet the farm</a> or <a href="/syrup">read about the syrup</a>.
+      </p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .map-intro { margin-bottom: clamp(1.5rem, 4vw, 2.5rem); }
+
+  .map-figure { margin: 0; }
+  .map-frame {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    background: var(--surface);
+  }
+  .map-frame iframe {
+    position: absolute; inset: 0;
+    width: 100%; height: 100%;
+    border: 0;
+  }
+  .map-figure figcaption {
+    margin-top: 0.75rem;
+    text-align: center;
+    color: var(--ink-soft);
+    font-size: 0.9rem;
+  }
+  @media (max-width: 600px) { .map-frame { aspect-ratio: 4 / 3; } }
+
+  .gallery {
+    display: grid;
+    gap: var(--gap);
+    grid-template-columns: 1fr;
+    margin-top: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  @media (min-width: 640px) { .gallery { grid-template-columns: 1fr 1fr; } }
+  @media (min-width: 960px) { .gallery { grid-template-columns: repeat(3, 1fr); } }
+
+  .gallery__item { margin: 0; }
+  .gallery__item figcaption {
+    margin-top: 0.5rem;
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+  }
+</style>
