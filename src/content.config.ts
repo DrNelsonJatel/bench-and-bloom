@@ -19,6 +19,8 @@ const recipes = defineCollection({
     ingredients: z.array(z.string()),
     steps: z.array(z.string()),
     order: z.number().default(100),
+    // Bench & Bloom original / signature serve (Okanagan-named), featured on the hub.
+    signature: z.boolean().default(false),
     related: z.array(z.string()).optional(), // slugs
   }),
 });

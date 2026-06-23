@@ -10,11 +10,11 @@ const pillars = [
   },
   {
     title: 'Real buds, nothing fake',
-    body: 'Our own lavender, steeped and strained by hand. No essential oils, no synthetic flavour. Just buds, cane sugar and water.',
+    body: 'Our lavender and butterfly pea flower, steeped and strained by hand. No essential oils, no synthetic flavour, no artificial colour. Just botanicals, cane sugar and water.',
   },
   {
-    title: 'Built for gin',
-    body: 'A bold, aromatic Grosso lavender that holds its own against gin, citrus and sparkling wine where softer lavenders fade.',
+    title: 'Watch it bloom',
+    body: 'A natural blue from butterfly pea that turns pink the moment it meets citrus. Bold enough for gin, soft enough for a lemonade or a latte.',
   },
 ];
 
@@ -32,8 +32,9 @@ const recipes = [
       <p class="eyebrow">{SITE.descriptor}</p>
       <h1>Small-batch lavender syrup, grown and made on the Naramata Bench.</h1>
       <p class="hero__lede">
-        A culinary lavender simple syrup built for gin and cocktails. Real lavender buds,
-        steeped and strained by hand. No essential oils, no shortcuts.
+        A culinary lavender simple syrup built for gin and cocktails. A natural blue from
+        butterfly pea and lavender that blooms to pink with a squeeze of citrus. No essential
+        oils, no artificial colour.
       </p>
       <div class="cta-row">
         {AMAZON_URL
@@ -61,15 +62,16 @@ const recipes = [
     <div class="wrap split">
       <div>
         <p class="eyebrow">The syrup</p>
-        <h2>One bottle. Three ingredients. A whole field behind it.</h2>
+        <h2>One bottle. Four ingredients. A whole field behind it.</h2>
         <p>
-          We grow Grosso lavender, the variety prized for its deep colour and bold aroma. After
-          harvest we steep the buds gently, strain them out and balance the syrup so the lavender
+          We grow Grosso lavender, the variety prized for its bold aroma, then steep it with
+          butterfly pea flower for a natural deep blue. We strain it and balance it so the lavender
           reads floral, never soapy. That is the hard part, and it is the part we obsess over.
         </p>
         <p>
-          The result is a syrup with enough backbone to come through a gin and tonic, a fizz or a
-          glass of sparkling wine, and soft enough to sweeten a latte or a lemonade.
+          Pour it into a glass and it is a deep blue. Add a squeeze of lemon or a splash of tonic and
+          watch it bloom from blue to pink. No dye, just chemistry, with enough backbone for gin and
+          enough softness for a lemonade or a latte.
         </p>
         <div class="cta-row">
           {AMAZON_URL
@@ -102,6 +104,24 @@ const recipes = [
       ))}
     </div>
     <p class="center" style="margin-top:2rem;"><a class="btn btn-secondary" href="/recipes">See all recipes</a></p>
+  </section>
+
+  <!-- Campaign / watch it bloom -->
+  <section class="section section--surface">
+    <div class="wrap split split--reel">
+      <video class="reel" autoplay muted loop playsinline poster="/campaign-essence.jpg">
+        <source src="/campaign-bloom.mp4" type="video/mp4" />
+      </video>
+      <div>
+        <p class="eyebrow">The essence of summer</p>
+        <h2>Watch it bloom.</h2>
+        <p>
+          A single-variety harvest from the Naramata Bench, chosen for its bold aroma and its
+          colour. Pour it blue, add a squeeze of citrus, and watch it turn sunset pink.
+        </p>
+        <div class="cta-row"><a class="btn btn-secondary" href="/recipes/naramata-sunset">The Naramata Sunset</a></div>
+      </div>
+    </div>
   </section>
 
   <!-- Our Farm -->

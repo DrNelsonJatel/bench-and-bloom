@@ -12,8 +12,8 @@ export const SITE = {
   locale: 'en_CA',
   description:
     'Small-batch lavender simple syrup, grown and made on the Naramata Bench. ' +
-    'Real lavender buds steeped and strained, no essential oils, built to stand ' +
-    'up to gin, citrus and sparkling wine.',
+    'Lavender and butterfly pea flower, steeped and strained, no essential oils and ' +
+    'no artificial colour. A natural blue that blooms to pink with a squeeze of citrus.',
   ogImage: '/images/og-default.jpg',
 } as const;
 

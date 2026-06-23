@@ -1,16 +1,11 @@
 ---
 import { SITE, NAV, AMAZON_URL } from '../consts';
-import Mark from './Mark.astro';
 ---
 
 <header class="site-header">
   <div class="wrap site-header__inner">
     <a class="lockup" href="/" aria-label={`${SITE.title} home`}>
-      <Mark size={32} class="lockup__icon" />
-      <span class="lockup__text">
-        <span class="lockup__mark">{SITE.wordmark}</span>
-        <span class="lockup__sub">{SITE.descriptor}</span>
-      </span>
+      <img class="site-logo" src="/brand/logo-primary.svg" alt={`${SITE.title} — ${SITE.descriptor}`} width="287" height="62" />
     </a>
 
     <nav class="site-nav" aria-label="Primary">
@@ -30,11 +25,8 @@ import Mark from './Mark.astro';
     border-bottom: 1px solid var(--line);
   }
   .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.75rem; }
-  .lockup { display: flex; align-items: center; gap: 0.55rem; text-decoration: none; }
-  .lockup__text { display: flex; flex-direction: column; line-height: 1.05; }
-  .lockup__icon { flex: none; }
-  .lockup__mark { font-family: var(--font-display); font-weight: 600; font-size: 1.3rem; color: var(--lavender-deep); }
-  .lockup__sub { font-size: 0.66rem; letter-spacing: var(--eyebrow-tracking); text-transform: uppercase; color: var(--gold-deep); }
+  .lockup { display: flex; align-items: center; text-decoration: none; }
+  .site-logo { height: 40px; width: auto; display: block; }
   .site-nav { display: flex; align-items: center; gap: clamp(0.75rem, 2vw, 1.5rem); }
   .site-nav > a:not(.btn) { color: var(--ink); text-decoration: none; font-weight: 500; font-size: 0.95rem; }
   .site-nav > a:not(.btn):hover { color: var(--gold-deep); }
@@ -42,6 +34,6 @@ import Mark from './Mark.astro';
   .soon { font-size: 0.82rem; color: var(--ink-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.4rem 0.7rem; }
   @media (max-width: 680px) {
     .site-nav > a:not(.btn) { display: none; }
-    .lockup__sub { display: none; }
+    .site-logo { height: 34px; }
   }
 </style>
