@@ -6,10 +6,27 @@ const recipes = (await getCollection('recipes')).sort((a, b) => a.data.order - b
 const anchor = recipes.find((r) => r.data.kind === 'anchor');
 const drinks = recipes.filter((r) => r.data.kind !== 'anchor');
 
+const signatures = drinks.filter((r) => r.data.signature);
+const rest = drinks.filter((r) => !r.data.signature);
+const gin = rest.filter((r) => r.data.spirit === 'Gin');
+const vodka = rest.filter((r) => r.data.spirit === 'Vodka');
+const noalc = rest.filter((r) => r.data.kind === 'mocktail');
+
+const groups = [
+  { label: 'Signature serves', note: 'Our own, named for the bench. Watch it bloom.', items: signatures },
+  { label: 'The classics', note: 'Gin', items: gin },
+  { label: 'Vodka', note: 'Vodka', items: vodka },
+  { label: 'No alcohol', note: 'Mocktail or cocktail', items: noalc },
+].filter((g) => g.items.length);
+
+const tag = (r: any) =>
+  r.data.signature ? 'Signature' : r.data.kind === 'mocktail' ? 'Mocktail or cocktail' : r.data.spirit ?? 'Cocktail';
+
 const title = 'Lavender Cocktails & Recipes';
 const description =
-  'Lavender simple syrup recipes for gin cocktails and mocktails: gin fizz, French 75, ' +
-  'lemonade and an iced lavender latte. Mocktail or cocktail, every time.';
+  'Lavender simple syrup recipes for gin and vodka cocktails and mocktails: the colour-changing ' +
+  'Naramata Sunset, gin fizz, French 75, Moscow mule, lemonade and an iced lavender latte. ' +
+  'Add citrus and watch it bloom from blue to pink.';
 ---
 
 <Base title={title} description={description}>
@@ -18,8 +35,8 @@ const description =
       <p class="eyebrow">Mix it</p>
       <h1>Lavender, made for the glass.</h1>
       <p class="hero__lede">
-        Gin is the anchor, but every pour works as a mocktail too. Start with the base
-        syrup, then take it anywhere.
+        Gin, vodka, sparkling or zero-proof. Pour it blue, add a squeeze of citrus, and watch it
+        bloom to pink. Start with the base syrup, then take it anywhere.
       </p>
     </div>
   </section>
@@ -42,17 +59,21 @@ const description =
 
   <section class="section section--surface">
     <div class="wrap">
-      <p class="eyebrow">The drinks</p>
-      <h2>Pour something</h2>
-      <div class="cards">
-        {drinks.map((r) => (
-          <a class="card card--link" href={`/recipes/${r.id}`}>
-            <p class="eyebrow">{r.data.kind === 'mocktail' ? 'Mocktail or cocktail' : r.data.spirit ?? 'Cocktail'}</p>
-            <h3>{r.data.title}</h3>
-            <p>{r.data.description}</p>
-          </a>
-        ))}
-      </div>
+      {groups.map((g, i) => (
+        <div class={i > 0 ? 'group' : ''}>
+          <p class="eyebrow">{g.note}</p>
+          <h2>{g.label}</h2>
+          <div class="cards">
+            {g.items.map((r) => (
+              <a class="card card--link" href={`/recipes/${r.id}`}>
+                <p class="eyebrow">{tag(r)}</p>
+                <h3>{r.data.title}</h3>
+                <p>{r.data.description}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   </section>
 </Base>
@@ -64,9 +85,8 @@ const description =
   .feature p { color: var(--ink-soft); }
   .feature__link { color: var(--lavender-deep); font-weight: 600; }
   .feature:hover .feature__link { color: var(--gold-deep); }
-  .feature__media { aspect-ratio: 16 / 11; border-radius: var(--radius); border: 1px solid var(--line);
-    background: radial-gradient(90% 90% at 30% 20%, rgba(124,106,156,0.28), transparent 60%), linear-gradient(160deg, var(--sage), var(--lavender));
-    display: grid; place-items: center; color: rgba(255,255,255,0.85); font-size: 0.78rem; letter-spacing: 0.06em; text-transform: uppercase; }
+  .group { margin-top: clamp(2.25rem, 5vw, 3.5rem); }
   .card--link { text-decoration: none; color: inherit; transition: border-color 0.15s ease, transform 0.15s ease; }
   .card--link:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .card--link:hover h3 { color: var(--lavender-deep); }
 </style>

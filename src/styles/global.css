@@ -57,7 +57,7 @@ h1, h2, h3, h4, .display {
   margin: 0 0 0.5em;
   overflow-wrap: break-word;
 }
-h1 { font-size: clamp(2.25rem, 1.6rem + 3.2vw, 4rem); }
+h1 { font-size: clamp(2.05rem, 1.4rem + 3vw, 4rem); hyphens: auto; }
 h2 { font-size: clamp(1.6rem, 1.2rem + 1.8vw, 2.4rem); }
 h3 { font-size: clamp(1.2rem, 1.05rem + 0.7vw, 1.45rem); color: var(--ink); }
 

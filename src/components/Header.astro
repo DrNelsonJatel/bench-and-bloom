@@ -2,13 +2,17 @@
 import { SITE, NAV, AMAZON_URL } from '../consts';
 ---
 
-<header class="site-header">
+<header class="site-header" data-header>
   <div class="wrap site-header__inner">
     <a class="lockup" href="/" aria-label={`${SITE.title} home`}>
       <img class="site-logo" src="/brand/logo-primary.svg" alt={`${SITE.title} — ${SITE.descriptor}`} width="287" height="62" />
     </a>
 
-    <nav class="site-nav" aria-label="Primary">
+    <button class="nav-toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="primary-nav">
+      <span class="nav-toggle__bars" aria-hidden="true"></span>
+    </button>
+
+    <nav class="site-nav" id="primary-nav" aria-label="Primary">
       {NAV.map((item) => <a href={item.href}>{item.label}</a>)}
       {AMAZON_URL
         ? <a class="btn btn-primary btn-sm" href={AMAZON_URL} target="_blank" rel="noopener">Buy on Amazon</a>
@@ -17,14 +21,29 @@ import { SITE, NAV, AMAZON_URL } from '../consts';
   </div>
 </header>
 
+<script>
+  const header = document.querySelector('[data-header]');
+  const toggle = header?.querySelector('.nav-toggle');
+  toggle?.addEventListener('click', () => {
+    const open = header!.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  header?.querySelectorAll('#primary-nav a').forEach((link) =>
+    link.addEventListener('click', () => {
+      header.classList.remove('nav-open');
+      toggle?.setAttribute('aria-expanded', 'false');
+    }),
+  );
+</script>
+
 <style>
   .site-header {
     position: sticky; top: 0; z-index: 20;
-    background: color-mix(in srgb, var(--paper) 88%, transparent);
+    background: color-mix(in srgb, var(--paper) 92%, transparent);
     backdrop-filter: saturate(120%) blur(6px);
     border-bottom: 1px solid var(--line);
   }
-  .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.75rem; }
+  .site-header__inner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding-block: 0.75rem; position: relative; }
   .lockup { display: flex; align-items: center; text-decoration: none; }
   .site-logo { height: 40px; width: auto; display: block; }
   .site-nav { display: flex; align-items: center; gap: clamp(0.75rem, 2vw, 1.5rem); }
@@ -32,8 +51,33 @@ import { SITE, NAV, AMAZON_URL } from '../consts';
   .site-nav > a:not(.btn):hover { color: var(--gold-deep); }
   .btn-sm { padding: 0.5rem 0.9rem; font-size: 0.9rem; }
   .soon { font-size: 0.82rem; color: var(--ink-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.4rem 0.7rem; }
+
+  /* hamburger (mobile only) */
+  .nav-toggle { display: none; width: 42px; height: 38px; border: 1px solid var(--line); border-radius: var(--radius); background: transparent; cursor: pointer; align-items: center; justify-content: center; }
+  .nav-toggle__bars { position: relative; display: block; width: 18px; height: 2px; background: var(--lavender-deep); transition: background 0.15s; }
+  .nav-toggle__bars::before, .nav-toggle__bars::after { content: ''; position: absolute; left: 0; width: 18px; height: 2px; background: var(--lavender-deep); transition: transform 0.18s, top 0.18s; }
+  .nav-toggle__bars::before { top: -6px; }
+  .nav-toggle__bars::after { top: 6px; }
+  .nav-open .nav-toggle__bars { background: transparent; }
+  .nav-open .nav-toggle__bars::before { top: 0; transform: rotate(45deg); }
+  .nav-open .nav-toggle__bars::after { top: 0; transform: rotate(-45deg); }
+
   @media (max-width: 680px) {
-    .site-nav > a:not(.btn) { display: none; }
+    .nav-toggle { display: inline-flex; }
     .site-logo { height: 34px; }
+    .site-nav {
+      position: absolute; top: 100%; left: 0; right: 0;
+      flex-direction: column; align-items: stretch; gap: 0;
+      background: var(--paper); border-bottom: 1px solid var(--line);
+      padding: 0.4rem 0; display: none;
+      box-shadow: 0 10px 18px rgba(43, 35, 51, 0.08);
+    }
+    .site-header.nav-open .site-nav { display: flex; }
+    .site-nav > a:not(.btn), .site-nav .btn, .site-nav .soon {
+      margin: 0; padding: 0.7rem 1.25rem; border: none; border-radius: 0;
+      font-size: 1rem; text-align: left; width: auto;
+    }
+    .site-nav .btn { background: transparent; color: var(--lavender-deep); justify-content: flex-start; }
+    .site-nav .soon { color: var(--ink-soft); }
   }
 </style>
