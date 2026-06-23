@@ -4,8 +4,8 @@ import { SITE } from '../consts';
 
 const title = 'Our Farm';
 const description =
-  'Bench & Bloom is a half-acre lavender farm on the Naramata Bench above Okanagan Lake. ' +
-  'One variety, one harvest a year, made in small batches.';
+  'Bench & Bloom is a second-generation family farm on the Naramata Bench above Okanagan Lake: ' +
+  'three acres, two of grapes for Hillside Winery and a half-acre of lavender. Owner-operator Nelson Jatel.';
 ---
 
 <Base title={title} description={description}>
@@ -62,4 +62,47 @@ const description =
         alt="Harvesting cut lavender on the John Deere, the Okanagan valley behind" />
     </div>
   </section>
+
+  <section class="section wrap">
+    <div class="split split--founder">
+      <div>
+        <p class="eyebrow">The family behind it</p>
+        <h2>Two generations on the bench.</h2>
+        <p>
+          Bench &amp; Bloom is a second-generation family farm. Nelson Jatel grew up here, on three
+          acres above Okanagan Lake on the Naramata Bench. Two of those acres grow grapes for
+          <strong>Hillside Winery</strong>; a half-acre is our lavender. The same warm, dry slopes that
+          ripen the grapes give the lavender its bold aroma.
+        </p>
+        <p>
+          It is small and hands-on, worked by hand harvest by harvest, alongside family. The syrup
+          carries the place it comes from.
+        </p>
+        <p class="byline">
+          Nelson Jatel, owner and operator &#183;
+          <a href="https://www.linkedin.com/in/nelsonjatel/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+      <img class="media" src="/images/founder-nelson.jpg" width="1125" height="1500"
+        loading="lazy" decoding="async"
+        alt="Nelson Jatel, owner and operator of Bench & Bloom, on the farm above Okanagan Lake" />
+    </div>
+
+    <div class="duo">
+      <img class="media" src="/images/founder-two-generations.jpg" width="1125" height="1500"
+        loading="lazy" decoding="async"
+        alt="Nelson Jatel and his father by the lavender field, two generations of the farm" />
+      <img class="media" src="/images/vineyard-lake.jpg" width="1500" height="1125"
+        loading="lazy" decoding="async"
+        alt="The family vineyard on the Naramata Bench above Okanagan Lake, grapes grown for Hillside Winery" />
+    </div>
+  </section>
 </Base>
+
+<style>
+  .split--founder { align-items: start; }
+  @media (min-width: 820px) { .split--founder { grid-template-columns: 1.25fr 0.75fr; } }
+  .byline { color: var(--ink-soft); font-size: 0.92rem; margin-top: 1.25rem; }
+  .duo { display: grid; gap: var(--gap); grid-template-columns: 1fr; margin-top: clamp(1.5rem, 4vw, 2.5rem); }
+  @media (min-width: 700px) { .duo { grid-template-columns: 1fr 1fr; } }
+</style>
