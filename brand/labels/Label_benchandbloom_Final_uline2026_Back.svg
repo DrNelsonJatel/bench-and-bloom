@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2.75in" height="3in" viewBox="0 0 198 216">
+  <!-- Bench & Bloom BACK / info panel (final). Sized for Uline S-23397 8oz Boston round.
+       TRIM 2.5 x 2.75in, 0.125in bleed. Units = points (72pt = 1in). Fonts: Inter.
+       [bracketed] = fill in. French = DRAFT, verify. Delete #guides before print. -->
+  <rect x="0" y="0" width="198" height="216" fill="#F7F3EE"/>
+
+  <text x="99" y="25" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="4.6" letter-spacing="0.8" fill="#7A5E28">BENCH &amp; BLOOM &#183; NARAMATA BENCH BOTANICALS</text>
+
+  <!-- Nutrition Facts placeholder -->
+  <rect x="18" y="30" width="162" height="54" fill="#FFFFFF" stroke="#2D2933" stroke-width="0.75"/>
+  <text x="22" y="42" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="8" fill="#2D2933">Nutrition Facts</text>
+  <text x="22" y="50" font-family="Inter, Arial, sans-serif" font-size="6" fill="#2D2933">Valeur nutritive</text>
+  <line x1="22" y1="53" x2="176" y2="53" stroke="#2D2933" stroke-width="0.5"/>
+  <text x="99" y="68" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-style="italic" font-size="5.4" fill="#5A5266">[ Insert calculated table, per 15 mL serving ]</text>
+  <text x="99" y="77" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-style="italic" font-size="5.4" fill="#5A5266">see printer spec / LABEL_SPEC.md</text>
+
+  <!-- Ingredients (4, bilingual; wrapped to fit) -->
+  <text x="18" y="95" font-family="Inter, Arial, sans-serif" font-size="5.4" fill="#2D2933"><tspan font-weight="600">Ingredients:</tspan> Sugar, water, lavender, butterfly pea</text>
+  <text x="18" y="102" font-family="Inter, Arial, sans-serif" font-size="5.4" fill="#2D2933">flower (Clitoria ternatea).</text>
+  <text x="18" y="110" font-family="Inter, Arial, sans-serif" font-size="5.4" fill="#2D2933"><tspan font-weight="600">Ingrédients :</tspan> Sucre, eau, lavande, fleur de pois</text>
+  <text x="18" y="117" font-family="Inter, Arial, sans-serif" font-size="5.4" fill="#2D2933">bleu (Clitoria ternatea).</text>
+
+  <!-- How to use + colour change -->
+  <text x="18" y="129" font-family="Inter, Arial, sans-serif" font-size="5.4" fill="#2D2933">Stir into gin, vodka or sparkling cocktails, or soda.</text>
+  <text x="18" y="136" font-family="Inter, Arial, sans-serif" font-size="5.4" fill="#5A4A78">Add citrus to turn it from blue to pink.</text>
+  <text x="18" y="143" font-family="Inter, Arial, sans-serif" font-size="5.4" fill="#2D2933">Refrigerate after opening / Réfrigérer après ouverture.</text>
+
+  <text x="18" y="153" font-family="Inter, Arial, sans-serif" font-size="5.4" fill="#2D2933">Best before / Meilleur avant: YYYY MM DD &#160;&#160; LOT 2026-001</text>
+
+  <text x="18" y="164" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="5.4" fill="#2D2933">Prepared for / Préparé pour:</text>
+  <text x="18" y="171" font-family="Inter, Arial, sans-serif" font-size="5.2" fill="#2D2933">Bench &amp; Bloom, [civic address], Naramata, BC V0H 1N0</text>
+  <text x="18" y="177" font-family="Inter, Arial, sans-serif" font-size="5.2" fill="#5A4A78">benchandbloom.com &#183; hello@benchandbloom.com</text>
+
+  <text x="18" y="191" font-family="Inter, Arial, sans-serif" font-size="5" fill="#5A5266">Product of Canada / Produit du Canada</text>
+  <rect x="150" y="179" width="30" height="15" fill="#FFFFFF" stroke="#2D2933" stroke-width="0.5"/>
+  <text x="165" y="188.5" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="5.2" fill="#5A5266">UPC</text>
+
+  <g id="guides" fill="none">
+    <rect x="9" y="9" width="180" height="198" stroke="#E6007E" stroke-width="0.4" stroke-dasharray="3 2"/>
+    <rect x="18" y="18" width="162" height="180" stroke="#00AEEF" stroke-width="0.4" stroke-dasharray="3 2"/>
+  </g>
+</svg>
