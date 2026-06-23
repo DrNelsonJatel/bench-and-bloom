@@ -1,0 +1,20 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# env (never commit secrets; only .env.example is tracked)
+.env
+.env.local
+.env.*.local
+
+# vercel
+.vercel/
+
+# os
+.DS_Store
+
+# planning artifacts stay local (not shipped)
+build/

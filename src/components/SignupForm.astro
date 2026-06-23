@@ -1,0 +1,47 @@
+---
+// Launch-list signup. Posts to Supabase via src/scripts/subscribe.ts (insert-only).
+---
+<form class="signup" data-signup novalidate>
+  <div class="signup__row">
+    <label class="visually-hidden" for="signup-email">Email address</label>
+    <input
+      id="signup-email"
+      name="email"
+      type="email"
+      inputmode="email"
+      autocomplete="email"
+      placeholder="you@example.com"
+      required
+    />
+    <button class="btn btn-primary" type="submit">Notify me</button>
+  </div>
+  <!-- Honeypot: hidden from people, tempting to bots. -->
+  <input class="signup__gotcha" type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" />
+  <p class="signup__status" data-status role="status" aria-live="polite"></p>
+  <p class="signup__fine">No spam. One launch note and a recipe card. Unsubscribe anytime.</p>
+</form>
+
+<script>
+  import { initSignupForms } from '../scripts/subscribe';
+  initSignupForms();
+</script>
+
+<style>
+  .signup { max-width: 30rem; margin: 1.5rem auto 0; }
+  .signup__row { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
+  .signup input[type='email'] {
+    flex: 1 1 16rem; min-width: 0;
+    padding: 0.8rem 1rem; font: inherit; color: var(--ink);
+    background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  }
+  .signup input[type='email']:focus-visible { border-color: var(--lavender-deep); outline-offset: 1px; }
+  .signup__gotcha { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .signup__status { min-height: 1.2em; margin: 0.85rem 0 0; font-size: 0.95rem; }
+  .signup__status[data-kind='error'] { color: #9a2f2f; }
+  .signup__status[data-kind='ok'] { color: var(--lavender-deep); font-weight: 500; }
+  .signup__fine { font-size: 0.82rem; color: var(--ink-soft); margin: 0.75rem 0 0; }
+  .visually-hidden {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+</style>

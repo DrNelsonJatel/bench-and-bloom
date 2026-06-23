@@ -1,0 +1,44 @@
+---
+import { SITE, NAV, SOCIAL, CLOSER } from '../consts';
+const year = 2026;
+const socials = Object.entries(SOCIAL).filter(([, url]) => url);
+---
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <div>
+      <p class="site-footer__mark">{SITE.wordmark}</p>
+      <p class="site-footer__sub">{SITE.descriptor}</p>
+      <p class="site-footer__closer">{CLOSER}</p>
+    </div>
+
+    <nav class="site-footer__nav" aria-label="Footer">
+      {NAV.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a href={`mailto:${SITE.email}`}>Contact</a>
+    </nav>
+  </div>
+
+  <div class="wrap site-footer__legal">
+    <span>&copy; {year} {SITE.title}. Naramata, British Columbia.</span>
+    {socials.length > 0 && (
+      <span class="site-footer__social">
+        {socials.map(([name, url]) => <a href={url} target="_blank" rel="noopener">{name}</a>)}
+      </span>
+    )}
+  </div>
+</footer>
+
+<style>
+  .site-footer { background: var(--ink); color: var(--paper); margin-top: var(--section-y); }
+  .site-footer__inner { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: space-between; padding-block: 3rem 1.5rem; }
+  .site-footer__mark { font-family: var(--font-display); font-size: 1.25rem; color: var(--paper); margin: 0; }
+  .site-footer__sub { font-size: 0.7rem; letter-spacing: var(--eyebrow-tracking); text-transform: uppercase; color: var(--gold); margin: 0.25rem 0 0; }
+  .site-footer__closer { color: #cfc6d2; margin: 0.75rem 0 0; font-style: italic; }
+  .site-footer__nav { display: flex; flex-direction: column; gap: 0.5rem; }
+  .site-footer__nav a { color: #e7e0ea; text-decoration: none; font-size: 0.95rem; }
+  .site-footer__nav a:hover { color: var(--gold); }
+  .site-footer__legal { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; padding-block: 1.25rem; border-top: 1px solid rgba(255,255,255,0.12); font-size: 0.82rem; color: #b6acbb; }
+  .site-footer__social { display: flex; gap: 1rem; text-transform: capitalize; }
+  .site-footer__social a { color: #b6acbb; }
+  .site-footer__social a:hover { color: var(--gold); }
+</style>

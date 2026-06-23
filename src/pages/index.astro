@@ -1,0 +1,146 @@
+---
+import Base from '../layouts/Base.astro';
+import SignupForm from '../components/SignupForm.astro';
+import { SITE, AMAZON_URL, EMAIL_CAPTURE } from '../consts';
+
+const pillars = [
+  {
+    title: 'Naramata Bench',
+    body: 'Grown on a half-acre on the bench above Okanagan Lake, in the heart of wine country. A small farm, a single harvest a year.',
+  },
+  {
+    title: 'Real buds, nothing fake',
+    body: 'Our own lavender, steeped and strained by hand. No essential oils, no synthetic flavour. Just buds, cane sugar and water.',
+  },
+  {
+    title: 'Built for gin',
+    body: 'A bold, aromatic Grosso lavender that holds its own against gin, citrus and sparkling wine where softer lavenders fade.',
+  },
+];
+
+const recipes = [
+  { kicker: 'The classic', title: 'Lavender Gin Fizz', body: 'Gin, lemon, a measure of Bench & Bloom, soda. Floral, bright, endlessly drinkable.' },
+  { kicker: 'The elevated one', title: 'Lavender French 75', body: 'Gin, lemon, lavender syrup, topped with sparkling wine. The dinner-party pour.' },
+  { kicker: 'Mocktail or cocktail', title: 'Lavender Lemonade', body: 'Fresh lemon and lavender syrup over ice. Add gin, or leave it for everyone at the table.' },
+];
+
+// The recipe hub is a Phase 1 build. These tiles preview it; they are not yet links.
+---
+
+<Base>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero__inner">
+      <p class="eyebrow">{SITE.descriptor}</p>
+      <h1>Small-batch lavender syrup, grown and made on the Naramata Bench.</h1>
+      <p class="hero__lede">
+        A culinary lavender simple syrup built for gin and cocktails. Real lavender buds,
+        steeped and strained by hand. No essential oils, no shortcuts.
+      </p>
+      <div class="cta-row">
+        {AMAZON_URL
+          ? <a class="btn btn-primary" href={AMAZON_URL} target="_blank" rel="noopener">Buy on Amazon.ca</a>
+          : <a class="btn btn-primary" href="#launch">Be first to pour it</a>}
+        <a class="btn btn-secondary" href="#recipes">See the recipes</a>
+      </div>
+    </div>
+    <svg class="hero__sprig" viewBox="0 0 200 360" aria-hidden="true" fill="none">
+      <path d="M100 360 V120" stroke="#8B9A7D" stroke-width="3" stroke-linecap="round"/>
+      <g fill="#7C6A9C">
+        <ellipse cx="100" cy="40" rx="10" ry="14"/>
+        <ellipse cx="84" cy="62" rx="9" ry="13"/><ellipse cx="116" cy="62" rx="9" ry="13"/>
+        <ellipse cx="100" cy="78" rx="10" ry="14"/>
+        <ellipse cx="82" cy="100" rx="9" ry="13"/><ellipse cx="118" cy="100" rx="9" ry="13"/>
+        <ellipse cx="100" cy="116" rx="10" ry="14"/>
+      </g>
+    </svg>
+  </section>
+
+  <!-- Pillars -->
+  <section class="section wrap">
+    <div class="pillars">
+      {pillars.map((p) => (
+        <div class="pillar">
+          <h3>{p.title}</h3>
+          <p>{p.body}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- The Syrup -->
+  <section id="syrup" class="section section--surface">
+    <div class="wrap split">
+      <div>
+        <p class="eyebrow">The syrup</p>
+        <h2>One bottle. Three ingredients. A whole field behind it.</h2>
+        <p>
+          We grow Grosso lavender, the variety prized for its deep colour and bold aroma. After
+          harvest we steep the buds gently, strain them out and balance the syrup so the lavender
+          reads floral, never soapy. That is the hard part, and it is the part we obsess over.
+        </p>
+        <p>
+          The result is a syrup with enough backbone to come through a gin and tonic, a fizz or a
+          glass of sparkling wine, and soft enough to sweeten a latte or a lemonade.
+        </p>
+        <div class="cta-row">
+          {AMAZON_URL
+            ? <a class="btn btn-primary" href={AMAZON_URL} target="_blank" rel="noopener">Buy on Amazon.ca</a>
+            : <span class="btn" aria-disabled="true">Coming soon on Amazon.ca</span>}
+        </div>
+      </div>
+      <div class="split__media" role="img" aria-label="Bench & Bloom lavender syrup, photo coming soon">
+        Bottle photo &mdash; coming this bloom
+      </div>
+    </div>
+  </section>
+
+  <!-- Recipes -->
+  <section id="recipes" class="section wrap">
+    <p class="eyebrow">Mix it</p>
+    <h2>Made for the glass.</h2>
+    <p class="lede">
+      Gin is the anchor, but every pour works as a mocktail too. The full recipe hub is on its way.
+    </p>
+    <div class="cards">
+      {recipes.map((r) => (
+        <article class="card">
+          <p class="eyebrow">{r.kicker}</p>
+          <h3>{r.title}</h3>
+          <p>{r.body}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <!-- Our Farm -->
+  <section id="story" class="section section--surface">
+    <div class="wrap split">
+      <div class="split__media" role="img" aria-label="The half-acre lavender field on the Naramata Bench, photo coming soon">
+        Field photo &mdash; coming this bloom
+      </div>
+      <div>
+        <p class="eyebrow">Our farm</p>
+        <h2>A half-acre on the bench.</h2>
+        <p>
+          We grow lavender on a small plot on the Naramata Bench, the same warm, dry slopes that
+          ripen the Okanagan&rsquo;s wine. It is a modest operation, and we like it that way: one
+          variety, one harvest, made in small batches we can stand behind.
+        </p>
+        <p>
+          A roadside stand is in the works. For now, the syrup travels to you through Amazon.ca.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Launch / email capture -->
+  <section id="launch" class="section wrap capture">
+    <p class="eyebrow">{SITE.descriptor}</p>
+    <h2>{EMAIL_CAPTURE.heading}</h2>
+    <p>{EMAIL_CAPTURE.prompt}</p>
+    {EMAIL_CAPTURE.enabled
+      ? <SignupForm />
+      : <span class="capture__note">Sign-up opens soon. Check back this season.</span>}
+  </section>
+</Base>

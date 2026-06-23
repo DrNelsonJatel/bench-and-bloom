@@ -1,0 +1,54 @@
+// Central site configuration. Edit these in one place.
+// Items marked PENDING need a real value before launch; do not ship placeholders.
+
+export const SITE = {
+  title: 'Bench & Bloom',
+  wordmark: 'Bench & Bloom',
+  // Provenance descriptor; the place/line under the brand. Swaps in one place.
+  descriptor: 'Naramata Bench Botanicals',
+  url: 'https://benchandbloom.com',
+  email: 'hello@benchandbloom.com',
+  author: 'Bench & Bloom',
+  locale: 'en_CA',
+  description:
+    'Small-batch lavender simple syrup, grown and made on the Naramata Bench. ' +
+    'Real lavender buds steeped and strained, no essential oils, built to stand ' +
+    'up to gin, citrus and sparkling wine.',
+  // PENDING: a real 1200x630 OG share image (generate from a hero photo once shot).
+  // Empty for now so we never reference a 404.
+  ogImage: '',
+} as const;
+
+export const CLOSER = 'Made on the Naramata Bench.';
+
+// The Amazon.ca product link. EMPTY until the listing is live (a 2-case test
+// batch). While empty the "Buy" button renders a "coming soon" state instead of
+// a broken link, so nothing ships half-finished.
+export const AMAZON_URL = '';
+
+// Single-page teaser for v0: nav anchors to homepage sections. When the multi-page
+// build lands (Phase 1), swap these for real routes (/syrup, /recipes, /farm).
+export const NAV = [
+  { href: '#syrup', label: 'The Syrup' },
+  { href: '#recipes', label: 'Recipes' },
+  { href: '#story', label: 'Our Farm' },
+] as const;
+
+// Social handles. EMPTY until claimed (the exact @benchandbloom is taken; a
+// variant such as @benchandbloomfarm will be grabbed). Footer hides empty ones.
+export const SOCIAL = {
+  instagram: '',
+  facebook: '',
+} as const;
+
+// Launch email capture (the cocktail recipe-card lead magnet + launch list).
+// Gated: the form only renders once the Supabase backend is wired (nelsonjatel
+// pattern). Until then the section shows a "sign-up opens soon" note, never a
+// dead input.
+export const EMAIL_CAPTURE = {
+  enabled: true,
+  heading: 'Be first to pour it.',
+  prompt:
+    'We are launching a small first batch on Amazon.ca this season. Leave your ' +
+    'email for the launch date and a free lavender cocktail recipe card.',
+} as const;
