@@ -1,58 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2.75in" height="3in" viewBox="0 0 198 216">
-  <!-- Bench & Bloom BACK / info panel (final). Uline S-23397. TRIM 2.5 x 2.75in, 0.125in bleed.
-       Nutrition Facts = GENERIC ESTIMATE from comparable market syrups (Torani/Monin ~45-50 cal,
-       ~11-12 g sugar per 15 mL) - VERIFY with a calculated table from the real recipe before print.
-       UPC = GTIN 627146286305 (GS1 Canada). French = draft, verify.
-       Delete #guides before print. -->
-  <rect x="0" y="0" width="198" height="216" fill="#F7F3EE"/>
-
-  <text x="99" y="20" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="4.6" letter-spacing="0.8" fill="#7A5E28">BENCH &amp; BLOOM &#183; NARAMATA BENCH BOTANICALS</text>
-
-  <!-- Nutrition Facts (estimate) -->
-  <rect x="18" y="24" width="162" height="88" fill="#FFFFFF" stroke="#2D2933" stroke-width="0.9"/>
-  <text x="22" y="33" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="7.5" fill="#2D2933">Nutrition Facts</text>
-  <text x="22" y="40" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="6" fill="#2D2933">Valeur nutritive</text>
-  <text x="22" y="46" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">Per 15 mL (1 tbsp) / pour 15 mL (1 c. à soupe)</text>
-  <line x1="22" y1="48.5" x2="176" y2="48.5" stroke="#2D2933" stroke-width="0.4"/>
-  <text x="22" y="55" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="6.5" fill="#2D2933">Calories 50</text>
-  <text x="176" y="54" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="4.2" fill="#2D2933">% Daily Value* / % valeur quotidienne*</text>
-  <line x1="22" y1="57.5" x2="176" y2="57.5" stroke="#2D2933" stroke-width="1.6"/>
-  <text x="22" y="64" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Fat / Lipides</tspan> 0 g</text>
-  <text x="176" y="64" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">0 %</text>
-  <line x1="22" y1="66.5" x2="176" y2="66.5" stroke="#2D2933" stroke-width="0.3"/>
-  <text x="22" y="72" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Carbohydrate / Glucides</tspan> 13 g</text>
-  <line x1="22" y1="74.5" x2="176" y2="74.5" stroke="#2D2933" stroke-width="0.3"/>
-  <text x="28" y="80" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">Sugars / Sucres 12 g</text>
-  <text x="176" y="80" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">12 %</text>
-  <line x1="22" y1="82.5" x2="176" y2="82.5" stroke="#2D2933" stroke-width="0.3"/>
-  <text x="22" y="88" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Protein / Protéines</tspan> 0 g</text>
-  <line x1="22" y1="90.5" x2="176" y2="90.5" stroke="#2D2933" stroke-width="0.3"/>
-  <text x="22" y="96" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Sodium</tspan> 0 mg</text>
-  <text x="176" y="96" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">0 %</text>
-  <line x1="22" y1="98.5" x2="176" y2="98.5" stroke="#2D2933" stroke-width="1.2"/>
-  <text x="22" y="104" font-family="Inter, Arial, sans-serif" font-size="4.1" fill="#2D2933">*5% or less is a little, 15% or more is a lot</text>
-  <text x="22" y="109" font-family="Inter, Arial, sans-serif" font-size="4.1" fill="#2D2933">*5% ou moins c'est peu, 15% ou plus c'est beaucoup</text>
-
-  <!-- Ingredients (4, bilingual; wrapped) -->
-  <text x="18" y="119" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Ingredients:</tspan> Sugar, water, lavender, butterfly pea flower</text>
-  <text x="18" y="125" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">(Clitoria ternatea).</text>
-  <text x="18" y="132" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Ingrédients :</tspan> Sucre, eau, lavande, fleur de pois bleu</text>
-  <text x="18" y="138" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">(Clitoria ternatea).</text>
-
-  <text x="18" y="147" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">Stir into gin, vodka or sparkling cocktails, or soda.</text>
-  <text x="18" y="153" font-family="Inter, Arial, sans-serif" font-size="5" fill="#5A4A78">Add citrus to turn it from blue to pink.</text>
-  <text x="18" y="159" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">Refrigerate after opening / Réfrigérer après ouverture.</text>
-  <text x="18" y="166" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">Best before / Meilleur avant: YYYY MM DD &#160; LOT 2026-001</text>
-
-  <text x="18" y="170" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="4.9" fill="#2D2933">Prepared for / Préparé pour:</text>
-  <text x="18" y="176" font-family="Inter, Arial, sans-serif" font-size="4.7" fill="#2D2933">Bench &amp; Bloom, 3820 Partridge Rd,</text>
-  <text x="18" y="181" font-family="Inter, Arial, sans-serif" font-size="4.7" fill="#2D2933">Naramata, BC, Canada V0H 1N0</text>
-  <text x="18" y="187" font-family="Inter, Arial, sans-serif" font-size="4.7" fill="#5A4A78">benchandbloom.com</text>
-  <text x="18" y="192" font-family="Inter, Arial, sans-serif" font-size="4.7" fill="#5A4A78">hello@benchandbloom.com</text>
-  <text x="18" y="199" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#5A5266">Product of Canada / Produit du Canada</text>
-
-  <!-- UPC placeholder barcode (replace with GS1 GTIN) -->
-  <svg x="118" y="171" width="60" height="35" viewBox="0 0 1036 605" preserveAspectRatio="xMidYMid meet"><g text-rendering="geometricPrecision">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" class="barcode-canvas" version="1.1" style="shape-rendering:crispEdges;" xmlns="http://www.w3.org/2000/svg">
+  <g text-rendering="geometricPrecision">
     <rect x="0" y="0" width="1036" height="605" fill="#ffffff" />
     <rect x="138" y="0" width="8" height="540" fill="#000000" />
     <rect x="154" y="0" width="8" height="540" fill="#000000" />
@@ -100,10 +49,5 @@
     <g transform="translate(898, 514)">
       <path d="M 20.198020935058594 14.34375 L 48.076927185058594 14.34375 L 48.076927185058594 20.3203125 L 26.701927185058594 20.3203125 L 26.701927185058594 33.1875 C 27.733177185058594 32.8359375 28.764427185058594 32.572265625 29.795677185058594 32.396484375 C 30.826927185058594 32.220703125 31.858177185058594 32.1328125 32.889427185058594 32.1328125 C 38.748802185058594 32.1328125 43.389427185058594 33.73828125 46.811302185058594 36.94921875 C 50.233177185058594 40.16015625 51.944114685058594 44.5078125 51.944114685058594 49.9921875 C 51.944114685058594 55.640625 50.186302185058594 60.029296875 46.670677185058594 63.158203125 C 43.155052185058594 66.287109375 38.198020935058594 67.8515625 31.799583435058594 67.8515625 C 29.596458435058594 67.8515625 27.352317810058594 67.6640625 25.067161560058594 67.2890625 C 22.782005310058594 66.9140625 20.420677185058594 66.3515625 17.983177185058594 65.6015625 L 17.983177185058594 58.46484375 C 20.092552185058594 59.61328125 22.272239685058594 60.46875 24.522239685058594 61.03125 C 26.772239685058594 61.59375 29.151145935058594 61.875 31.658958435058594 61.875 C 35.713645935058594 61.875 38.924583435058594 60.80859375 41.291770935058594 58.67578125 C 43.658958435058594 56.54296875 44.842552185058594 53.6484375 44.842552185058594 49.9921875 C 44.842552185058594 46.3359375 43.658958435058594 43.44140625 41.291770935058594 41.30859375 C 38.924583435058594 39.17578125 35.713645935058594 38.109375 31.658958435058594 38.109375 C 29.760520935058594 38.109375 27.867942810058594 38.3203125 25.981224060058594 38.7421875 C 24.094505310058594 39.1640625 22.166770935058594 39.8203125 20.198020935058594 40.7109375 L 20.198020935058594 14.34375 Z " fill="#000000" shape-rendering="geometricPrecision" />
     </g>
-  </g></svg>
-
-  <g id="guides" fill="none">
-    <rect x="9" y="9" width="180" height="198" stroke="#E6007E" stroke-width="0.4" stroke-dasharray="3 2"/>
-    <rect x="18" y="18" width="162" height="180" stroke="#00AEEF" stroke-width="0.4" stroke-dasharray="3 2"/>
   </g>
 </svg>
