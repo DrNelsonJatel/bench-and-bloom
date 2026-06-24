@@ -11,7 +11,7 @@ export const SITE = {
   author: 'Bench & Bloom',
   locale: 'en_CA',
   description:
-    'Small-batch lavender simple syrup, grown and made on the Naramata Bench. ' +
+    'Small-batch lavender syrup, grown and made on the Naramata Bench. ' +
     'Lavender and butterfly pea flower, steeped and strained, no essential oils and ' +
     'no artificial colour. A natural blue that blooms to pink with a squeeze of citrus.',
   ogImage: '/images/og-default.jpg',
