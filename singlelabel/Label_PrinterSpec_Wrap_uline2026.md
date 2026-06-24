@@ -93,7 +93,7 @@ pilot run.
   can output a print-ready EPS/SVG at the correct magnification).
 
 **Fonts:**
-- **Fraunces** (wordmark + "Lavender Simple Syrup") and **Inter** (everything else). Both free
+- **Fraunces** (wordmark + "Lavender Syrup") and **Inter** (everything else). Both free
   (Google Fonts / SIL OFL). **Outline / vectorise all fonts before sending to print**, or supply the
   font files. The mark, rules, and colour fields are already vector.
 
@@ -127,8 +127,21 @@ The label is built to **Canadian** prepackaged-food rules (SFCR / FDR / CFIA) an
 free **Industry Labelling Tool** (inspection.canada.ca) or a food-labelling consultant. **The French
 copy is a solid draft — have it professionally verified.**
 
+> **French is MANDATORY — do not remove.** Bilingual (EN + FR) labelling of all mandatory
+> information (common name, net quantity, ingredients, Nutrition Facts, storage) is required under the
+> Consumer Packaging and Labelling Act + SFCR for prepackaged consumer food sold **nationally** —
+> which Amazon.ca is. The narrow exemptions (local foods sold only in the producing area, specialty/
+> test-market foods) do **not** apply, and Quebec adds its own French requirements. Removing French
+> would risk CFIA non-compliance and Amazon delisting. (The dealer name/address itself need not be
+> translated beyond "Prepared for / Préparé pour".)
+>
+> **Common name dropped "Simple"** → now **"Lavender Syrup / Sirop à la lavande"** (cleaner/more
+> premium per label-expert feedback). Keep **"simple syrup"** in the Amazon listing title + keywords
+> for search intent. **Civic house number removed** from the address (privacy) — postal code + town +
+> website/email keep it contactable.
+
 **Canada — present on the label:**
-- ✓ Common name, **bilingual**, on the PDP — "Lavender Simple Syrup / Sirop simple à la lavande"
+- ✓ Common name, **bilingual**, on the PDP — "Lavender Syrup / Sirop à la lavande"
 - ✓ **Net quantity** on the PDP in metric — **250 mL** — **[VERIFY type height** for the PDP area]
 - ✓ Ingredient list, **bilingual, descending by weight** — **[VERIFY order against your recipe]**
 - ✓ Nutrition Facts table, **bilingual** — **[VERIFY — currently an ESTIMATE]** (see below)
