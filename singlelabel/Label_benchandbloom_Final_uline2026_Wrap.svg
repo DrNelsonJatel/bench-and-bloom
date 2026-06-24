@@ -28,7 +28,7 @@
   <text x="270" y="116" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-style="italic" font-size="9.5" fill="#5A5266">Sirop simple à la lavande</text>
 
   <text x="270" y="136" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="6.2" fill="#2D2933">Small batch &#183; estate-grown &#183; Naramata Bench</text>
-  <text x="270" y="146" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="6.2" fill="#7A5E28">Lavender + butterfly pea &#183; blooms blue to pink</text>
+  <text x="270" y="146" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="6" fill="#7A5E28">Lavender + butterfly pea &#183; blooms blue to pink with citrus</text>
 
   <!-- net quantity: metric primary (Canada) + US customary (FDA dual-declaration) -->
   <text x="270" y="190" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="12" fill="#2D2933">250 mL (8.45 fl oz)</text>
@@ -72,7 +72,8 @@
   <text x="376" y="122.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">butterfly pea flower (Clitoria ternatea).</text>
   <text x="376" y="129" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Ingrédients :</tspan> Sucre, eau, lavande,</text>
   <text x="376" y="134.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">fleur de pois bleu (Clitoria ternatea).</text>
-  <text x="376" y="141" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#7A5E28">No essential oils. / Sans huiles essentielles.</text>
+  <text x="376" y="140" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#7A5E28">No essential oils, no artificial colour.</text>
+  <text x="376" y="145.5" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#7A5E28">Sans huiles essentielles ni colorant artificiel.</text>
 
   <!-- How to use -->
   <line x1="376" y1="150" x2="518" y2="150" stroke="#C2A05E" stroke-width="0.5"/>
