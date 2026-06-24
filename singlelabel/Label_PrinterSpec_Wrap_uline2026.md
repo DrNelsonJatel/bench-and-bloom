@@ -30,18 +30,21 @@ pilot run.
   dashed verticals mark where the wrap curves front↔back (front panel framed by the gold rules).
   **Delete the `#guides` layer before printing** (or tell the printer they're non-printing).
 
-## Dating & logo (2026 pilot)
+## Dating, logo & extras (2026 pilot)
 - **Front logo** = the official outlined **Bench & Bloom** lockup (sprig + wordmark + descriptor),
-  embedded as vector — the brand name does **not** depend on the Fraunces font.
+  embedded as vector — fully font-independent. The descriptor reads the brand-canonical
+  **"NARAMATA BENCH BOTANICALS"** (regenerated as outlined Inter; the old logo art said
+  "Lavender · Naramata Bench" — now corrected here and in `public/brand/logo-*.svg`).
 - **Best-before convention = 12 months.** Pilot batch: **Packaged 2026 07 01 → Best before 2027 07 01**
   (`YYYY MM DD`, bilingual) + **LOT 2026-001**. Driven by **butterfly-pea colour fade**, not safety
   (high-sugar + hot-fill is shelf-stable far longer); 12 months protects the blue→pink feature. Stamp
   the real packaged/best-before dates + lot per batch.
-- **[VERIFY before print] Descriptor mismatch:** the embedded **logo** descriptor reads
-  **"LAVENDER · NARAMATA BENCH"**, while the **site/`SITE.descriptor`** uses **"Naramata Bench
-  Botanicals"**. The label's back tag was made neutral ("Naramata, BC") so the label itself is
-  consistent, but **the brand still needs one canonical descriptor** — resolve and (if needed)
-  regenerate the logo art before the print run.
+- **Ingredients (4, current product):** sugar, water, lavender (*Lavandula* ×*intermedia* 'Grosso'),
+  butterfly pea flower (*Clitoria ternatea*) — bilingual, descending by weight, binomials italicised.
+  Clean-label trio stated: **no essential oils, no artificial colour, no synthetic flavour.**
+- **QR code** (left wing, beside the UPC) → `benchandbloom.com/recipes/naramata-sunset` (the
+  colour-change signature serve). 33-module symbol with a 4-module quiet zone; keep it ≥ 11 mm square
+  in print and do **not** recolour or crop the quiet zone, or it may not scan.
 
 ## Layout (how it reads on the bottle)
 - **Centre = FRONT / Principal Display Panel:** sprig mark, "Bench & Bloom", descriptor, common name
