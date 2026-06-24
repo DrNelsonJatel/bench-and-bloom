@@ -30,6 +30,19 @@ pilot run.
   dashed verticals mark where the wrap curves front↔back (front panel framed by the gold rules).
   **Delete the `#guides` layer before printing** (or tell the printer they're non-printing).
 
+## Dating & logo (2026 pilot)
+- **Front logo** = the official outlined **Bench & Bloom** lockup (sprig + wordmark + descriptor),
+  embedded as vector — the brand name does **not** depend on the Fraunces font.
+- **Best-before convention = 12 months.** Pilot batch: **Packaged 2026 07 01 → Best before 2027 07 01**
+  (`YYYY MM DD`, bilingual) + **LOT 2026-001**. Driven by **butterfly-pea colour fade**, not safety
+  (high-sugar + hot-fill is shelf-stable far longer); 12 months protects the blue→pink feature. Stamp
+  the real packaged/best-before dates + lot per batch.
+- **[VERIFY before print] Descriptor mismatch:** the embedded **logo** descriptor reads
+  **"LAVENDER · NARAMATA BENCH"**, while the **site/`SITE.descriptor`** uses **"Naramata Bench
+  Botanicals"**. The label's back tag was made neutral ("Naramata, BC") so the label itself is
+  consistent, but **the brand still needs one canonical descriptor** — resolve and (if needed)
+  regenerate the logo art before the print run.
+
 ## Layout (how it reads on the bottle)
 - **Centre = FRONT / Principal Display Panel:** sprig mark, "Bench & Bloom", descriptor, common name
   (EN + FR), tasting line, net quantity. Framed by two thin gold rules.
