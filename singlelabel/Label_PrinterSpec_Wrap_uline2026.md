@@ -51,7 +51,7 @@ pilot run.
   (EN + FR), tasting line, net quantity. Framed by two thin gold rules.
 - **Right wing → curves to the back:** Nutrition Facts, ingredients (EN/FR), how to use.
 - **Left wing → curves to the back:** provenance story, best-before/lot, "Prepared for" address,
-  website, Product of Canada, **UPC barcode**.
+  website, Product of Canada, **UPC barcode + QR code** (QR → the colour-change recipe).
 - The two wings meet at the **rear seam/window**. Orient the bottle PDP-forward when applying.
 
 ---
@@ -136,9 +136,10 @@ copy is a solid draft — have it professionally verified.**
 > translated beyond "Prepared for / Préparé pour".)
 >
 > **Common name dropped "Simple"** → now **"Lavender Syrup / Sirop à la lavande"** (cleaner/more
-> premium per label-expert feedback). Keep **"simple syrup"** in the Amazon listing title + keywords
-> for search intent. **Civic house number removed** from the address (privacy) — postal code + town +
-> website/email keep it contactable.
+> premium per label-expert feedback), aligned across the label and the website. The Amazon listing
+> **title** aligns to **"Lavender Syrup"** too; keep **"lavender simple syrup"** only in the Amazon
+> **backend search keywords** (invisible to shoppers) to retain search intent. **Civic house number
+> removed** from the address (privacy) — postal code + town + website/email keep it contactable.
 
 **Canada — present on the label:**
 - ✓ Common name, **bilingual**, on the PDP — "Lavender Syrup / Sirop à la lavande"
