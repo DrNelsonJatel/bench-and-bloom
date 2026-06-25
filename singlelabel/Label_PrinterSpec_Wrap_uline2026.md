@@ -195,7 +195,19 @@ once you give me the recipe.
 - [ ] Print one, **wrap a real bottle**, check the 0.21″ window sits where you want it and the panel
       clears the shrink band
 
+## Ordering (read before you upload)
+- **Send the printer:** `Label_benchandbloom_PRINTREADY_uline2026.svg` — **guides removed, all fonts
+  outlined** (Fraunces + Inter → vector), so nothing prints wrong and no font needs supplying.
+- **Set the FINISHED / die-cut size to `7.25in × 2.75in`.** The file is `7.5in × 3.0in` because that
+  **includes the 0.125in bleed** — it is **not** the finished size. If you enter 7.5×3.0 as the
+  finished size the label comes out too big (over-wraps the 7.46in bottle, too tall for the 3.125in
+  panel). Tell the printer: *finished 7.25×2.75, artwork 7.5×3.0 with 0.125in bleed, cut centred.*
+- **Do NOT order off the `.png`** — the preview PNGs still show the guide lines and are raster.
+- Quantity: order ~2× your bottle count (hand-application wastes a few).
+
 ## Files in this folder
-- `Label_benchandbloom_Final_uline2026_Wrap.svg` — **the print master** (vector)
-- `Label_benchandbloom_Final_uline2026_Wrap.png` / `.jpg` — previews only
-- `Label_PrinterSpec_Wrap_uline2026.md` — this spec
+- `Label_benchandbloom_PRINTREADY_uline2026.svg` — **SEND THIS TO THE PRINTER** (guides removed, fonts outlined, vector)
+- `Label_benchandbloom_PRINTREADY_uline2026_600dpi.png` — 600-dpi raster backup (correct fonts, no guides)
+- `Label_benchandbloom_Final_uline2026_Wrap.svg` — **editable master** (keeps text + guides; edit here, then re-export press-ready)
+- `Label_benchandbloom_Final_uline2026_Wrap.png` / `.jpg` — previews only (show guides — not for print)
+- `Label_PrinterSpec_Wrap_uline2026.md` / `.pdf` — this spec
