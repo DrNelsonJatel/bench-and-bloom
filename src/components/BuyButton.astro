@@ -1,14 +1,14 @@
 ---
-// One place for the Amazon CTA. While AMAZON_URL is empty it renders a
-// non-clickable "coming soon" state, so no page ever ships a dead link.
-import { AMAZON_URL } from '../consts';
+// One place for the store CTA. While AMAZON_URL is empty it renders a
+// non-clickable availability line, so no page ever ships a dead link.
+import { AMAZON_URL, AVAILABILITY } from '../consts';
 
 interface Props {
   label?: string;
   soon?: string;
   block?: boolean;
 }
-const { label = 'Buy on Amazon.ca', soon = 'Coming soon on Amazon.ca', block = false } = Astro.props;
+const { label = 'Buy now', soon = AVAILABILITY, block = false } = Astro.props;
 const cls = block ? 'btn btn-primary' : 'btn btn-primary';
 ---
 {AMAZON_URL

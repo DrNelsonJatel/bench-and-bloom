@@ -24,6 +24,10 @@ export const CLOSER = 'Made on the Naramata Bench.';
 // a broken link, so nothing ships half-finished.
 export const AMAZON_URL = '';
 
+// Boutique availability line shown wherever the store link isn't live yet.
+// When AMAZON_URL is set, the same "Buy now" button links to the store.
+export const AVAILABILITY = 'Summer harvest, available mid-July';
+
 // Primary navigation (real routes, Phase 1).
 export const NAV = [
   { href: '/syrup', label: 'The Syrup' },
@@ -58,6 +62,6 @@ export const EMAIL_CAPTURE = {
   enabled: true,
   heading: 'Be first to pour it.',
   prompt:
-    'We are launching a small first batch on Amazon.ca this season. Leave your ' +
+    'We are launching a small first batch this season. Leave your ' +
     'email for the launch date and a free lavender cocktail recipe card.',
 } as const;

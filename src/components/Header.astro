@@ -15,8 +15,8 @@ import { SITE, NAV, AMAZON_URL } from '../consts';
     <nav class="site-nav" id="primary-nav" aria-label="Primary">
       {NAV.map((item) => <a href={item.href}>{item.label}</a>)}
       {AMAZON_URL
-        ? <a class="btn btn-primary btn-sm" href={AMAZON_URL} target="_blank" rel="noopener">Buy on Amazon</a>
-        : <span class="soon">Coming soon on Amazon.ca</span>}
+        ? <a class="btn btn-primary btn-sm" href={AMAZON_URL} target="_blank" rel="noopener">Buy now</a>
+        : <span class="soon">Available mid-July</span>}
     </nav>
   </div>
 </header>
