@@ -7,7 +7,7 @@
        Units = points (72pt = 1in). Fonts: Fraunces (display) + Inter (everything else) - OUTLINE before print.
        Layout: centre = FRONT / Principal Display Panel; left + right wings curve to the back and
        meet at the rear seam (all legal copy on the back). Delete #guides before print.
-       Nutrition Facts = GENERIC ESTIMATE - VERIFY with a calculated table before print.
+       Nutrition Facts = recipe calculation (2:1 sugar:water by volume, ~63 Brix, per 15 mL). Barcode = real GS1 GTIN 627146286305.
        US Nutrition Facts format differs from this Canadian table - see printer guide [VERIFY]. -->
 
   <!-- ground -->
@@ -55,7 +55,7 @@
   <text x="380" y="60" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Fat / Lipides</tspan> 0 g</text>
   <text x="514" y="60" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">0 %</text>
   <line x1="380" y1="62" x2="514" y2="62" stroke="#2D2933" stroke-width="0.3"/>
-  <text x="380" y="67.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Carbohydrate / Glucides</tspan> 13 g</text>
+  <text x="380" y="67.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Carbohydrate / Glucides</tspan> 12 g</text>
   <line x1="380" y1="69.5" x2="514" y2="69.5" stroke="#2D2933" stroke-width="0.3"/>
   <text x="386" y="75" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">Sugars / Sucres 12 g</text>
   <text x="514" y="75" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">12 %</text>

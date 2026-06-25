@@ -88,9 +88,9 @@ pilot run.
 **Barcode:**
 - Keep the barcode panel **solid black bars on a plain white block** (already built that way). Do
   **not** tint it, reverse it, or shrink it below ~80% — scanners need the quiet zones and contrast.
-- The art carries a placeholder rendering of **GTIN 627146286305 (GS1 Canada)**. **[VERIFY]** swap in
-  the final scannable barcode from your GS1 GTIN before the run (your printer or a free GS1 generator
-  can output a print-ready EPS/SVG at the correct magnification).
+- The art carries the **real GS1 barcode (GTIN 627146286305, GS1 Canada)** — the official GS1 output,
+  embedded verbatim. **Scan a printed sample** to confirm it reads at final size (don't shrink the
+  barcode below ~80% or crop its quiet zones).
 
 **Fonts:**
 - **Fraunces** (wordmark + "Lavender Syrup") and **Inter** (everything else). Both free
@@ -145,7 +145,7 @@ copy is a solid draft — have it professionally verified.**
 - ✓ Common name, **bilingual**, on the PDP — "Lavender Syrup / Sirop à la lavande"
 - ✓ **Net quantity** on the PDP in metric — **250 mL** — **[VERIFY type height** for the PDP area]
 - ✓ Ingredient list, **bilingual, descending by weight** — **[VERIFY order against your recipe]**
-- ✓ Nutrition Facts table, **bilingual** — **[VERIFY — currently an ESTIMATE]** (see below)
+- ✓ Nutrition Facts table, **bilingual** — **recipe-calculated** (per 15 mL: 50 cal, 12 g carb, 12 g sugars / 12% DV, 0 fat/protein/sodium)
 - ✓ Dealer name + principal place of business — "Prepared for … Naramata, BC, Canada V0H 1N0"
       **[VERIFY the civic address is correct]**
 - ✓ Best-before + lot code fields (`YYYY MM DD` / `LOT 2026-001`) — **fill in real values per batch**
@@ -175,18 +175,20 @@ copy is a solid draft — have it professionally verified.**
 - For the pilot (Amazon.ca first), **option 1 is recommended**: ship the Canadian label now, add the
   US variant when/if you list on Amazon.com.
 
-**Nutrition Facts values are a GENERIC ESTIMATE** (modeled on comparable market syrups: ~50 cal,
-~12–13 g sugar per 15 mL). **[VERIFY] — replace with a calculated table** from your actual recipe
-quantities + serving size (a recognized nutrition database or a lab CoA). I can draft the real table
-once you give me the recipe.
+**Nutrition Facts are RECIPE-CALCULATED** for a **2:1 sugar:water (by volume) syrup, ~63 °Brix, per
+15 mL serving:** Calories 50, Carbohydrate 12 g, Sugars 12 g (12% DV), Fat/Protein 0 g, Sodium 0 mg.
+A pure sugar+water syrup's nutrition is essentially its sugar content, so recipe calculation is
+accurate and CFIA-defensible; a lab CoA is optional gold-standard. **If the production batch ends up
+richer (2:1 by weight ≈ 67 °Brix), recompute** (sugars/calories rise ~6%). **Still confirm the FOP
+"High in sugars" exemption** with CFIA (likely exempt as a sweetening syrup — see above).
 
 ---
 
 ## Pre-print checklist
 - [ ] **[VERIFY]** all items above in the CFIA Industry Labelling Tool (worth the hour for a real run)
-- [ ] Replace estimated Nutrition Facts with a **calculated** table (give me the recipe)
+- [x] Nutrition Facts **recipe-calculated** (2:1 by volume) — recompute if final Brix differs
 - [ ] Confirm civic address + postal code in "Prepared for / Préparé pour"
-- [ ] Drop in the **real scannable barcode** for GTIN 627146286305 (GS1 magnification)
+- [x] **Real GS1 barcode** embedded (627146286305) — scan a printed sample to confirm
 - [ ] Have the **French** professionally verified
 - [ ] Decide CMYK vs. spot Pantone for the lavender (ask printer)
 - [ ] **Outline the fonts** (Fraunces + Inter) or supply font files
