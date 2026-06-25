@@ -151,10 +151,13 @@ copy is a solid draft — have it professionally verified.**
 - ✓ Best-before + lot code fields (`YYYY MM DD` / `LOT 2026-001`) — **fill in real values per batch**
 - ✓ Allergens: sugar/water/lavender/butterfly-pea carry **no priority allergens** → no "Contains"
       line. **[VERIFY]** add "may contain" **only if** shared-equipment cross-contact is real.
-- **[VERIFY] Front-of-pack "High in sugars / Élevé en sucres" symbol** — mandatory since Jan 1 2026
-      over the sugar threshold; sugars/syrups *may* be exempt, but a flavoured lavender syrup is a
-      grey area. **Confirm with CFIA before printing** — if it applies, the symbol goes top-right of
-      the PDP and the layout will need a small adjustment.
+- ⚠️ **Front-of-pack "High in sugars / Élevé en sucres" symbol — REQUIRED, but OMITTED for the 2026
+      pilot by owner decision (known compliance gap).** A **flavoured** syrup loses the sweetening-agent
+      exemption (FDR **B.01.350(5)** — "flavoured syrups" are the named example), and sugars run ~49% DV
+      per the 60 mL syrup reference amount vs the 15% trigger. So the symbol is legally required for
+      retail sale on Amazon.ca. **Deliberately left off for the small proof run; ADD before scaling /
+      a full retail push.** When added, it goes top-right of the front panel at HC's prescribed min
+      size and the front layout is reworked to fit. (NB: US competitors don't show it — it's a Canadian rule.)
 
 **United States (FDA) — if you also sell on Amazon.com:**
 - ✓ **Net quantity is dual-declared** on the PDP — **"250 mL (8.45 fl oz)"** — satisfies FDA's
@@ -180,7 +183,8 @@ copy is a solid draft — have it professionally verified.**
 A pure sugar+water syrup's nutrition is essentially its sugar content, so recipe calculation is
 accurate and CFIA-defensible; a lab CoA is optional gold-standard. **If the production batch ends up
 richer (2:1 by weight ≈ 67 °Brix), recompute** (sugars/calories rise ~6%). **Still confirm the FOP
-"High in sugars" exemption** with CFIA (likely exempt as a sweetening syrup — see above).
+"High in sugars" symbol** is **REQUIRED** for retail (flavoured syrup, not exempt) — see the
+front-of-pack note above; intentionally omitted for the pilot, add before scale.
 
 ---
 
