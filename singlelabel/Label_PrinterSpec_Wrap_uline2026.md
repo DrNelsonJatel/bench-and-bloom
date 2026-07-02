@@ -203,7 +203,7 @@ richer, recompute** — and note the FOP "High in sugars" symbol returns above ~
 - [ ] **[VERIFY]** all items above in the CFIA Industry Labelling Tool (worth the hour for a real run)
 - [x] Nutrition Facts **recipe-calculated** (1:5 by volume, ~14.5 °Brix) — recompute if final Brix differs
 - [ ] **"Keep refrigerated"** storage statement present + best-before ≤ ~3 months (refrigerated product)
-- [ ] **Re-export print derivatives** (`PRINTREADY.svg` outlined + `.png`/`.jpg`) from the updated Wrap master — the committed renders still show the OLD 50 cal / 12 g values until re-exported
+- [x] **Print derivatives re-exported (2026-07-02):** print-ready PDF (`Label_benchandbloom_Wrap_PRINTREADY_uline2026.pdf`, 7.5×3in, Inter+Fraunces embedded, guides removed) + 600dpi PNG + self-contained SVG + refreshed previews — all show the new 10 cal / 2 g / "Keep refrigerated" / water-first values (visually verified). Send the **PDF** to the printer. See `PRINT_FILES_STATUS.md`. (The separate `Label_PrinterSpec_Wrap_uline2026.pdf` spec-doc render is still old text; the `.md` is authoritative.)
 - [ ] Confirm civic address + postal code in "Prepared for / Préparé pour"
 - [x] **Real GS1 barcode** embedded (627146286305) — scan a printed sample to confirm
 - [ ] Have the **French** professionally verified
