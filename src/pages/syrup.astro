@@ -21,7 +21,7 @@ const productLd = {
 };
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} heroImage="/images/lavender-closeup.jpg">
   <section class="hero hero--photo" style="--hero-img:url('/images/lavender-closeup.jpg')">
     <div class="wrap hero__inner">
       <p class="eyebrow">{SITE.descriptor}</p>
@@ -52,7 +52,7 @@ const productLd = {
         would simply disappear.
       </p>
     </div>
-    <img class="media" src="/images/lavender-bundle-lake.jpg" width="1125" height="1500"
+    <img class="media" loading="lazy" decoding="async" src="/images/lavender-bundle-lake.jpg" width="1125" height="1500"
       loading="lazy" decoding="async"
       alt="A freshly cut bundle of Grosso lavender on the deck, Okanagan Lake in the distance" />
   </section>

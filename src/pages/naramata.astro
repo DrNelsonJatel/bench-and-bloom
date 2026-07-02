@@ -51,7 +51,7 @@ const gallery = [
 ];
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} heroImage="/images/farm-bench-sky.jpg">
   <section class="hero hero--photo" style="--hero-img:url('/images/farm-bench-sky.jpg')">
     <div class="wrap hero__inner">
       <p class="eyebrow">{SITE.descriptor}</p>
@@ -64,7 +64,7 @@ const gallery = [
   </section>
 
   <section class="section wrap split">
-    <img class="media" src="/images/vineyard-lake.jpg" width="1500" height="1125"
+    <img class="media" loading="lazy" decoding="async" src="/images/vineyard-lake.jpg" width="1500" height="1125"
       loading="lazy" decoding="async"
       alt="Vineyard on the Naramata Bench above the blue of Okanagan Lake, with the hills behind" />
     <div>
@@ -122,7 +122,7 @@ const gallery = [
     <div class="gallery">
       {gallery.map((g) => (
         <figure class="gallery__item">
-          <img class="media" src={g.src} width={g.w} height={g.h}
+          <img class="media" loading="lazy" decoding="async" src={g.src} width={g.w} height={g.h}
             loading="lazy" decoding="async" alt={g.alt} />
           <figcaption>{g.caption}</figcaption>
         </figure>

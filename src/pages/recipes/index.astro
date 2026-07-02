@@ -29,7 +29,7 @@ const description =
   'Add citrus and watch it bloom from blue to pink.';
 ---
 
-<Base title={title} description={description}>
+<Base title={title} description={description} heroImage="/images/lavender-bees.jpg">
   <section class="hero hero--photo" style="--hero-img:url('/images/lavender-bees.jpg')">
     <div class="wrap hero__inner">
       <p class="eyebrow">Mix it</p>
@@ -50,7 +50,7 @@ const description =
           <p>{anchor.data.description}</p>
           <span class="feature__link">Read the how-to</span>
         </div>
-        <img class="media" src="/images/harvest-field.jpg" width="1400" height="1050"
+        <img class="media" loading="lazy" decoding="async" src="/images/harvest-field.jpg" width="1400" height="1050"
           loading="lazy" decoding="async"
           alt="Cut lavender hauled from the field, on its way to becoming syrup" />
       </a>

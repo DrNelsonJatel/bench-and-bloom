@@ -18,6 +18,7 @@ interface Props {
   description?: string;
   image?: string;
   noindex?: boolean;
+  heroImage?: string;
 }
 
 const {
@@ -25,6 +26,7 @@ const {
   description = SITE.description,
   image = SITE.ogImage,
   noindex = false,
+  heroImage,
 } = Astro.props;
 
 const pageTitle = title ? `${title} · ${SITE.title}` : `${SITE.title} · ${SITE.descriptor}`;
@@ -61,6 +63,9 @@ const businessLd = {
     <link rel="canonical" href={canonical} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
 
+    {/* Preload the LCP hero image (CSS background heroes are discovered late) */}
+    {heroImage && <link rel="preload" as="image" href={heroImage} fetchpriority="high" />}
+
     <meta name="theme-color" content="#5A4A78" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="/favicon.ico" sizes="any" />
@@ -77,6 +82,8 @@ const businessLd = {
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     {ogImageUrl && <meta property="og:image" content={ogImageUrl} />}
+    {ogImageUrl && <meta property="og:image:width" content="1200" />}
+    {ogImageUrl && <meta property="og:image:height" content="630" />}
     <meta property="og:locale" content={SITE.locale} />
 
     <!-- Twitter -->
