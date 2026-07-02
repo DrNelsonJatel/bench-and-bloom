@@ -19,10 +19,10 @@ fonts embedded, print guides removed. Visually verified.
 - `Label_benchandbloom_Final_uline2026_Wrap.png` / `.jpg` — refreshed preview renders.
 - `Label_PrinterSpec_Wrap_uline2026.md` — the spec (authoritative, current).
 
-## ⚠️ One stale convenience file (not the art)
-- `Label_PrinterSpec_Wrap_uline2026.pdf` — a June-25 PDF *render of the spec document* (not the
-  label). Still shows old nutrition text. The **`.md` is authoritative and current**; regenerate
-  or ignore this PDF. Harmless as long as you send the label PDF above, not this.
+## ✅ Spec document
+- `Label_PrinterSpec_Wrap_uline2026.md` — authoritative source.
+- `Label_PrinterSpec_Wrap_uline2026.pdf` — regenerated 2026-07-02 from the `.md`
+  (pandoc gfm → HTML → Chrome print-to-PDF, US Letter, 8pp). Now current.
 
 ## Verified label content (per 15 mL)
 Calories 10 · Carbohydrate 2 g · Sugars 2 g (2% DV) · Fat/Protein/Sodium 0 ·
