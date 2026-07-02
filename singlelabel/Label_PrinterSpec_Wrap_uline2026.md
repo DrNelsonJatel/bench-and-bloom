@@ -35,12 +35,16 @@ pilot run.
   embedded as vector — fully font-independent. The descriptor reads the brand-canonical
   **"NARAMATA BENCH BOTANICALS"** (regenerated as outlined Inter; the old logo art said
   "Lavender · Naramata Bench" — now corrected here and in `public/brand/logo-*.svg`).
-- **Best-before convention = 12 months.** Pilot batch: **Packaged 2026 07 01 → Best before 2027 07 01**
-  (`YYYY MM DD`, bilingual) + **LOT 2026-001**. Driven by **butterfly-pea colour fade**, not safety
-  (high-sugar + hot-fill is shelf-stable far longer); 12 months protects the blue→pink feature. Stamp
-  the real packaged/best-before dates + lot per batch.
-- **Ingredients (4, current product):** sugar, water, lavender (*Lavandula* ×*intermedia* 'Grosso'),
+- **Best-before convention = ~3 months, REFRIGERATED.** Pilot batch: **Packaged 2026 07 01 → Best
+  before 2026 10 01** (`YYYY MM DD`, bilingual) + **LOT 2026-001**. This is a **low-sugar (~14.5 °Brix,
+  1:5 sugar:water) refrigerated product** — it is **NOT shelf-stable** (a_w ≈ 0.98). Sugar is far below
+  preservation strength (~65 °Brix needed), so the label carries **"Keep refrigerated / Garder au
+  froid"** and a short dated life. Preservation relies on **hot-fill + clean bottles + refrigeration**,
+  not sugar. Both colour fade and food safety favour a short, cold shelf life. Stamp the real
+  packaged/best-before dates + lot per batch.
+- **Ingredients (4, current product):** water, sugar, lavender (*Lavandula* ×*intermedia* 'Grosso'),
   butterfly pea flower (*Clitoria ternatea*) — bilingual, descending by weight, binomials italicised.
+  (At 1:5 **water is the largest component**, so it now leads the list.)
   Clean-label trio stated: **no essential oils, no artificial colour, no synthetic flavour.**
 - **QR code** (left wing, beside the UPC) → `benchandbloom.com/recipes/naramata-sunset` (the
   colour-change signature serve). 33-module symbol with a 4-module quiet zone; keep it ≥ 11 mm square
@@ -145,19 +149,18 @@ copy is a solid draft — have it professionally verified.**
 - ✓ Common name, **bilingual**, on the PDP — "Lavender Syrup / Sirop à la lavande"
 - ✓ **Net quantity** on the PDP in metric — **250 mL** — **[VERIFY type height** for the PDP area]
 - ✓ Ingredient list, **bilingual, descending by weight** — **[VERIFY order against your recipe]**
-- ✓ Nutrition Facts table, **bilingual** — **recipe-calculated** (per 15 mL: 50 cal, 12 g carb, 12 g sugars / 12% DV, 0 fat/protein/sodium)
+- ✓ Nutrition Facts table, **bilingual** — **recipe-calculated** (per 15 mL: 10 cal, 2 g carb, 2 g sugars / 2% DV, 0 fat/protein/sodium)
 - ✓ Dealer name + principal place of business — "Prepared for … Naramata, BC, Canada V0H 1N0"
       **[VERIFY the civic address is correct]**
 - ✓ Best-before + lot code fields (`YYYY MM DD` / `LOT 2026-001`) — **fill in real values per batch**
 - ✓ Allergens: sugar/water/lavender/butterfly-pea carry **no priority allergens** → no "Contains"
       line. **[VERIFY]** add "may contain" **only if** shared-equipment cross-contact is real.
-- ⚠️ **Front-of-pack "High in sugars / Élevé en sucres" symbol — REQUIRED, but OMITTED for the 2026
-      pilot by owner decision (known compliance gap).** A **flavoured** syrup loses the sweetening-agent
-      exemption (FDR **B.01.350(5)** — "flavoured syrups" are the named example), and sugars run ~49% DV
-      per the 60 mL syrup reference amount vs the 15% trigger. So the symbol is legally required for
-      retail sale on Amazon.ca. **Deliberately left off for the small proof run; ADD before scaling /
-      a full retail push.** When added, it goes top-right of the front panel at HC's prescribed min
-      size and the front layout is reworked to fit. (NB: US competitors don't show it — it's a Canadian rule.)
+- ✓ **Front-of-pack "High in sugars / Élevé en sucres" symbol — NOT REQUIRED for this low-sugar
+      formulation.** At ~2 g sugars / 15 mL the 60 mL syrup reference amount carries **~8 g sugars ≈ 8%
+      DV**, below the **15% DV** FOP trigger — so the symbol is **not** required and is correctly absent.
+      (This resolves the earlier compliance gap: the old ~63 °Brix recipe ran ~49% DV and *would* have
+      required it; the 1:5 reformulation removes the trigger entirely.) **Recheck if the recipe is ever
+      made richer** — the trigger returns above ~3.75 g sugars / 15 mL (≈15 g / 60 mL).
 
 **United States (FDA) — if you also sell on Amazon.com:**
 - ✓ **Net quantity is dual-declared** on the PDP — **"250 mL (8.45 fl oz)"** — satisfies FDA's
@@ -178,19 +181,29 @@ copy is a solid draft — have it professionally verified.**
 - For the pilot (Amazon.ca first), **option 1 is recommended**: ship the Canadian label now, add the
   US variant when/if you list on Amazon.com.
 
-**Nutrition Facts are RECIPE-CALCULATED** for a **2:1 sugar:water (by volume) syrup, ~63 °Brix, per
-15 mL serving:** Calories 50, Carbohydrate 12 g, Sugars 12 g (12% DV), Fat/Protein 0 g, Sodium 0 mg.
-A pure sugar+water syrup's nutrition is essentially its sugar content, so recipe calculation is
-accurate and CFIA-defensible; a lab CoA is optional gold-standard. **If the production batch ends up
-richer (2:1 by weight ≈ 67 °Brix), recompute** (sugars/calories rise ~6%). **Still confirm the FOP
-"High in sugars" symbol** is **REQUIRED** for retail (flavoured syrup, not exempt) — see the
-front-of-pack note above; intentionally omitted for the pilot, add before scale.
+**Nutrition Facts are RECIPE-CALCULATED** for a **1:5 sugar:water (by volume), ~14.5 °Brix,
+refrigerated product, per 15 mL serving:** Calories 10, Carbohydrate 2 g, Sugars 2 g (2% DV),
+Fat/Protein 0 g, Sodium 0 mg. Basis: 1 cup sugar (~200 g) : 5 cups water (~1,183 g) → ~14.5% sugar by
+mass, ~0.153 g sugar/mL, so 15 mL ≈ 2.3 g sugars → rounds to 2 g / 10 cal under CFIA rounding rules.
+A pure sugar+water solution's nutrition is essentially its sugar content, so recipe calculation is
+accurate and CFIA-defensible; a lab CoA is optional gold-standard. **If the recipe is ever made
+richer, recompute** — and note the FOP "High in sugars" symbol returns above ~3.75 g sugars / 15 mL.
+
+> ⚠️ **FOOD SAFETY — this is a refrigerated, NOT shelf-stable product.** At ~14.5 °Brix water activity
+> is ~0.98, far above the ~0.85 (≥65 °Brix) needed for sugar to preserve. Sugar-alone shelf stability
+> would need ~11 cups sugar : 5 cups water. This recipe is preserved by **hot-fill (~85 °C) + sanitized
+> bottles + refrigeration + short (~3-month) dated life**, and the label states **"Keep refrigerated."**
+> Do **not** print any "shelf-stable"/ambient-storage claim, and note this is **not** a warehouse-FBA
+> ambient product without a preservation redesign (acidify + sorbate/benzoate, which would turn the
+> butterfly-pea colour pink, or go to ≥65 °Brix).
 
 ---
 
 ## Pre-print checklist
 - [ ] **[VERIFY]** all items above in the CFIA Industry Labelling Tool (worth the hour for a real run)
-- [x] Nutrition Facts **recipe-calculated** (2:1 by volume) — recompute if final Brix differs
+- [x] Nutrition Facts **recipe-calculated** (1:5 by volume, ~14.5 °Brix) — recompute if final Brix differs
+- [ ] **"Keep refrigerated"** storage statement present + best-before ≤ ~3 months (refrigerated product)
+- [ ] **Re-export print derivatives** (`PRINTREADY.svg` outlined + `.png`/`.jpg`) from the updated Wrap master — the committed renders still show the OLD 50 cal / 12 g values until re-exported
 - [ ] Confirm civic address + postal code in "Prepared for / Préparé pour"
 - [x] **Real GS1 barcode** embedded (627146286305) — scan a printed sample to confirm
 - [ ] Have the **French** professionally verified

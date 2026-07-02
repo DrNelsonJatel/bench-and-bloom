@@ -43,7 +43,7 @@ Hand this, plus the two SVGs, to the label printer (StickerYou / Jukebox / Avery
 ## Before you print — [VERIFY] with CFIA Industry Labelling Tool (free)
 - Nutrition Facts table (placeholder box on back) — likely required; may qualify for the small-supplier
   exemption. If required, insert the calculated table (per 15 mL serving).
-- Front-of-pack "High in sugars / Élevé en sucres" symbol — confirm whether it applies.
+- Front-of-pack "High in sugars / Élevé en sucres" symbol — **NOT required** for the low-sugar 1:5 (~14.5 °Brix) recipe (~8% DV per 60 mL, below the 15% trigger).
 - French copy professionally verified (it is draft here).
 - Real civic address filled into "Prepared for / Préparé pour".
 - UPC barcode placed in the box (needed for Amazon FBA).

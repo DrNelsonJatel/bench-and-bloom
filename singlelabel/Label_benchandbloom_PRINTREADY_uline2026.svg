@@ -8,7 +8,11 @@
        Units = points (72pt = 1in). Fonts: Fraunces (display) + Inter (everything else) - OUTLINE before print.
        Layout: centre = FRONT / Principal Display Panel; left + right wings curve to the back and
        meet at the rear seam (all legal copy on the back). Delete #guides before print.
-       Nutrition Facts = recipe calculation (2:1 sugar:water by volume, ~63 Brix, per 15 mL). Barcode = real GS1 GTIN 627146286305.
+       ⚠️ STALE — re-export needed. This outlined print file still shows the OLD nutrition (50 cal / 12 g
+       sugars) and "Refrigerate after opening". The editable master Label_benchandbloom_Final_uline2026_Wrap.svg
+       has been updated to the 1:5 (~14.5 Brix) REFRIGERATED recipe: 10 cal / 2 g sugars, "Keep refrigerated",
+       ingredients water-first, best-before ~3 months. Re-export this outlined SVG + the .png/.jpg from that
+       master (Inkscape: Path > Object to Path) before sending to the printer. Barcode = real GS1 GTIN 627146286305.
        US Nutrition Facts format differs from this Canadian table - see printer guide [VERIFY]. -->
 
   <!-- ground -->

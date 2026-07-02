@@ -7,7 +7,7 @@
        Units = points (72pt = 1in). Fonts: Fraunces (display) + Inter (everything else) - OUTLINE before print.
        Layout: centre = FRONT / Principal Display Panel; left + right wings curve to the back and
        meet at the rear seam (all legal copy on the back). Delete #guides before print.
-       Nutrition Facts = recipe calculation (2:1 sugar:water by volume, ~63 Brix, per 15 mL). Barcode = real GS1 GTIN 627146286305.
+       Nutrition Facts = recipe calculation (1:5 sugar:water by volume, ~14.5 Brix, refrigerated product, per 15 mL). Barcode = real GS1 GTIN 627146286305.
        US Nutrition Facts format differs from this Canadian table - see printer guide [VERIFY]. -->
 
   <!-- ground -->
@@ -49,16 +49,16 @@
   <text x="380" y="38.5" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="5.4" fill="#2D2933">Valeur nutritive</text>
   <text x="380" y="44" font-family="Inter, Arial, sans-serif" font-size="4" fill="#2D2933">Per 15 mL (1 tbsp) / pour 15 mL (1 c. à soupe)</text>
   <line x1="380" y1="46" x2="514" y2="46" stroke="#2D2933" stroke-width="0.4"/>
-  <text x="380" y="52" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="6" fill="#2D2933">Calories 50</text>
+  <text x="380" y="52" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="6" fill="#2D2933">Calories 10</text>
   <text x="514" y="51" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="3.8" fill="#2D2933">% Daily Value* / % valeur quotidienne*</text>
   <line x1="380" y1="54.5" x2="514" y2="54.5" stroke="#2D2933" stroke-width="1.6"/>
   <text x="380" y="60" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Fat / Lipides</tspan> 0 g</text>
   <text x="514" y="60" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">0 %</text>
   <line x1="380" y1="62" x2="514" y2="62" stroke="#2D2933" stroke-width="0.3"/>
-  <text x="380" y="67.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Carbohydrate / Glucides</tspan> 12 g</text>
+  <text x="380" y="67.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Carbohydrate / Glucides</tspan> 2 g</text>
   <line x1="380" y1="69.5" x2="514" y2="69.5" stroke="#2D2933" stroke-width="0.3"/>
-  <text x="386" y="75" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">Sugars / Sucres 12 g</text>
-  <text x="514" y="75" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">12 %</text>
+  <text x="386" y="75" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">Sugars / Sucres 2 g</text>
+  <text x="514" y="75" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">2 %</text>
   <line x1="380" y1="77" x2="514" y2="77" stroke="#2D2933" stroke-width="0.3"/>
   <text x="380" y="82.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Protein / Protéines</tspan> 0 g</text>
   <line x1="380" y1="84.5" x2="514" y2="84.5" stroke="#2D2933" stroke-width="0.3"/>
@@ -69,10 +69,10 @@
   <text x="380" y="102.5" font-family="Inter, Arial, sans-serif" font-size="3.8" fill="#2D2933">*5% ou moins c'est peu, 15% ou plus c'est beaucoup</text>
 
   <!-- Ingredients (bilingual; descending by weight) -->
-  <text x="376" y="116" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Ingredients:</tspan> Sugar, water, lavender</text>
+  <text x="376" y="116" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Ingredients:</tspan> Water, sugar, lavender</text>
   <text x="376" y="120.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">(<tspan font-style="italic">Lavandula &#215;intermedia</tspan> 'Grosso'), butterfly pea</text>
   <text x="376" y="125" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">flower (<tspan font-style="italic">Clitoria ternatea</tspan>).</text>
-  <text x="376" y="130.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Ingrédients :</tspan> Sucre, eau, lavande, fleur de</text>
+  <text x="376" y="130.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933"><tspan font-weight="600">Ingrédients :</tspan> Eau, sucre, lavande, fleur de</text>
   <text x="376" y="135" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">pois bleu (<tspan font-style="italic">Clitoria ternatea</tspan>).</text>
   <text x="376" y="140.5" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#7A5E28">No essential oils, no artificial colour.</text>
   <text x="376" y="145" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#7A5E28">Sans huiles essentielles ni colorant artificiel.</text>
@@ -81,8 +81,8 @@
   <line x1="376" y1="150" x2="518" y2="150" stroke="#C2A05E" stroke-width="0.5"/>
   <text x="376" y="159" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#2D2933">Stir into gin, vodka or sparkling cocktails, or soda.</text>
   <text x="376" y="165" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#5A4A78">Add citrus to turn it from blue to pink.</text>
-  <text x="376" y="171" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#2D2933">Refrigerate after opening /</text>
-  <text x="376" y="176.5" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#2D2933">Réfrigérer après ouverture.</text>
+  <text x="376" y="171" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#2D2933">Keep refrigerated /</text>
+  <text x="376" y="176.5" font-family="Inter, Arial, sans-serif" font-size="4.4" fill="#2D2933">Garder au froid.</text>
 
   <!-- ============================ LEFT WING: Story + Producer + Dates + Barcode (x18-164) ===== -->
   <text x="91" y="28" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="4.6" letter-spacing="0.6" fill="#7A5E28">BENCH &amp; BLOOM &#183; NARAMATA, BC</text>
@@ -94,7 +94,7 @@
 
   <line x1="20" y1="70" x2="162" y2="70" stroke="#C2A05E" stroke-width="0.5"/>
 
-  <text x="20" y="82" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">Best before / Meilleur avant: 2027 07 01</text>
+  <text x="20" y="82" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">Best before / Meilleur avant: 2026 10 01</text>
   <text x="20" y="87.5" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">Packaged / Emballé: 2026 07 01 &#160; LOT 2026-001</text>
 
   <text x="20" y="99" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="4.6" fill="#2D2933">Prepared for / Préparé pour:</text>

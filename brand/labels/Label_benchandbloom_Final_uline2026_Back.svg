@@ -1,7 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="2.75in" height="3in" viewBox="0 0 198 216">
   <!-- Bench & Bloom BACK / info panel (final). Uline S-23397. TRIM 2.5 x 2.75in, 0.125in bleed.
-       Nutrition Facts = GENERIC ESTIMATE from comparable market syrups (Torani/Monin ~45-50 cal,
-       ~11-12 g sugar per 15 mL) - VERIFY with a calculated table from the real recipe before print.
+       Nutrition Facts = recipe-calculated (1:5 sugar:water by volume, ~14.5 Brix, refrigerated
+       product, per 15 mL). NOTE: brand/labels/ is the LEGACY 2-panel design; singlelabel/ Wrap is
+       the current production label — keep both in sync if this panel is still used.
        UPC = GTIN 627146286305 (GS1 Canada). French = draft, verify.
        Delete #guides before print. -->
   <rect x="0" y="0" width="198" height="216" fill="#F7F3EE"/>
@@ -14,16 +15,16 @@
   <text x="22" y="40" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="6" fill="#2D2933">Valeur nutritive</text>
   <text x="22" y="46" font-family="Inter, Arial, sans-serif" font-size="4.6" fill="#2D2933">Per 15 mL (1 tbsp) / pour 15 mL (1 c. à soupe)</text>
   <line x1="22" y1="48.5" x2="176" y2="48.5" stroke="#2D2933" stroke-width="0.4"/>
-  <text x="22" y="55" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="6.5" fill="#2D2933">Calories 50</text>
+  <text x="22" y="55" font-family="Inter, Arial, sans-serif" font-weight="700" font-size="6.5" fill="#2D2933">Calories 10</text>
   <text x="176" y="54" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="4.2" fill="#2D2933">% Daily Value* / % valeur quotidienne*</text>
   <line x1="22" y1="57.5" x2="176" y2="57.5" stroke="#2D2933" stroke-width="1.6"/>
   <text x="22" y="64" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Fat / Lipides</tspan> 0 g</text>
   <text x="176" y="64" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">0 %</text>
   <line x1="22" y1="66.5" x2="176" y2="66.5" stroke="#2D2933" stroke-width="0.3"/>
-  <text x="22" y="72" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Carbohydrate / Glucides</tspan> 13 g</text>
+  <text x="22" y="72" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Carbohydrate / Glucides</tspan> 2 g</text>
   <line x1="22" y1="74.5" x2="176" y2="74.5" stroke="#2D2933" stroke-width="0.3"/>
-  <text x="28" y="80" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">Sugars / Sucres 12 g</text>
-  <text x="176" y="80" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">12 %</text>
+  <text x="28" y="80" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">Sugars / Sucres 2 g</text>
+  <text x="176" y="80" text-anchor="end" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">2 %</text>
   <line x1="22" y1="82.5" x2="176" y2="82.5" stroke="#2D2933" stroke-width="0.3"/>
   <text x="22" y="88" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Protein / Protéines</tspan> 0 g</text>
   <line x1="22" y1="90.5" x2="176" y2="90.5" stroke="#2D2933" stroke-width="0.3"/>
@@ -34,14 +35,14 @@
   <text x="22" y="109" font-family="Inter, Arial, sans-serif" font-size="4.1" fill="#2D2933">*5% ou moins c'est peu, 15% ou plus c'est beaucoup</text>
 
   <!-- Ingredients (4, bilingual; wrapped) -->
-  <text x="18" y="119" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Ingredients:</tspan> Sugar, water, lavender, butterfly pea flower</text>
+  <text x="18" y="119" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Ingredients:</tspan> Water, sugar, lavender, butterfly pea flower</text>
   <text x="18" y="125" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">(Clitoria ternatea).</text>
-  <text x="18" y="132" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Ingrédients :</tspan> Sucre, eau, lavande, fleur de pois bleu</text>
+  <text x="18" y="132" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933"><tspan font-weight="600">Ingrédients :</tspan> Eau, sucre, lavande, fleur de pois bleu</text>
   <text x="18" y="138" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">(Clitoria ternatea).</text>
 
   <text x="18" y="147" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">Stir into gin, vodka or sparkling cocktails, or soda.</text>
   <text x="18" y="153" font-family="Inter, Arial, sans-serif" font-size="5" fill="#5A4A78">Add citrus to turn it from blue to pink.</text>
-  <text x="18" y="159" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">Refrigerate after opening / Réfrigérer après ouverture.</text>
+  <text x="18" y="159" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">Keep refrigerated / Garder au froid.</text>
   <text x="18" y="166" font-family="Inter, Arial, sans-serif" font-size="5" fill="#2D2933">Best before / Meilleur avant: YYYY MM DD &#160; LOT 2026-001</text>
 
   <text x="18" y="170" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="4.9" fill="#2D2933">Prepared for / Préparé pour:</text>
