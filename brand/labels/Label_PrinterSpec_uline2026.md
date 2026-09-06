@@ -1,3 +1,11 @@
+> ⛔ **SUPERSEDED 2026-09-06.** This old two-label printer spec describes the abandoned **1:5
+> refrigerated** formulation. Its formulation, nutrition, storage and colour content is
+> **wrong for the current product** and must not be used to generate label copy or a batch.
+> Authoritative: **`JATEL_ProductSpec_v1.0_20260906.md`**, then
+> `singlelabel/Label_PrinterSpec_Wrap_uline2026.md` (v2.0).
+
+---
+
 # Bench & Bloom — Label Printer Spec (uline2026)
 
 Hand this, plus the two SVGs, to the label printer (StickerYou / Jukebox / Avery WePrint, etc.).

@@ -1,4 +1,29 @@
-# Bench & Bloom — Single Wrap Label Printer Spec (uline2026)
+# Bench & Bloom — Single Wrap Label Printer Spec (uline2026) — **v2.0, 2026-09-06**
+
+> ## ⛔ THE JULY ARTWORK CANNOT BE REPRINTED. IT MUST BE REDRAWN.
+>
+> The product was reformulated on 2026-09-06 from a **1:5 refrigerated cordial** to an
+> **11:5 acidified, sugar-preserved syrup**. Authoritative definition:
+> **`JATEL_ProductSpec_v1.0_20260906.md`** (repo root). Read that first.
+>
+> | | July artwork | Current product |
+> |---|---|---|
+> | Sugar : water | 1 : 5 | **11 : 5** |
+> | Brix | ~14.5 | **64.8** |
+> | pH | ~7 | **~2.5** (citric acid, 0.53% w/v) |
+> | Colour in bottle | blue | **deep ruby / garnet** |
+> | Serving | 15 mL | **30 mL** (Table of Reference Amounts item U.15) |
+> | Nutrition | 10 cal / 2 g sugars | **100 cal / 26 g sugars / 26% DV** |
+> | FOP symbol | not required | **REQUIRED**, and it needs upper-half PDP space |
+> | Storage | Keep refrigerated | **Refrigerate after opening** |
+> | Origin claim | Product of Canada | **Made in Canada from domestic and imported ingredients** |
+>
+> **A prior version of this file stated a 60 mL reference amount and a 15% DV trigger.
+> Both were wrong.** The correct figures are **30 mL** and **10% DV**. Corrected throughout below.
+>
+> **What is still valid in this file:** every physical and print specification. Trim, bleed, wrap
+> math, stock, adhesive, finish, fonts, palette, barcode handling. Sections marked *(physical)* are
+> unchanged and can be used as-is.
 
 Hand this file **plus `Label_benchandbloom_Final_uline2026_Wrap.svg`** to the label printer
 (StickerYou / Jukebox / Avery WePrint / a local trade printer). The `.png` / `.jpg` in this folder
@@ -22,7 +47,7 @@ pilot run.
 - **Safe margin: 0.125″** inside trim — all text/logo/barcode are kept inside it.
 - **Wrap math:** 7.25″ label on a **7.46″** circumference leaves a **~0.21″ vertical window of bare
   glass** where the two ends approach each other. This is **intentional and good**:
-  1. the violet syrup still peeks through (the colour-change is the product's hook), and
+  1. the ruby syrup still peeks through (the colour is the product's signature), and
   2. the ends **never need to butt or overlap precisely** — so hand application is forgiving (no
      labeller, no registration headache, no wrinkled seam).
 - **Height:** 2.75″ centres in the 3.125″ straight panel with ≈ 0.19″ clearance top and bottom.
@@ -35,27 +60,35 @@ pilot run.
   embedded as vector — fully font-independent. The descriptor reads the brand-canonical
   **"NARAMATA BENCH BOTANICALS"** (regenerated as outlined Inter; the old logo art said
   "Lavender · Naramata Bench" — now corrected here and in `public/brand/logo-*.svg`).
-- **Best-before convention = ~3 months, REFRIGERATED.** Pilot batch: **Packaged 2026 07 01 → Best
-  before 2026 10 01** (`YYYY MM DD`, bilingual) + **LOT 2026-001**. This is a **low-sugar (~14.5 °Brix,
-  1:5 sugar:water) refrigerated product** — it is **NOT shelf-stable** (a_w ≈ 0.98). Sugar is far below
-  preservation strength (~65 °Brix needed), so the label carries **"Keep refrigerated / Garder au
-  froid"** and a short dated life. Preservation relies on **hot-fill + clean bottles + refrigeration**,
-  not sugar. Both colour fade and food safety favour a short, cold shelf life. Stamp the real
-  packaged/best-before dates + lot per batch.
-- **Ingredients (4, current product):** water, sugar, lavender (*Lavandula* ×*intermedia* 'Grosso'),
+- **Best-before convention = ~12 months, AMBIENT.** ⚠️ **The dates below are STALE PLACEHOLDERS from
+  the July batch and must not print.** Stamp the real packaged and best-before dates per batch.
+  Superseded example: ~~**Packaged 2026 07 01 → Best before 2026 10 01**~~ Format `YYYY MM DD`, bilingual, plus **LOT**. This is a
+  **high-sugar (64.8 °Brix, 11:5 sugar:water), acidified (pH ~2.5) product** and it **IS
+  shelf-stable** (a_w ≈ 0.85). Preservation is carried by **two hurdles, sugar and acid**, plus
+  hot-fill into sanitized glass, so the label carries **"Refrigerate after opening / Réfrigérer après
+  ouverture"** and a ~12-month dated life. **Colour, not safety, is the limit on shelf life:**
+  anthocyanins are at their most stable below pH 3.5, so the ruby holds far better than the old blue
+  did. Stamp the real packaged/best-before dates + lot per batch.
+- **Ingredients (5, current product — ORDER HAS CHANGED, sugar now leads by weight):** sugar, water, lavender (*Lavandula* ×*intermedia* 'Grosso'), citric acid,
   butterfly pea flower (*Clitoria ternatea*) — bilingual, descending by weight, binomials italicised.
-  (At 1:5 **water is the largest component**, so it now leads the list.)
+  (At 11:5 **sugar is the largest component at ~65% by mass**, so it leads the list. Citric acid
+  remains in the product and must be declared; the lavender and butterfly pea are strained out but
+  are still declared by their as-added weight.)
   Clean-label trio stated: **no essential oils, no artificial colour, no synthetic flavour.**
-- **QR code** (left wing, beside the UPC) → `benchandbloom.com/recipes/naramata-sunset` (the
-  colour-change signature serve). 33-module symbol with a 4-module quiet zone; keep it ≥ 11 mm square
-  in print and do **not** recolour or crop the quiet zone, or it may not scan.
+- **QR code** (left wing, beside the UPC) → **`benchandbloom.com/recipes/lavender-milk`**.
+  ⚠️ **Repointed.** It previously pointed at `/recipes/naramata-sunset`, which described a
+  blue-to-pink serve the product can no longer perform. The colour change now happens in milk, and
+  `/recipes/lavender-milk` is the serve that demonstrates it. **Both pages are live; verify the new
+  target loads before generating the symbol.** 33-module symbol with a 4-module quiet zone; keep it
+  ≥ 11 mm square in print and do **not** recolour or crop the quiet zone, or it may not scan.
 
 ## Layout (how it reads on the bottle)
 - **Centre = FRONT / Principal Display Panel:** sprig mark, "Bench & Bloom", descriptor, common name
   (EN + FR), tasting line, net quantity. Framed by two thin gold rules.
 - **Right wing → curves to the back:** Nutrition Facts, ingredients (EN/FR), how to use.
 - **Left wing → curves to the back:** provenance story, best-before/lot, "Prepared for" address,
-  website, Product of Canada, **UPC barcode + QR code** (QR → the colour-change recipe).
+  website, **"Made in Canada from domestic and imported ingredients"**, **UPC barcode + QR code**
+  (QR → repoint to `/recipes/lavender-milk`, the serve that now carries the colour change).
 - The two wings meet at the **rear seam/window**. Orient the bottle PDP-forward when applying.
 
 ---
@@ -64,16 +97,18 @@ pilot run.
 
 **Face stock — order this:**
 - **Soft-matte / cream BOPP film** (bi-axially-oriented polypropylene). **Waterproof and oil/
-  moisture-resistant** — this bottle lives in a fridge, sweats with condensation, and gets handled
-  with wet hands. Paper stock will cockle, wick, and tear; **do not use paper.**
+  moisture-resistant.** The product is now ambient rather than refrigerated, so condensation is no
+  longer the daily case, but it still goes in a fridge after opening, gets handled with wet hands and
+  meets sticky syrup at the pour. Paper stock will cockle, wick, and tear; **do not use paper.**
 - **Slight cream/natural tint preferred** over bright optic-white — it flatters the `#F7F3EE` chalk
   ground and reads premium/editorial, not crafty. If the printer only offers white BOPP, that's
   fine because the artwork carries its own chalk ground edge-to-edge (full-bleed `#F7F3EE`).
 - **Avoid glossy white film** — it cheapens the wine-country positioning and fights the matte brand.
 
 **Adhesive:**
-- **Permanent, clear, glass-rated, cold/wet-resistant** (a "fridge/freezer-grade" or BS5609-style
-  permanent acrylic adhesive). Tell the printer it's **for glass, refrigerated, with condensation.**
+- **Permanent, clear, glass-rated, cold/wet-resistant** permanent acrylic. Tell the printer it's
+  **for glass, ambient storage but refrigerated after opening, with condensation.** The cold-rated
+  adhesive is still the right call and costs nothing extra.
 
 **Finish / lamination:**
 - **Matte laminate or matte varnish over-coat** — adds scuff/water durability and the tactile
@@ -149,18 +184,30 @@ copy is a solid draft — have it professionally verified.**
 - ✓ Common name, **bilingual**, on the PDP — "Lavender Syrup / Sirop à la lavande"
 - ✓ **Net quantity** on the PDP in metric — **250 mL** — **[VERIFY type height** for the PDP area]
 - ✓ Ingredient list, **bilingual, descending by weight** — **[VERIFY order against your recipe]**
-- ✓ Nutrition Facts table, **bilingual** — **recipe-calculated** (per 15 mL: 10 cal, 2 g carb, 2 g sugars / 2% DV, 0 fat/protein/sodium)
+- ✓ Nutrition Facts table, **bilingual** — **recipe-calculated (per 30 mL / 2 tbsp: 100 cal, 26 g carb, 26 g sugars / 26% DV, 0 fat/protein/sodium)**
 - ✓ Dealer name + principal place of business — "Prepared for … Naramata, BC, Canada V0H 1N0"
       **[VERIFY the civic address is correct]**
 - ✓ Best-before + lot code fields (`YYYY MM DD` / `LOT 2026-001`) — **fill in real values per batch**
 - ✓ Allergens: sugar/water/lavender/butterfly-pea carry **no priority allergens** → no "Contains"
       line. **[VERIFY]** add "may contain" **only if** shared-equipment cross-contact is real.
-- ✓ **Front-of-pack "High in sugars / Élevé en sucres" symbol — NOT REQUIRED for this low-sugar
-      formulation.** At ~2 g sugars / 15 mL the 60 mL syrup reference amount carries **~8 g sugars ≈ 8%
-      DV**, below the **15% DV** FOP trigger — so the symbol is **not** required and is correctly absent.
-      (This resolves the earlier compliance gap: the old ~63 °Brix recipe ran ~49% DV and *would* have
-      required it; the 1:5 reformulation removes the trigger entirely.) **Recheck if the recipe is ever
-      made richer** — the trigger returns above ~3.75 g sugars / 15 mL (≈15 g / 60 mL).
+- ⛔ **Front-of-pack "High in sugars / Élevé en sucres" symbol — REQUIRED. This is the single
+      biggest change and it is a PDP relayout, not a patch.** The product is item **U.15** of the
+      Health Canada *Table of Reference Amounts for Food* ("syrups used as ingredients"), reference
+      amount **30 mL**, prescribed serving **2 tbsp (30 mL)**. Because the reference amount is
+      **≤ 30 mL, the trigger is 10% DV, not the default 15%.** At **26% DV** the product exceeds it
+      by 2.6x. The Division 18 "sweetening agents sold as such" exemption (sugar, honey, maple, table
+      syrup) does **not** reach a compounded botanical flavouring syrup.
+      **Placement:** principal display panel, **upper half** (PDP height ≥ width), with a clear
+      buffer equal to the symbol's x-height, and the buffer's outer edge at least 10% of the
+      principal display surface width in from the left or right edge.
+      **Do NOT redraw the symbol.** Obtain the official EPS and the size directory from Health
+      Canada: email **smiu-ugdi@hc-sc.gc.ca**, subject *"HPFB BNS Compendium of Nutrition Symbol
+      Formats"*.
+      **Consequence:** with the symbol on the PDP, all sugars-related nutrient content claims are
+      prohibited there except "reduced in sugar". "Small batch", "no essential oils", "no artificial
+      colour" and the tasting descriptors are not nutrient content claims and remain permitted.
+      **[VERIFY]** the principal display surface computes to roughly **78–105 cm²**, which straddles
+      a size-band boundary. Pin the PDS before the designer picks a size row.
 
 **United States (FDA) — if you also sell on Amazon.com:**
 - ✓ **Net quantity is dual-declared** on the PDP — **"250 mL (8.45 fl oz)"** — satisfies FDA's
@@ -181,29 +228,41 @@ copy is a solid draft — have it professionally verified.**
 - For the pilot (Amazon.ca first), **option 1 is recommended**: ship the Canadian label now, add the
   US variant when/if you list on Amazon.com.
 
-**Nutrition Facts are RECIPE-CALCULATED** for a **1:5 sugar:water (by volume), ~14.5 °Brix,
-refrigerated product, per 15 mL serving:** Calories 10, Carbohydrate 2 g, Sugars 2 g (2% DV),
-Fat/Protein 0 g, Sodium 0 mg. Basis: 1 cup sugar (~200 g) : 5 cups water (~1,183 g) → ~14.5% sugar by
-mass, ~0.153 g sugar/mL, so 15 mL ≈ 2.3 g sugars → rounds to 2 g / 10 cal under CFIA rounding rules.
-A pure sugar+water solution's nutrition is essentially its sugar content, so recipe calculation is
-accurate and CFIA-defensible; a lab CoA is optional gold-standard. **If the recipe is ever made
-richer, recompute** — and note the FOP "High in sugars" symbol returns above ~3.75 g sugars / 15 mL.
+**Nutrition Facts are RECIPE-CALCULATED** for the **11:5 sugar:water (by volume), 64.8 °Brix,
+acidified, ambient-stable product, per 30 mL (2 tbsp) serving:** Calories 100, Carbohydrate 26 g,
+Sugars 26 g (26% DV), Fat/Protein 0 g, Sodium 0 mg. Unrounded basis 25.67 g sugars and 102.7 kcal per
+30 mL; rounded per CFIA rules (calories >50 to the nearest 10, carbohydrate and sugars to the nearest
+1 g, %DV to the nearest 1% computed on the unrounded amount against a 100 g DV for sugars).
+**The serving is prescribed, not chosen** — 2 tbsp follows from the 30 mL reference amount.
+**If the recipe changes, recompute, and note the FOP symbol is already required and stays required
+anywhere above 3 g sugars / 30 mL.**
 
-> ⚠️ **FOOD SAFETY — this is a refrigerated, NOT shelf-stable product.** At ~14.5 °Brix water activity
-> is ~0.98, far above the ~0.85 (≥65 °Brix) needed for sugar to preserve. Sugar-alone shelf stability
-> would need ~11 cups sugar : 5 cups water. This recipe is preserved by **hot-fill (~85 °C) + sanitized
-> bottles + refrigeration + short (~3-month) dated life**, and the label states **"Keep refrigerated."**
-> Do **not** print any "shelf-stable"/ambient-storage claim, and note this is **not** a warehouse-FBA
-> ambient product without a preservation redesign (acidify + sorbate/benzoate, which would turn the
-> butterfly-pea colour pink, or go to ≥65 °Brix).
-
----
+> ⚠️ **FOOD SAFETY — this is now an AMBIENT, SHELF-STABLE product, and the reasons have changed.**
+> At 64.8 °Brix water activity is ~0.85 and pH is ~2.5, so preservation is carried by **two hurdles,
+> sugar and acid**, plus hot-fill into sanitized glass. The label must say
+> **"Refrigerate after opening / Réfrigérer après ouverture"** and must **NOT** say "Keep
+> refrigerated", which is now false and would misdescribe the product.
+>
+> ⚠️ **Both the Brix and the pH behind that determination are CALCULATED, not measured.** Confirm
+> with a refractometer (expect 64–66 °Brix) and a pH meter (expect ≤ 4.0) on batch 1 **before**
+> printing an ambient best-before. If the measured Brix is more than 1 °Brix off, recompute the
+> Nutrition Facts table.
 
 ## Pre-print checklist
 - [ ] **[VERIFY]** all items above in the CFIA Industry Labelling Tool (worth the hour for a real run)
-- [x] Nutrition Facts **recipe-calculated** (1:5 by volume, ~14.5 °Brix) — recompute if final Brix differs
-- [ ] **"Keep refrigerated"** storage statement present + best-before ≤ ~3 months (refrigerated product)
-- [x] **Print derivatives re-exported (2026-07-02):** print-ready PDF (`Label_benchandbloom_Wrap_PRINTREADY_uline2026.pdf`, 7.5×3in, Inter+Fraunces embedded, guides removed) + 600dpi PNG + self-contained SVG + refreshed previews — all show the new 10 cal / 2 g / "Keep refrigerated" / water-first values (visually verified). Send the **PDF** to the printer. See `PRINT_FILES_STATUS.md`. (The separate `Label_PrinterSpec_Wrap_uline2026.pdf` spec-doc render is still old text; the `.md` is authoritative.)
+- [ ] Nutrition Facts **rebuilt** for 11:5 / 64.8 °Brix on the 30 mL serving — recompute if measured Brix differs by >1
+- [ ] **"Refrigerate after opening"** present; **"Keep refrigerated" REMOVED**; best-before ~12 months
+- [ ] **FOP "High in sugars" symbol placed** in the upper half of the PDP, from the official Health Canada EPS
+- [ ] **Nutrition Facts rebuilt on the 30 mL serving** (100 cal / 26 g / 26% DV)
+- [ ] **Ingredient list reordered**, sugar first, **citric acid added**, EN + FR
+- [ ] **"Product of Canada" REMOVED**, replaced with "Made in Canada from domestic and imported ingredients"
+- [ ] **All blue-to-pink colour copy removed**; the syrup is ruby
+- [ ] **Measure Brix and pH** on batch 1 before committing to an ambient best-before
+- [ ] **QR repointed** to `/recipes/lavender-milk`
+- [ ] ⛔ **Print derivatives are STALE.** The 2026-07-02 exports (`...PRINTREADY....pdf` / `.png` /
+      `.svg`) all render the 1:5 refrigerated product: blue-era copy, 15 mL nutrition table, no FOP
+      symbol, "Keep refrigerated", "Product of Canada", July dates. **Do not send any of them to a
+      printer.** The editable master must be redrawn against this v2 spec and re-exported.
 - [ ] Confirm civic address + postal code in "Prepared for / Préparé pour"
 - [x] **Real GS1 barcode** embedded (627146286305) — scan a printed sample to confirm
 - [ ] Have the **French** professionally verified
