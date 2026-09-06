@@ -27,7 +27,8 @@ Lavender simple syrup is the base for every drink in this collection. It is four
 about twenty minutes, and the only hard part is the steep.
 
 A note on the lavender: use real culinary lavender buds, never essential oil, which is not safe to
-drink. We grow **Grosso**, a bold, aromatic variety, so we use the lighter end of the range. A softer
+drink. We grow **Grosso**, a lavandin: earthier and warmer than English lavender, less perfume and more
+herb, and bolder with it, so we use the lighter end of the range. A softer
 English lavender can take a little more. Either way, taste as you go.
 
 The **butterfly pea flower** is what gives it colour. It adds almost no flavour, just a deep natural

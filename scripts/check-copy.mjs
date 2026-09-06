@@ -48,10 +48,9 @@ const REQUIRED = [
     /citric acid/i.test(readFileSync(join(DIST, 'syrup', 'index.html'), 'utf8'))],
   ['anchor discloses how the bottle differs', () =>
     /How our bottle differs/.test(readFileSync(join(DIST, ANCHOR, 'index.html'), 'utf8'))],
-  // The site explains that Grosso is grown BECAUSE it is high in essential oil.
-  // That only reads correctly alongside the standing clean-label claim that no
-  // extracted oil goes into the bottle. If the claim is ever dropped, the
-  // Grosso rationale becomes actively misleading, so pin them together.
+  // Grosso is positioned on TASTING NOTES (earthy and warm, less floral), not on
+  // essential-oil content: the oil framing risked reading against the standing
+  // "no essential oils" line on the same page. Keep that clean-label claim pinned.
   ['no-essential-oils claim still on /syrup', () =>
     /never add extracted essential oil|no essential oils/i.test(readFileSync(join(DIST, 'syrup', 'index.html'), 'utf8'))],
 ];

@@ -12,7 +12,8 @@ export const SITE = {
   locale: 'en_CA',
   description:
     'Small-batch lavender syrup, grown and made on the Naramata Bench. ' +
-    'Lavender and butterfly pea flower, steeped and strained, no essential oils and ' +
+    'Estate-grown Grosso lavender, earthy and warm rather than high floral, with butterfly pea ' +
+    'flower, steeped and strained, no essential oils and ' +
     'no artificial colour. It pours a deep ruby and blooms to a soft lavender violet '  +
     'the moment it meets warm milk.',
   ogImage: '/images/og-default.jpg',
