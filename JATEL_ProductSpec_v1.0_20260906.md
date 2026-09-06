@@ -217,8 +217,8 @@ goes in blue and comes out ruby.
 
 Dating (stamp real values per batch; ~12 month convention for a shelf-stable acidified syrup, colour rather than safety being the limit):
 ```
-Best before / Meilleur avant: YYYY MM DD
-Packaged / Emballé: YYYY MM DD   LOT: 2026-001
+BEST BEFORE / MEILLEUR AVANT   [ blank, stamped at fill ]
+LOT                            [ blank, stamped at fill ]
 ```
 
 Responsible party:

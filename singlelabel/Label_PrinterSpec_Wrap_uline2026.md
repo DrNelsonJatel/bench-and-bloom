@@ -60,9 +60,11 @@ pilot run.
   embedded as vector — fully font-independent. The descriptor reads the brand-canonical
   **"NARAMATA BENCH BOTANICALS"** (regenerated as outlined Inter; the old logo art said
   "Lavender · Naramata Bench" — now corrected here and in `public/brand/logo-*.svg`).
-- **Best-before convention = ~12 months, AMBIENT.** ⚠️ **The dates below are STALE PLACEHOLDERS from
-  the July batch and must not print.** Stamp the real packaged and best-before dates per batch.
-  Superseded example: ~~**Packaged 2026 07 01 → Best before 2026 10 01**~~ Format `YYYY MM DD`, bilingual, plus **LOT**. This is a
+- **Best-before convention = ~12 months, AMBIENT.** ⛔ **NO DATE IS PRINTED IN THE ARTWORK.**
+  The label carries a blank **coding panel** that is stamped per batch — see
+  **"Coding panel (date + lot)"** below. The old approach baked
+  `Packaged 2026 07 01 / Best before 2026 10 01 / LOT 2026-001` into the vector art, which meant every
+  batch needed a new print run and left 48 labels that expired with one batch. That is now fixed. Format `YYYY MM DD`, bilingual, plus **LOT**. This is a
   **high-sugar (64.8 °Brix, 11:5 sugar:water), acidified (pH ~2.5) product** and it **IS
   shelf-stable** (a_w ≈ 0.85). Preservation is carried by **two hurdles, sugar and acid**, plus
   hot-fill into sanitized glass, so the label carries **"Refrigerate after opening / Réfrigérer après
@@ -82,11 +84,92 @@ pilot run.
   target loads before generating the symbol.** 33-module symbol with a 4-module quiet zone; keep it
   ≥ 11 mm square in print and do **not** recolour or crop the quiet zone, or it may not scan.
 
+## Coding panel (date + lot) — **variable data, stamped at fill**
+
+The artwork prints the **field names** and leaves the **values blank**. Only the operator's stamp
+changes between batches, so one print run serves every batch until the recipe or the law changes.
+
+### Geometry
+- **Panel: 42 × 13 mm**, on the **left wing**, above the "Prepared for" block.
+- **Pure ground, no artwork behind it.** Chalk White `#F7F3EE` or pure white. Nothing screened, no
+  rules crossing it, no drop shadow. Ink needs maximum contrast and a clean key.
+- Two lines, each with a pre-printed bilingual field name and a blank value zone:
+
+```
+  BEST BEFORE / MEILLEUR AVANT   [ ______________ ]     ← ~30 mm blank
+  LOT                            [ ______________ ]     ← ~30 mm blank
+```
+
+- Field names in **Inter, 6 pt, Onyx `#2D2933`**. Value zones sized for **8 pt** stamped characters:
+  a full date reads ~15.5 mm wide, so 30 mm gives comfortable room and tolerates a crooked stamp.
+- Line height 3.8 mm at 8 pt; two lines plus leading needs 9.6 mm, inside the 13 mm panel.
+
+**Space check:** the left wing is 60.5 × 63.5 mm. With the UPC, QR, address, origin claim, story and
+this panel it runs to **81% committed.** It fits, but there is little slack — **if anything has to
+give in layout, shorten the provenance story, not the coding panel.**
+
+### ⚠️ The trap: ink will not dry on laminated BOPP
+
+This is the single thing that ruins hand-coded film labels. **BOPP is non-porous, and a matte
+laminate over it is more so.** Ordinary rubber-stamp ink will bead, smear, transfer to the next
+bottle, and thumb off a week later. A best-before date that rubs off is a compliance failure, not
+just an annoyance.
+
+**Tell the printer, in these words:** *"Leave a coating knockout in the coding panel — no laminate and
+no varnish in that window — for on-line date coding."* Printers do this routinely and it usually costs
+nothing.
+
+**Then still use the right ink:** a **solvent-based, fast-dry ink rated for non-porous surfaces**
+(the pad or cartridge will say "for glass, metal, plastic, foil"). Water-based office stamp ink will
+not work even on a knockout.
+
+### Coding method at pilot scale
+- **48 bottles: a self-inking date stamp with changeable bands, plus a solvent ink pad.** Roughly
+  $30 to $60. Add a separate small stamp or a fine permanent marker for the lot code.
+- **If you scale past a few hundred:** a handheld thermal inkjet (TIJ) coder. Faster, cleaner,
+  prints date and lot in one pass. Not worth it for a pilot.
+- **Do not** hand-write the best-before in pen. It reads amateur and it smudges on film.
+
+### Best practice: stamp flat, before application
+**Stamp the labels while they are still on the liner, laid flat, before any of them touch a bottle.**
+You can run a whole strip in a minute. Stamping a curved bottle after application gives you a smeared,
+skewed code and one ruined label at a time. Let the ink flash off for a minute before handling.
+
+### Date format
+Use the **bilingual month symbols** prescribed in the regulations rather than a numeric month:
+
+`JA  FE  MR  AL  MA  JN  JL  AU  SE  OC  NO  DE`
+
+So a best-before reads **`2027 SE 06`**. One stamp then serves both languages, and it removes any
+ambiguity about whether the middle number is a month or a day, which a numeric format would force you
+to declare explicitly. **[VERIFY** the exact permitted formats and whether an order declaration is
+still needed, in the CFIA Industry Labelling Tool, along with everything else in this file.**]**
+
+Lot format: keep it simple and traceable, e.g. **`2026-001`**, incrementing per batch. Record every
+lot against its production sheet, Brix and pH reading in the batch log. That link is your traceability
+under SFCR and it is the whole point of the lot code.
+
+### Verification before you commit the run
+1. Stamp a printed sample in the coding panel.
+2. **Thumb it after 60 seconds.** It must not smear.
+3. **Thumb it again after 24 hours, hard.** It must not lift.
+4. Leave one sample in a fridge overnight and repeat, because the bottle goes cold after opening.
+
+If any of those fail, the coating knockout is missing or the ink is wrong. Fix it before printing
+quantity, not after.
+
+### The commercial upside
+Because the labels no longer expire with a batch, **order them in quantity.** The old baked-in dates
+capped a sensible order at one batch. A blank coding panel means 500 labels are as usable in a year
+as they are today, and label pricing steps hard between 100 and 500. Get both quoted.
+
+---
+
 ## Layout (how it reads on the bottle)
 - **Centre = FRONT / Principal Display Panel:** sprig mark, "Bench & Bloom", descriptor, common name
   (EN + FR), tasting line, net quantity. Framed by two thin gold rules.
 - **Right wing → curves to the back:** Nutrition Facts, ingredients (EN/FR), how to use.
-- **Left wing → curves to the back:** provenance story, best-before/lot, "Prepared for" address,
+- **Left wing → curves to the back:** provenance story, **blank coding panel (date + lot)**, "Prepared for" address,
   website, **"Made in Canada from domestic and imported ingredients"**, **UPC barcode + QR code**
   (QR → repoint to `/recipes/lavender-milk`, the serve that now carries the colour change).
 - The two wings meet at the **rear seam/window**. Orient the bottle PDP-forward when applying.
@@ -252,6 +335,9 @@ anywhere above 3 g sugars / 30 mL.**
 - [ ] **[VERIFY]** all items above in the CFIA Industry Labelling Tool (worth the hour for a real run)
 - [ ] Nutrition Facts **rebuilt** for 11:5 / 64.8 °Brix on the 30 mL serving — recompute if measured Brix differs by >1
 - [ ] **"Refrigerate after opening"** present; **"Keep refrigerated" REMOVED**; best-before ~12 months
+- [ ] **Coding panel present and BLANK** (42 × 13 mm, left wing); no date or lot baked into the artwork
+- [ ] **Coating knockout** specified in the coding panel — no laminate, no varnish in that window
+- [ ] **Solvent, non-porous-rated ink** sourced; smear-tested at 60 s and at 24 h, cold and ambient
 - [ ] **FOP "High in sugars" symbol placed** in the upper half of the PDP, from the official Health Canada EPS
 - [ ] **Nutrition Facts rebuilt on the 30 mL serving** (100 cal / 26 g / 26% DV)
 - [ ] **Ingredient list reordered**, sugar first, **citric acid added**, EN + FR
