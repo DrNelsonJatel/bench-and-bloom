@@ -69,6 +69,20 @@ const REQUIRED = [
     /Recipe-calculated/i.test(readFileSync(join(DIST, 'nutrition', 'index.html'), 'utf8'))],
   ['nutrition page discloses the sugars symbol', () =>
     /High in sugars/i.test(readFileSync(join(DIST, 'nutrition', 'index.html'), 'utf8'))],
+  // Bilingual site. The French is an unverified draft: it must exist, must actually
+  // render French rather than silently falling back to English, and must stay out
+  // of the index until a francophone reviewer signs off.
+  ['french home built', () => existsSync(join(DIST, 'fr', 'index.html'))],
+  ['french home renders French, not an English fallback', () =>
+    /Sirop de lavande en petits lots/.test(readFileSync(join(DIST, 'fr', 'index.html'), 'utf8'))],
+  ['unverified French carries noindex', () =>
+    /noindex/.test(readFileSync(join(DIST, 'fr', 'index.html'), 'utf8'))],
+  ['English is NOT noindexed', () =>
+    !/noindex/.test(readFileSync(join(DIST, 'index.html'), 'utf8'))],
+  ['language toggle present on English home', () =>
+    /lang-toggle/.test(readFileSync(join(DIST, 'index.html'), 'utf8'))],
+  ['hreflang alternates present', () =>
+    /hreflang="fr-CA"/.test(readFileSync(join(DIST, 'index.html'), 'utf8'))],
 ];
 
 let fails = 0;

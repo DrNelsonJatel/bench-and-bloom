@@ -12,6 +12,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import Analytics from '@vercel/analytics/astro';
 import { SITE } from '../consts';
+import { langFromUrl, localizePath, FR_VERIFIED } from '../i18n/config';
 
 interface Props {
   title?: string;
@@ -28,6 +29,13 @@ const {
   noindex = false,
   heroImage,
 } = Astro.props;
+
+const lang = langFromUrl(Astro.url);
+// The French translation is an unverified draft, so it is kept out of the index
+// until a francophone reviewer signs off (flip FR_VERIFIED in i18n/config.ts).
+const hideFromIndex = noindex || (lang === 'fr' && !FR_VERIFIED);
+const enHref = new URL(localizePath(Astro.url.pathname, 'en'), SITE.url).href;
+const frHref = new URL(localizePath(Astro.url.pathname, 'fr'), SITE.url).href;
 
 const pageTitle = title ? `${title} · ${SITE.title}` : `${SITE.title} · ${SITE.descriptor}`;
 const canonical = new URL(Astro.url.pathname, SITE.url).href;
@@ -61,7 +69,10 @@ const businessLd = {
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical} />
-    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    {hideFromIndex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="alternate" hreflang="en-CA" href={enHref} />
+    <link rel="alternate" hreflang="fr-CA" href={frHref} />
+    <link rel="alternate" hreflang="x-default" href={enHref} />
 
     {/* Preload the LCP hero image (CSS background heroes are discovered late) */}
     {heroImage && <link rel="preload" as="image" href={heroImage} fetchpriority="high" />}

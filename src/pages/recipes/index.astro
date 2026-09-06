@@ -1,6 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
+import { langFromUrl } from '../../i18n/config';
+import { useTranslations } from '../../i18n/utils';
+const lang = langFromUrl(Astro.url);
+const t = useTranslations(lang);
 
 const recipes = (await getCollection('recipes')).sort((a, b) => a.data.order - b.data.order);
 const anchor = recipes.find((r) => r.data.kind === 'anchor');
@@ -32,11 +36,11 @@ const description =
 <Base title={title} description={description} heroImage="/images/lavender-bees.jpg">
   <section class="hero hero--photo" style="--hero-img:url('/images/lavender-bees.jpg')">
     <div class="wrap hero__inner">
-      <p class="eyebrow">Mix it</p>
-      <h1>Lavender, made for the glass.</h1>
+      <p class="eyebrow">{t('recipes.eyebrow')}</p>
+      <h1>{t('recipes.title')}</h1>
       <p class="hero__lede">
-        Gin, vodka, sparkling or zero-proof. It pours a deep ruby, and stirred into warm
-        milk it blooms to lavender violet. Start with the base syrup, then take it anywhere.
+        {t('recipes.lede')}
+        {lang !== 'en' && <><br /><small style="opacity:.75">{t('recipes.englishOnly')}</small></>}
       </p>
     </div>
   </section>

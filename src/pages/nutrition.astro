@@ -2,6 +2,11 @@
 import Base from '../layouts/Base.astro';
 import BuyButton from '../components/BuyButton.astro';
 import { SITE } from '../consts';
+import { langFromUrl, localizePath } from '../i18n/config';
+import { useTranslations } from '../i18n/utils';
+const lang = langFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 
 const title = 'Nutrition & Specifications';
 const description =
@@ -24,11 +29,10 @@ const spec = [
 
 <Base title={title} description={description}>
   <section class="section wrap">
-    <p class="eyebrow">The numbers</p>
-    <h1>Nutrition &amp; specifications.</h1>
+    <p class="eyebrow">{t('nutrition.eyebrow')}</p>
+    <h1>{t('nutrition.title')}</h1>
     <p class="lede" style="max-width:var(--measure);">
-      Everything we know about what is in the bottle, including the parts that are not
-      flattering and the parts we have not finished measuring.
+      {t('nutrition.lede')}
     </p>
   </section>
 
@@ -78,10 +82,9 @@ const spec = [
   </section>
 
   <section class="section wrap">
-    <h2>Full specification</h2>
+    <h2>{t('nutrition.specTitle')}</h2>
     <p class="lede" style="max-width:var(--measure);">
-      Each figure with how we know it. Where we have not put an instrument on something yet,
-      it says so.
+      {t('nutrition.specLede')}
     </p>
     <div class="spec">
       {spec.map((r) => (
@@ -101,7 +104,7 @@ const spec = [
 
   <section class="section section--surface">
     <div class="wrap center">
-      <h2>Questions we have not answered here?</h2>
+      <h2>{t('nutrition.askTitle')}</h2>
       <p class="lede" style="margin-inline:auto;">
         Ask us directly. <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
       </p>

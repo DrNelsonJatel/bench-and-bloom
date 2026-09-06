@@ -1,5 +1,10 @@
 ---
 import { SITE, NAV, SOCIAL, CLOSER } from '../consts';
+import { langFromUrl, localizePath } from '../i18n/config';
+import { useTranslations } from '../i18n/utils';
+const lang = langFromUrl(Astro.url);
+const t = useTranslations(lang);
+const navKeys = ['syrup','recipes','farm','naramata','visit','nutrition'] as const;
 const year = 2026;
 const socials = Object.entries(SOCIAL).filter(([, url]) => url);
 ---
@@ -8,18 +13,17 @@ const socials = Object.entries(SOCIAL).filter(([, url]) => url);
   <div class="wrap site-footer__inner">
     <div class="site-footer__brand">
       <img class="site-footer__logo" loading="lazy" decoding="async" src="/brand/logo-white.svg" alt={`${SITE.title} — ${SITE.descriptor}`} width="260" height="56" />
-      <p class="site-footer__closer">{CLOSER}</p>
+      <p class="site-footer__closer">{t('site.closer')}</p>
     </div>
 
     <nav class="site-footer__nav" aria-label="Footer">
-      {NAV.map((item) => <a href={item.href}>{item.label}</a>)}
-      <a href="/nutrition">Nutrition</a>
-      <a href={`mailto:${SITE.email}`}>Contact</a>
+      {navKeys.map((k) => <a href={localizePath(k === 'nutrition' ? '/nutrition' : `/${k}`, lang)}>{t(`nav.${k}`)}</a>)}
+      <a href={`mailto:${SITE.email}`}>{t('nav.contact')}</a>
     </nav>
   </div>
 
   <div class="wrap site-footer__legal">
-    <span>&copy; {year} {SITE.title}. Naramata, British Columbia.</span>
+    <span>&copy; {year} {SITE.title}. {t('site.rights')}</span>
     {socials.length > 0 && (
       <span class="site-footer__social">
         {socials.map(([name, url]) => <a href={url} target="_blank" rel="noopener">{name}</a>)}

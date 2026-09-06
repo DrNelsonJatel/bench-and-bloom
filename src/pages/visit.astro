@@ -1,6 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
 import { SITE, VISIT } from '../consts';
+import { langFromUrl, localizePath } from '../i18n/config';
+import { useTranslations } from '../i18n/utils';
+const lang = langFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 
 const title = 'Visit';
 const description =
@@ -11,11 +16,10 @@ const description =
 <Base title={title} description={description} heroImage="/images/farm-bench-sky.jpg">
   <section class="hero hero--photo" style="--hero-img:url('/images/farm-bench-sky.jpg')">
     <div class="wrap hero__inner">
-      <p class="eyebrow">Naramata Bench, BC</p>
-      <h1>Find us on the bench.</h1>
+      <p class="eyebrow">{t('visit.eyebrow')}</p>
+      <h1>{t('visit.title')}</h1>
       <p class="hero__lede">
-        We are a small, working lavender farm on the Naramata Bench, in the heart of
-        Okanagan wine country near Penticton.
+        {t('visit.lede')}
       </p>
     </div>
   </section>
@@ -35,8 +39,8 @@ const description =
       </div>
     ) : (
       <div class="capture center">
-        <p class="eyebrow">For now</p>
-        <h2 class="mt-0">A working farm, not yet open to visitors.</h2>
+        <p class="eyebrow">{t('visit.closedEyebrow')}</p>
+        <h2 class="mt-0">{t('visit.closedTitle')}</h2>
         <p style="margin-inline:auto;">{VISIT.note}</p>
         <p style="margin-inline:auto;">
           Want to know the moment the stand opens, or when the summer harvest is ready?

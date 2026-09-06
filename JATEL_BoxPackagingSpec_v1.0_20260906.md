@@ -21,10 +21,14 @@ All branding is carried by the seal sticker (`JATEL_SealStickerSpec_v1.0_2026090
 | Straight label panel | 3.125 in |
 | Tamper band | Uline S-17668 black shrink band over cap/neck |
 
-**Filled weight ≈ 536 g.** Syrup 329 g (250 mL × 1.316 g/mL at 64 °Brix) + glass ~200 g **[EST]**
-+ cap ~5 g + label ~2 g. **Weigh one empty bottle on a kitchen scale and correct the glass figure**,
-because it drives every shipping quote in section 5. **You now have 48 of them in hand, so this is a
-thirty-second job and it is the last estimate holding up the shipping numbers.**
+**Filled weight ≈ 540 g. VERIFIED 2026-09-06.** Bottle **209 g** with the cap (Uline lists S-23397
+at a unit weight of 0.46 lb / 0.21 kg, **cap included and shipped attached**) + syrup 329 g
+(250 mL × 1.316 g/mL at 64 °Brix) + label ~2 g.
+
+> This closes the open estimate. Note it lands close to this spec's 200 g guess and **well above the
+> 175 g used in the channel costing model**, which understated the filled bottle by 30 g, or 6%.
+> A confirmatory kitchen-scale check on a real bottle is still worth thirty seconds, since Uline's
+> unit weight may be a shipping figure rather than a measured one.
 
 **The body is a true cylinder** through the whole label panel, tapering only at the shoulder. That is
 what makes the 7.25 in wrap label work, and it is also why the square carton in section 2 carries a

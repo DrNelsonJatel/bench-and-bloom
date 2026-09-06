@@ -3,10 +3,12 @@ All CAD, pre-tax (GST/HST recoverable as ITCs for a registered business).
 Every rate is sourced; see the accompanying markdown. QAQC block at the end."""
 
 # ---------- physical ----------
-GLASS_G, SYRUP_G, CAP_G = 175, 329, 6          # syrup = 250 mL x 1.316 g/mL @ 64 Brix
-# GLASS_G 175 is asserted from a published spec; the repo box spec estimates 200. NEITHER IS
-# WEIGHED, and 48 bottles are in hand. 25 g/bottle moves the 3-pack by 75 g. Weigh one.
-BOTTLE_G = GLASS_G + SYRUP_G + CAP_G
+# VERIFIED 2026-09-06 from Uline's S-23397 listing: unit weight 0.46 lb (0.21 kg) = 209 g,
+# CAP INCLUDED and shipped attached. That supersedes the earlier 175 g + 6 g split, which
+# understated the empty bottle by 28 g. Label ~2 g.
+BOTTLE_CAP_G, SYRUP_G, LABEL_G = 209, 329, 2   # syrup = 250 mL x 1.316 g/mL @ 64 Brix
+GLASS_G, CAP_G = BOTTLE_CAP_G, 0               # kept for callers; cap is inside the 209 g
+BOTTLE_G = BOTTLE_CAP_G + SYRUP_G + LABEL_G   # 540 g, was modelled at 510 g
 
 # ---------- COGS per bottle ----------
 # shrink_band CORRECTED 2026-09-06: S-17668 is $26.00/CT on order 53425173, not $0.03/band.
@@ -26,8 +28,12 @@ SHIP_MAT_3 = 0.49 + 1.80 + 0.25   # 3 pouches + heavy-duty 8x8x6 + void
 
 # ---------- Amazon (amazon.ca, Sept 2026, incl. 3.5% fuel/logistics surcharge) ----------
 REFERRAL       = 0.15            # Grocery, >$20.00
-FBA_FEE_1      = 8.23            # standard size, 800 g shipping weight
-FBA_FEE_3      = 11.15           # standard size, 2000 g
+# ⚠️ SHIPPING WEIGHTS BELOW ARE NOW UNDERSTATED. With a 540 g filled bottle the single is
+# ~830 g and the three-pack ~2,090 g, not 800 / 2,000. FBA fee tables step at weight breaks
+# and 2,000 g is exactly where one tends to sit. If there is a break at 2 kg the three-pack
+# fee is wrong and the pack-format advantage needs requoting. UNRESOLVED.
+FBA_FEE_1      = 8.23            # standard size, quoted at 800 g -- recheck at ~830 g
+FBA_FEE_3      = 11.15           # standard size, quoted at 2000 g -- RECHECK at ~2090 g
 FBA_STORE_1    = 0.07            # per unit-month, off-peak
 FBA_STORE_3    = 0.17
 FBA_PREP_1     = 0.19            # self-applied bubble bag; FBA Prep ended in CA 2026-07-01

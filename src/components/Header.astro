@@ -1,5 +1,14 @@
 ---
 import { SITE, NAV, AMAZON_URL } from '../consts';
+import { langFromUrl, localizePath } from '../i18n/config';
+import { useTranslations } from '../i18n/utils';
+
+const lang = langFromUrl(Astro.url);
+const t = useTranslations(lang);
+// The toggle points at the SAME page in the other language, not at the home page.
+const otherLang = lang === 'en' ? 'fr' : 'en';
+const otherHref = localizePath(Astro.url.pathname, otherLang);
+const navKeys = ['syrup','recipes','farm','naramata','visit','nutrition'] as const;
 ---
 
 <header class="site-header" data-header>
@@ -13,10 +22,12 @@ import { SITE, NAV, AMAZON_URL } from '../consts';
     </button>
 
     <nav class="site-nav" id="primary-nav" aria-label="Primary">
-      {NAV.map((item) => <a href={item.href}>{item.label}</a>)}
+      {navKeys.map((k) => <a href={localizePath(k === 'nutrition' ? '/nutrition' : `/${k}`, lang)}>{t(`nav.${k}`)}</a>)}
+      <a class="lang-toggle" href={otherHref} hreflang={otherLang} lang={otherLang}
+         aria-label={t('nav.langAria')} rel="alternate">{t('nav.langLabel')}</a>
       {AMAZON_URL
-        ? <a class="btn btn-primary btn-sm" href={AMAZON_URL} target="_blank" rel="noopener">Buy now</a>
-        : <span class="soon">Coming soon</span>}
+        ? <a class="btn btn-primary btn-sm" href={AMAZON_URL} target="_blank" rel="noopener">{t('btn.buy')}</a>
+        : <span class="soon">{t('btn.soon')}</span>}
     </nav>
   </div>
 </header>
@@ -51,6 +62,12 @@ import { SITE, NAV, AMAZON_URL } from '../consts';
   .site-nav > a:not(.btn):hover { color: var(--gold-deep); }
   .btn-sm { padding: 0.5rem 0.9rem; font-size: 0.9rem; }
   .soon { font-size: 0.82rem; color: var(--ink-soft); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.4rem 0.7rem; }
+  .lang-toggle {
+    font-size: 0.86rem; font-weight: 600; color: var(--lavender-deep) !important;
+    border: 1px solid var(--line); border-radius: var(--radius);
+    padding: 0.35rem 0.6rem; text-decoration: none;
+  }
+  .lang-toggle:hover { border-color: var(--gold); color: var(--gold-deep) !important; }
 
   /* hamburger (mobile only) */
   .nav-toggle { display: none; width: 42px; height: 38px; border: 1px solid var(--line); border-radius: var(--radius); background: transparent; cursor: pointer; align-items: center; justify-content: center; }

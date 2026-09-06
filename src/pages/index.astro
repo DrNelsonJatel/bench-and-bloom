@@ -2,19 +2,24 @@
 import Base from '../layouts/Base.astro';
 import SignupForm from '../components/SignupForm.astro';
 import { SITE, AMAZON_URL, EMAIL_CAPTURE } from '../consts';
+import { langFromUrl, localizePath } from '../i18n/config';
+import { useTranslations } from '../i18n/utils';
+const lang = langFromUrl(Astro.url);
+const t = useTranslations(lang);
+
 
 const pillars = [
   {
-    title: 'Naramata Bench',
-    body: 'Grown on a half-acre on the bench above Okanagan Lake, in the heart of wine country. A small farm, two harvests a year.',
+    title: t('home.p1title'),
+    body: t('home.p1'),
   },
   {
-    title: 'Real buds, nothing fake',
-    body: 'Our lavender and butterfly pea flower, steeped and strained by hand. No essential oils, no synthetic flavour, no artificial colour. Just botanicals, cane sugar and water.',
+    title: t('home.p2title'),
+    body: t('home.p2'),
   },
   {
-    title: 'Watch it bloom',
-    body: 'A deep ruby from butterfly pea that blooms to lavender violet in warm milk. Bold enough for gin, soft enough for a lemonade or a latte.',
+    title: t('home.p3title'),
+    body: t('home.p3'),
   },
 ];
 
@@ -30,11 +35,9 @@ const recipes = [
   <section class="hero hero--photo" style="--hero-img:url('/images/hero-lavender-golden-hour.jpg')">
     <div class="wrap hero__inner">
       <p class="eyebrow">{SITE.descriptor}</p>
-      <h1>Small-batch lavender syrup, grown and made on the Naramata Bench.</h1>
+      <h1>{t('home.title')}</h1>
       <p class="hero__lede">
-        A culinary lavender syrup built for gin and cocktails. A deep ruby from
-        lavender and butterfly pea that blooms to lavender violet the moment it meets warm
-        milk. No essential oils, no artificial colour.
+        {t('home.lede')}
       </p>
       <div class="cta-row">
         {AMAZON_URL
@@ -61,8 +64,8 @@ const recipes = [
   <section id="syrup" class="section section--surface">
     <div class="wrap split">
       <div>
-        <p class="eyebrow">The syrup</p>
-        <h2>One bottle. Five ingredients. A whole field behind it.</h2>
+        <p class="eyebrow">{t('home.syrupEyebrow')}</p>
+        <h2>{t('home.syrupTitle')}</h2>
         <p>
           We grow a single variety of lavender, Grosso, a lavandin that tastes earthier and warmer
           than the lavender most people know, less perfume and more herb, then steep it with
@@ -89,11 +92,10 @@ const recipes = [
 
   <!-- Recipes -->
   <section id="recipes" class="section wrap">
-    <p class="eyebrow">Mix it</p>
-    <h2>Made for the glass.</h2>
+    <p class="eyebrow">{t('home.mixEyebrow')}</p>
+    <h2>{t('home.mixTitle')}</h2>
     <p class="lede">
-      Gin is the anchor, but every pour works as a mocktail too. Start with the base syrup,
-      then take it anywhere.
+      {t('home.mixLede')}
     </p>
     <div class="cards">
       {recipes.map((r) => (
@@ -114,8 +116,8 @@ const recipes = [
         <source src="/campaign-bloom.mp4" type="video/mp4" />
       </video>
       <div>
-        <p class="eyebrow">The essence of summer</p>
-        <h2>Watch it bloom.</h2>
+        <p class="eyebrow">{t('home.bloomEyebrow')}</p>
+        <h2>{t('home.bloomTitle')}</h2>
         <p>
           A single-variety harvest from the Naramata Bench, chosen for its bold aroma and its
           colour. Pour it ruby, stir it into warm milk, and watch it turn lavender violet.
