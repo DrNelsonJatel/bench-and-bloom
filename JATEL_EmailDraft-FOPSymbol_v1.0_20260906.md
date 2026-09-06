@@ -1,7 +1,7 @@
 # Email draft — Health Canada, front-of-package nutrition symbol artwork
 
 **Document:** JATEL_EmailDraft-FOPSymbol_v2.0_20260906 (minimalist rewrite of v1.0)
-**Status:** DRAFT. **Not sent.** Fill `[your phone]`, then send from `hello@benchandbloom.com`.
+**Status:** ✅ **SENT 2026-09-06** from `hello@benchandbloom.com`, contact line completed. Awaiting reply.
 **Purpose:** Obtain the official "High in sugars / Élevé en sucres" EPS and the size directory. This
 is the only external dependency blocking the label redraw.
 

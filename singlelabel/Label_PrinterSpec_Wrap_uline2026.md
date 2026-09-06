@@ -192,6 +192,70 @@ as they are today, and label pricing steps hard between 100 and 500. Get both qu
 
 ---
 
+## Content tiers — the minimalist label
+
+**Build the label from what is required, then add back deliberately.** The label is space-constrained
+in a way the July version was not: the mandatory sugars symbol now takes upper-half PDP space, and the
+Nutrition Facts table alone consumes 42% of a wing. Starting from a full label and trimming produces
+a cramped one. Starting from the mandatory set and adding produces a considered one.
+
+Each wing is **60.5 × 63.5 mm = 3,841 mm²**.
+
+### Tier 1 — mandatory. Never cut.
+| Element | Wing | Area |
+|---|---|---|
+| Common name, bilingual | *front PDP* | — |
+| Net quantity 250 mL, min **3.2 mm** type | *front PDP* | — |
+| **"Élevé en sucres" symbol**, upper half | *front PDP* | — |
+| Nutrition Facts table EN/FR | right | 1,596 mm² |
+| Ingredient list EN/FR | right | 847 mm² |
+| Storage: *Refrigerate after opening* EN/FR | right | 302 mm² |
+| Dealer name + address | left | 605 mm² |
+
+**Left wing 16%. Right wing 71%.**
+
+### Tier 2 — not legally required, but commercially non-negotiable
+| Element | Wing | Area |
+|---|---|---|
+| UPC barcode (retail and Amazon) | left | 656 mm² |
+| Coding panel: best-before + lot | left | 638 mm² |
+
+**Left wing 49%. Right wing 71%.** *This is the minimalist label.*
+
+> **Best-before is probably not legally required here.** A best-before date is mandatory for foods with
+> a durable life of **90 days or less**; this product is dated ~12 months. It stays because Amazon
+> requires dating on grocery and consumers expect it, not because the law compels it.
+> **[Moderate confidence — confirm with item 1.]** The **lot code stays regardless**: it is the
+> traceability spine under SFCR and the key into the batch record.
+
+### Tier 3 — optional brand content. Cut first, add back in this order.
+| Element | Wing | Area | Verdict |
+|---|---|---|---|
+| QR code → `/recipes/lavender-milk` | left | 169 mm² | **Keep.** Cheapest square on the label and it carries the colour-change demo |
+| Clean-label trio EN/FR | right | 423 mm² | Keep if the right wing allows. It is the real differentiator |
+| "How to use" EN/FR | right | 423 mm² | **Cut.** The QR goes to recipes, which does this better |
+| Origin: "Made in Canada…" EN/FR | left | 423 mm² | **Cut.** Voluntary, and an awkward claim with imported sugar leading |
+| Provenance story | left | 726 mm² | **Cut.** Largest single item, and the website tells it far better |
+
+**All of Tier 3: left wing 84%, right wing 94%.**
+
+### Recommended build
+**Tier 1 + Tier 2 + QR + clean-label trio** → left wing **54%**, right wing **82%**.
+
+That keeps the two elements that do commercial work, drops the three that duplicate the website, and
+leaves real breathing room on both wings instead of 6% and 16%.
+
+> **Watch the right wing, not the left.** Every earlier space note in this file worried about the left
+> wing. The costing says the **right** wing is the binding constraint, because the Nutrition Facts
+> table is 1,596 mm² and cannot shrink. If something has to give, it gives on the right.
+
+**Things commonly assumed mandatory that are not:** country-of-origin claim, clean-label claims,
+"how to use", the QR, botanical binomials, and the provenance story. **Things easy to miss that are:**
+the storage statement (special storage is needed once opened), and that *every* mandatory element is
+bilingual.
+
+---
+
 ## Layout (how it reads on the bottle)
 - **Centre = FRONT / Principal Display Panel:** sprig mark, "Bench & Bloom", descriptor, common name
   (EN + FR), tasting line, net quantity. Framed by two thin gold rules.
