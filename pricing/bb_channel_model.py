@@ -3,11 +3,15 @@ All CAD, pre-tax (GST/HST recoverable as ITCs for a registered business).
 Every rate is sourced; see the accompanying markdown. QAQC block at the end."""
 
 # ---------- physical ----------
-GLASS_G, SYRUP_G, CAP_G = 175, 329, 6          # syrup = 250 mL x 1.316 g/mL @ 64.8 Brix
+GLASS_G, SYRUP_G, CAP_G = 175, 329, 6          # syrup = 250 mL x 1.316 g/mL @ 64 Brix
+# GLASS_G 175 is asserted from a published spec; the repo box spec estimates 200. NEITHER IS
+# WEIGHED, and 48 bottles are in hand. 25 g/bottle moves the 3-pack by 75 g. Weigh one.
 BOTTLE_G = GLASS_G + SYRUP_G + CAP_G
 
 # ---------- COGS per bottle ----------
-COGS = dict(bottle_cap=1.70, shrink_band=0.03, wrap_label=1.00,
+# shrink_band CORRECTED 2026-09-06: S-17668 is $26.00/CT on order 53425173, not $0.03/band.
+# $0.104 at 250/CT, $0.052 at 500/CT. Using 250/CT. Count the carton to settle it.
+COGS = dict(bottle_cap=1.70, shrink_band=0.104, wrap_label=1.00,
             syrup=1.00, inbound_freight=0.87)
 COGS_B = sum(COGS.values())
 

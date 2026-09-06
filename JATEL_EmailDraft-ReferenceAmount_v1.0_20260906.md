@@ -1,7 +1,7 @@
 # Email draft — Health Canada, reference amount U.14 vs U.15
 
 **Document:** JATEL_EmailDraft-ReferenceAmount_v1.0_20260906
-**Status:** DRAFT. **Not sent.** Send from `hello@benchandbloom.com`.
+**Status:** ✅ **SENT 2026-09-06** from `hello@benchandbloom.com`. Awaiting reply.
 **Why it matters:** the answer sets the declared serving size and therefore every value in the
 Nutrition Facts table, on the label **and** on `benchandbloom.com/nutrition`. It does **not** affect
 whether the sugars symbol is required; that is triggered under either entry.
