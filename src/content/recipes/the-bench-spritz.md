@@ -1,6 +1,6 @@
 ---
 title: The Bench Spritz
-description: Wine country in a glass. Sparkling wine, lavender syrup and soda, blooming soft pink. The Naramata Bench patio pour.
+description: Wine country in a glass. Sparkling wine, lavender syrup and soda, a soft ruby. The Naramata Bench patio pour.
 kind: cocktail
 spirit: Sparkling wine
 signature: true
@@ -14,7 +14,7 @@ ingredients:
   - Ice and a lemon twist
 steps:
   - Fill a wine glass with ice. Add the lavender syrup and the soda.
-  - Top with sparkling wine. The acidity turns it a soft pink.
+  - Top with sparkling wine. The acidity keeps it a soft, clear ruby.
   - Stir gently and garnish with a lemon twist.
 related:
   - naramata-sunset
@@ -24,8 +24,8 @@ order: 3
 ---
 
 The Naramata Bench is forty-odd wineries above the lake, so a spritz here almost makes itself: a local
-dry sparkling wine, a measure of lavender syrup and a splash of soda. The wine's acidity blooms the
-syrup to a soft pink, so it arrives at the table already the colour of the bench at golden hour.
+dry sparkling wine, a measure of lavender syrup and a splash of soda. The wine's acidity holds the
+syrup at a soft ruby, so it arrives at the table already the colour of the bench at golden hour.
 
 Use a dry sparkling so it finishes crisp. Start from a bottle of [Bench & Bloom](/syrup) or a batch of
 [lavender simple syrup](/recipes/how-to-make-lavender-simple-syrup).

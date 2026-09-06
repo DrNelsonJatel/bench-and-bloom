@@ -24,7 +24,7 @@ order: 24
 ---
 
 Honey and lavender are old friends, and the Bee's Knees gives them a gin backbone. The lemon brightens
-it and shifts the colour toward pink. Warm the honey slightly so it shakes in cleanly.
+it and holds the colour bright. Warm the honey slightly so it shakes in cleanly.
 
 Start from a bottle of [Bench & Bloom](/syrup) or a batch of
 [lavender simple syrup](/recipes/how-to-make-lavender-simple-syrup).

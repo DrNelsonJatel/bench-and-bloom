@@ -1,6 +1,6 @@
 ---
 title: How to Make Lavender Simple Syrup
-description: The four-ingredient lavender simple syrup behind every drink on this page, with butterfly pea for a natural blue that turns pink with citrus.
+description: The four-ingredient lavender simple syrup to make at home, with butterfly pea for a natural blue that turns pink with citrus. Our bottled version is made differently, and this explains how.
 kind: anchor
 servings: About 1.5 cups (350 mL)
 prepTime: PT5M
@@ -30,9 +30,21 @@ A note on the lavender: use real culinary lavender buds, never essential oil, wh
 drink. We grow **Grosso**, a bold, aromatic variety, so we use the lighter end of the range. A softer
 English lavender can take a little more. Either way, taste as you go.
 
-The **butterfly pea flower** is what makes it blue. It adds almost no flavour, just a deep natural
-colour and a trick: the blue is pH sensitive. Add a squeeze of lemon, a splash of tonic or a pour of
-sparkling wine and it blooms from blue to pink. No dye, just chemistry.
+The **butterfly pea flower** is what gives it colour. It adds almost no flavour, just a deep natural
+pigment and a trick: it is pH sensitive. Made this way, with no acid in the pan, the syrup sets a deep
+blue, and a squeeze of lemon or a splash of tonic blooms it to pink. No dye, just chemistry.
+
+## How our bottle differs
+
+The [Bench & Bloom](/syrup) bottle is not this recipe. Ours is built to sit on a shelf rather than in
+your fridge, so it is made richer and carries a little citric acid. That acid holds the butterfly pea
+at the red end of its range from the start, which is why the bottle pours a deep ruby instead
+of blue.
+
+You do not lose the colour trick, you gain the other half of it. Because our syrup starts acidic, it
+runs *backwards* when it meets something closer to neutral. Stir it into warm milk and it blooms from
+ruby to a soft lavender violet. That is the [Lavender Milk](/recipes/lavender-milk), and it is the one
+we would pour you first.
 
 ## The one trick
 

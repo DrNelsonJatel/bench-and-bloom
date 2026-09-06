@@ -1,6 +1,6 @@
 ---
 title: Lavender Tom Collins
-description: The long, easy gin highball. Gin, lemon, lavender syrup and soda over ice, blooming pink as you stir.
+description: The long, easy gin highball. Gin, lemon, lavender syrup and soda over ice, bright ruby.
 kind: cocktail
 spirit: Gin
 servings: 1 drink
@@ -14,7 +14,7 @@ ingredients:
   - Ice and a lemon wheel
 steps:
   - Build the gin, lemon and lavender syrup in an ice-filled tall glass.
-  - Top with soda water and stir. The lemon turns it pink as you go.
+  - Top with soda water and stir. The lemon holds the colour bright.
   - Garnish with a lemon wheel.
 related:
   - lavender-gin-fizz
@@ -24,8 +24,8 @@ order: 22
 ---
 
 The Tom Collins is the simplest way to a long, refreshing lavender drink: gin, lemon, syrup, soda,
-built right in the glass. The lemon does double duty here, brightening the lavender and blooming the
-colour to pink.
+built right in the glass. The lemon does double duty here, brightening the lavender and holding the
+syrup at its clearest ruby.
 
 Start from a bottle of [Bench & Bloom](/syrup) or a batch of
 [lavender simple syrup](/recipes/how-to-make-lavender-simple-syrup).

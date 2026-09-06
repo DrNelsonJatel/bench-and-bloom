@@ -13,7 +13,8 @@ export const SITE = {
   description:
     'Small-batch lavender syrup, grown and made on the Naramata Bench. ' +
     'Lavender and butterfly pea flower, steeped and strained, no essential oils and ' +
-    'no artificial colour. A natural blue that blooms to pink with a squeeze of citrus.',
+    'no artificial colour. It pours a deep ruby and blooms to a soft lavender violet '  +
+    'the moment it meets warm milk.',
   ogImage: '/images/og-default.jpg',
 } as const;
 
@@ -26,7 +27,7 @@ export const AMAZON_URL = '';
 
 // Boutique availability line shown wherever the store link isn't live yet.
 // When AMAZON_URL is set, the same "Buy now" button links to the store.
-export const AVAILABILITY = 'Summer harvest, available mid-July';
+export const AVAILABILITY = 'First batch coming soon';
 
 // Primary navigation (real routes, Phase 1).
 export const NAV = [

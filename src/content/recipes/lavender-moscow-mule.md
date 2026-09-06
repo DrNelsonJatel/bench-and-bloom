@@ -1,6 +1,6 @@
 ---
 title: Lavender Moscow Mule
-description: Vodka, lime and ginger beer with lavender to round it out. The colour shifts pink with the lime.
+description: Vodka, lime and ginger beer with lavender to round it out. Arrives a bright ruby.
 kind: cocktail
 spirit: Vodka
 servings: 1 drink
@@ -13,7 +13,7 @@ ingredients:
   - Ginger beer, to top
   - Ice and a lime wheel
 steps:
-  - Fill a mug or glass with ice. Add the vodka, lavender syrup and lime. It blooms pink.
+  - Fill a mug or glass with ice. Add the vodka, lavender syrup and lime.
   - Top with ginger beer and stir once.
   - Garnish with a lime wheel.
 related:
@@ -24,7 +24,7 @@ order: 32
 ---
 
 The mule is all about the snap of ginger and lime, and a measure of lavender rounds the edges without
-getting in the way. The lime turns the syrup pink the moment it goes in, so this one arrives blushing.
+getting in the way. The lime keeps the syrup at its brightest ruby, so this one arrives glowing.
 
 Start from a bottle of [Bench & Bloom](/syrup) or a batch of
 [lavender simple syrup](/recipes/how-to-make-lavender-simple-syrup).

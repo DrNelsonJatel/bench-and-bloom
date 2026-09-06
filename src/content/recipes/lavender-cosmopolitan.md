@@ -24,7 +24,7 @@ order: 34
 ---
 
 The cosmo is built for a floral lift, and lavender slots right in beside the cranberry and lime. The
-citrus keeps it on the pink side of the colour shift, which suits the drink.
+citrus holds it on the red side of the colour range, which suits the drink.
 
 Start from a bottle of [Bench & Bloom](/syrup) or a batch of
 [lavender simple syrup](/recipes/how-to-make-lavender-simple-syrup).

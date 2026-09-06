@@ -25,6 +25,12 @@ Lavender went mainstream in the coffee shop, not the bar, and an iced lavender l
 the easiest way to use the syrup every day. Lavender and coffee are a natural pair, with
 the floral note cutting through the roast.
 
+Watch the milk as the syrup goes in. Our bottle is acidic enough to pour a deep ruby, and
+milk is close to neutral, so the butterfly pea swings the other way and the colour blooms toward
+lavender violet before the espresso goes over the top. Add the syrup to the milk first if you want to
+see it happen.
+
 Start light on the syrup and add to taste. Make a batch of
 [lavender simple syrup](/recipes/how-to-make-lavender-simple-syrup), or reach for a bottle
-of [Bench & Bloom](/syrup).
+of [Bench & Bloom](/syrup). For the warm, caffeine-free version of the same trick, see the
+[Lavender Milk](/recipes/lavender-milk).
