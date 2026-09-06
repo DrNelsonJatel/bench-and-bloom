@@ -41,6 +41,9 @@ const FORBIDDEN = [
   // The proprietor's home address must never be published. The dealer address on
   // label and site is the FARM: 3820 Partridge Rd, Naramata BC V0H 1N1.
   ['home-address-must-not-ship', /Bernard\s*Ave|V1Y\s*6P7/i, true],
+  // Farm postal code is V0H 1N1, confirmed 2026-09-06. V0H 1N0 is the wrong code
+  // that the July artwork carries; it must never reach published output either.
+  ['wrong-postal-code', /V0H\s*1N0/i, true],
 ];
 
 const REQUIRED = [

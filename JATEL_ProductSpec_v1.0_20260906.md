@@ -153,9 +153,9 @@ The lavender and water are Canadian, so an ingredient-origin claim remains avail
   privacy, which left the address not postal-deliverable and therefore non-compliant. **Do not strip
   it again.** The proprietor's home address must never appear on the label; the farm address is not
   the home address.
-  ⚠️ **[VERIFY] postal code.** The current artwork prints **V0H 1N0**; the correct code is stated as
-  **V0H 1N1**. One of the two is wrong. Confirm on Canada Post's postal code lookup before print —
-  this is a mandatory field.
+  ✅ **Postal code CONFIRMED 2026-09-06: `V0H 1N1`.** The current artwork prints **`V0H 1N0`, which
+  is WRONG** and must be corrected when the label is redrawn. This is a mandatory field, so it is a
+  hard print blocker, not a nicety.
 - Best before date and lot code.
 
 ## 6. Label copy blocks (paste verbatim)
@@ -294,7 +294,7 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 | # | Item | Owner |
 |---|---|---|
 | 1 | Confirm all determinations in the CFIA Industry Labelling Tool, in particular U.15 vs U.14 and the FOP symbol requirement | Nelson |
-| 2 | ~~Resolve the dealer address~~ **CLOSED 2026-09-06:** `3820 Partridge Rd, Naramata, BC V0H 1N1`. **Postal code still needs a 10-second check** — artwork says V0H 1N0, stated address says V0H 1N1 | verify code |
+| 2 | ~~Resolve the dealer address~~ **CLOSED 2026-09-06:** `3820 Partridge Rd, Naramata, BC V0H 1N1`, postal code confirmed. Artwork's `V0H 1N0` is confirmed wrong and must be corrected in the redraw | closed |
 | 3 | Professional French verification | external |
 | 4 | Measure actual Brix with a refractometer on batch 1 and confirm 64 to 66; recompute the NFt if it deviates by more than 1 °Brix | Nelson |
 | 5 | Measure actual pH; confirm <= 4.0 for the acid-preservation claim | Nelson |

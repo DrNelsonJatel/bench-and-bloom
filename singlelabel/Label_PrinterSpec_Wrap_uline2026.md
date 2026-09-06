@@ -272,8 +272,9 @@ copy is a solid draft — have it professionally verified.**
       3820 Partridge Rd, Naramata, BC, Canada V0H 1N1"**. This is the **farm** address. The civic
       number **3820 is required and must stay**: an earlier revision removed it for privacy, which
       made the address undeliverable and the field non-compliant. **Never substitute a home address
-      here.** ⚠️ **[VERIFY]** the artwork currently prints **V0H 1N0** and the stated code is
-      **V0H 1N1** — confirm which is right on Canada Post's lookup before print.
+      here.** ✅ **Postal code confirmed `V0H 1N1`.** ⛔ **The existing artwork prints `V0H 1N0`,
+      which is WRONG.** Correct it in the redraw — a wrong postal code in a mandatory field is a
+      compliance failure, not a typo.
 - ✓ Best-before + lot code fields (`YYYY MM DD` / `LOT 2026-001`) — **fill in real values per batch**
 - ✓ Allergens: sugar/water/lavender/butterfly-pea carry **no priority allergens** → no "Contains"
       line. **[VERIFY]** add "may contain" **only if** shared-equipment cross-contact is real.
@@ -362,7 +363,7 @@ anywhere above 3 g sugars / 30 mL.**
       symbol, "Keep refrigerated", "Product of Canada", July dates. **Do not send any of them to a
       printer.** The editable master must be redrawn against this v2 spec and re-exported.
 - [ ] **Address set to `Bench & Bloom, 3820 Partridge Rd, Naramata, BC, Canada V0H 1N1`** (farm address, civic number included)
-- [ ] **Postal code confirmed** — artwork says V0H 1N0, stated address says V0H 1N1, resolve before print
+- [x] **Postal code confirmed `V0H 1N1`** (2026-09-06). ⛔ Artwork's `V0H 1N0` is wrong — fix in the redraw
 - [x] **Real GS1 barcode** embedded (627146286305) — scan a printed sample to confirm
 - [ ] Have the **French** professionally verified
 - [ ] Decide CMYK vs. spot Pantone for the lavender (ask printer)
