@@ -9,7 +9,7 @@
 > | | July artwork | Current product |
 > |---|---|---|
 > | Sugar : water | 1 : 5 | **11 : 5** |
-> | Brix | ~14.5 | **64.8** |
+> | Brix | ~14.5 | **64** |
 > | pH | ~7 | **~2.5** (citric acid, 0.53% w/v) |
 > | Colour in bottle | blue | **deep ruby / garnet** |
 > | Serving | 15 mL | **30 mL** (Table of Reference Amounts item U.15) |
@@ -65,7 +65,7 @@ pilot run.
   **"Coding panel (date + lot)"** below. The old approach baked
   `Packaged 2026 07 01 / Best before 2026 10 01 / LOT 2026-001` into the vector art, which meant every
   batch needed a new print run and left 48 labels that expired with one batch. That is now fixed. Format `YYYY MM DD`, bilingual, plus **LOT**. This is a
-  **high-sugar (64.8 °Brix, 11:5 sugar:water), acidified (pH ~2.5) product** and it **IS
+  **high-sugar (64 °Brix, 11:5 sugar:water), acidified (pH ~2.5) product** and it **IS
   shelf-stable** (a_w ≈ 0.85). Preservation is carried by **two hurdles, sugar and acid**, plus
   hot-fill into sanitized glass, so the label carries **"Refrigerate after opening / Réfrigérer après
   ouverture"** and a ~12-month dated life. **Colour, not safety, is the limit on shelf life:**
@@ -90,23 +90,42 @@ The artwork prints the **field names** and leaves the **values blank**. Only the
 changes between batches, so one print run serves every batch until the recipe or the law changes.
 
 ### Geometry
-- **Panel: 42 × 13 mm**, on the **left wing**, above the "Prepared for" block.
+- **Panel: 51 × 12.5 mm**, on the **left wing**, above the "Prepared for" block.
 - **Pure ground, no artwork behind it.** Chalk White `#F7F3EE` or pure white. Nothing screened, no
   rules crossing it, no drop shadow. Ink needs maximum contrast and a clean key.
 - Two lines, each with a pre-printed bilingual field name and a blank value zone:
 
 ```
-  BEST BEFORE / MEILLEUR AVANT   [ ______________ ]     ← ~30 mm blank
-  LOT                            [ ______________ ]     ← ~30 mm blank
+  BEST BEFORE / MEILLEUR AVANT   [ 2027 SE 15    ]     ← ~30 mm blank
+  LOT                            [ 20260915-01   ]     ← ~30 mm blank
 ```
+
+**Two lines, not three. The lot code carries the bottling date.** Format the lot as
+**`YYYYMMDD-nn`** (bottling date, then a sequence number within that day) and one field does both
+jobs: the bottling date is readable straight off the bottle, and traceability runs lot → batch record
+→ date, Brix, pH, steep time and yield.
+
+An explicit third `BOTTLED / EMBOUTEILLÉ` line was costed and it does fit, at 51 × 17.5 mm, but it
+takes the left wing from **84% to 90% committed** and leaves only 10% slack on a panel that also has
+to hold a UPC, a QR, an address and an origin claim. The date-encoded lot buys the same information
+for free. **Use three lines only if you have a specific reason to want the bottling date spelled out
+in plain language.**
 
 - Field names in **Inter, 6 pt, Onyx `#2D2933`**. Value zones sized for **8 pt** stamped characters:
   a full date reads ~15.5 mm wide, so 30 mm gives comfortable room and tolerates a crooked stamp.
 - Line height 3.8 mm at 8 pt; two lines plus leading needs 9.6 mm, inside the 13 mm panel.
 
-**Space check:** the left wing is 60.5 × 63.5 mm. With the UPC, QR, address, origin claim, story and
-this panel it runs to **81% committed.** It fits, but there is little slack — **if anything has to
-give in layout, shorten the provenance story, not the coding panel.**
+**Space check:** the left wing is 60.5 × 63.5 mm = 3,841 mm². With the UPC, QR, address, origin
+claim, story and this panel it runs to **84% committed**, leaving ~16% for gutters and whitespace.
+It fits — **but if anything has to give in layout, shorten the provenance story, not the coding
+panel.**
+
+**Do NOT put pH or °Brix on the label.** Neither is mandatory, neither means anything to a person
+buying lavender syrup, and the Brix has never been checked against a refractometer — printing it
+would assert an unverified number on 100 labels. Both belong in the **batch record, keyed by the lot
+code**, which is exactly what the lot code is for. If you want that transparency public, the QR is
+already on the label and a batch page on the site is a far better home for it than 4 pt type on a
+wing that is 84% full.
 
 ### ⚠️ The trap: ink will not dry on laminated BOPP
 
@@ -145,7 +164,7 @@ ambiguity about whether the middle number is a month or a day, which a numeric f
 to declare explicitly. **[VERIFY** the exact permitted formats and whether an order declaration is
 still needed, in the CFIA Industry Labelling Tool, along with everything else in this file.**]**
 
-Lot format: keep it simple and traceable, e.g. **`2026-001`**, incrementing per batch. Record every
+Lot format: **`YYYYMMDD-nn`**, e.g. **`20260915-01`** — the bottling date plus a sequence number. Record every
 lot against its production sheet, Brix and pH reading in the batch log. That link is your traceability
 under SFCR and it is the whole point of the lot code.
 
@@ -157,6 +176,14 @@ under SFCR and it is the whole point of the lot code.
 
 If any of those fail, the coating knockout is missing or the ink is wrong. Fix it before printing
 quantity, not after.
+
+### Label run: 100 labels against 48 bottles
+**100 to 48 is 2.08x, which is right** — the spec advises ~2x for hand application waste, and a wrap
+label is unforgiving of a crooked first attempt.
+
+The part worth noticing: **the 52 spares do not expire with this batch.** Because the coding panel is
+blank, they are as usable on next season's run as they are today. That is the whole point of the
+panel, and it turns what would have been 52 wasted labels into 52 banked ones.
 
 ### The commercial upside
 Because the labels no longer expire with a batch, **order them in quantity.** The old baked-in dates
@@ -324,7 +351,7 @@ copy is a solid draft — have it professionally verified.**
 - For the pilot (Amazon.ca first), **option 1 is recommended**: ship the Canadian label now, add the
   US variant when/if you list on Amazon.com.
 
-**Nutrition Facts are RECIPE-CALCULATED** for the **11:5 sugar:water (by volume), 64.8 °Brix,
+**Nutrition Facts are RECIPE-CALCULATED** for the **11:5 sugar:water (by volume), 64 °Brix,
 acidified, ambient-stable product, per 30 mL (2 tbsp) serving:** Calories 100, Carbohydrate 26 g,
 Sugars 26 g (26% DV), Fat/Protein 0 g, Sodium 0 mg. Unrounded basis 25.67 g sugars and 102.7 kcal per
 30 mL; rounded per CFIA rules (calories >50 to the nearest 10, carbohydrate and sugars to the nearest
@@ -334,7 +361,7 @@ Sugars 26 g (26% DV), Fat/Protein 0 g, Sodium 0 mg. Unrounded basis 25.67 g suga
 anywhere above 3 g sugars / 30 mL.**
 
 > ⚠️ **FOOD SAFETY — this is now an AMBIENT, SHELF-STABLE product, and the reasons have changed.**
-> At 64.8 °Brix water activity is ~0.85 and pH is ~2.5, so preservation is carried by **two hurdles,
+> At 64 °Brix water activity is ~0.85 and pH is ~2.5, so preservation is carried by **two hurdles,
 > sugar and acid**, plus hot-fill into sanitized glass. The label must say
 > **"Refrigerate after opening / Réfrigérer après ouverture"** and must **NOT** say "Keep
 > refrigerated", which is now false and would misdescribe the product.
@@ -352,7 +379,7 @@ anywhere above 3 g sugars / 30 mL.**
 
 ## Pre-print checklist
 - [ ] **[VERIFY]** all items above in the CFIA Industry Labelling Tool (worth the hour for a real run)
-- [ ] Nutrition Facts **rebuilt** for 11:5 / 64.8 °Brix on the 30 mL serving — recompute if measured Brix differs by >1
+- [ ] Nutrition Facts **rebuilt** for 11:5 / 64 °Brix on the 30 mL serving — recompute if measured Brix differs by >1
 - [ ] **"Refrigerate after opening"** present; **"Keep refrigerated" REMOVED**; best-before ~12 months
 - [ ] **Coding panel present and BLANK** (42 × 13 mm, left wing); no date or lot baked into the artwork
 - [ ] **Coating knockout** specified in the coding panel — no laminate, no varnish in that window

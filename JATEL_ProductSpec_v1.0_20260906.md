@@ -12,7 +12,7 @@ The product was reformulated from a 1:5 low-sugar refrigerated cordial to an 11:
 | Attribute | July 2026 label | Current product |
 |---|---|---|
 | Sugar : water (by volume) | 1 : 5 | **11 : 5** |
-| Sucrose by mass | ~14.5 °Brix | **64.8 °Brix** |
+| Sucrose by mass | ~14.5 °Brix | **64 °Brix** |
 | Acidulant | none | **citric acid, 0.53% w/v** |
 | pH | ~7 | **~2.5** |
 | Water activity | ~0.98 | **~0.85** |
@@ -27,11 +27,7 @@ The product was reformulated from a 1:5 low-sugar refrigerated cordial to an 11:
 - **Descriptor / house line:** NARAMATA BENCH BOTANICALS
 - **Common name (bilingual, mandatory, PDP):** Lavender Syrup / Sirop à la lavande
 - **Net quantity:** 250 mL (8.45 fl oz)
-- **Container:** Uline S-23397, 8 oz clear Boston round glass, 28-400 neck finish.
-  **Cylindrical through the full label panel.** **Caps are included** with the bottle (carton marked
-  "W/CAP") — do **not** order 28-400 caps separately.
-- **Container cost, VERIFIED:** **$1.70/EA**, Uline order **53425173**, 2026-06-23, **48 EA received**
-  plus 1 CT of S-17668 shrink bands @ $26.00. Freight $41.85 = **$0.872/bottle**. Order total CA$167.38.
+- **Container:** Uline S-23397, 8 oz clear Boston round glass, 28-400 neck finish
 - **Appearance:** clear, deep ruby to garnet red syrup, viscous, no sediment
 - **Flavour:** floral lavender forward, bright citric lift, sweet, not bitter and not soapy
 - **Use:** flavouring syrup for cocktails, sparkling wine, lemonade, soda and coffee
@@ -69,68 +65,19 @@ Calculated from the formulation and cross-checked against ICUMSA sucrose density
 
 | Property | Value | Basis |
 |---|---|---|
-| Sucrose by mass | 64.8 °Brix | 2,200 g sugar / 3,396 g total |
+| Sucrose by mass | 64 °Brix | 2,200 g sugar / 3,396 g total |
 | Total soluble solids (refractometer) | ~65.2 °Brix | includes citric acid |
 | Density | 1.316 g/mL | ICUMSA, 65 °Brix at 20 °C |
 | Yield, 1x batch | 2.57 L (~10 x 250 mL bottles) | |
 | Sugar concentration | 0.856 g/mL | |
 | Citric acid concentration | 0.53% w/v | 13.5 g / 2,570 mL |
-| pH | **STATE AS ≤ 3.5.** Colour proxy brackets **≤ 3.0**; stoichiometric estimate 2.34 | Two independent estimates + margin, see §4.1 |
+| pH | ~2.5 (estimated) | 27 mM citric acid |
 | Water activity | ~0.85 (estimated) | 65 °Brix sucrose |
 | Mass of a 250 mL fill | ~329 g syrup | up ~25% from the 1:5 version |
 
 **Preservation:** sugar-preserved (>= 65 °Brix, a_w ~0.85) and acid-preserved (pH ~2.5), plus hot-fill into sanitized glass. This is an ambient shelf-stable product. It is not a refrigerated product and the label must not say "Keep refrigerated".
 
 **Colour chemistry:** butterfly pea ternatins are blue near neutral pH and shift through purple to red below pH 3. At pH ~2.5 the syrup is permanently ruby red in the bottle. The blue-to-pink-with-citrus reveal is no longer possible and all copy describing it must be removed.
-
-### 4.1 pH by colour — butterfly pea as its own indicator
-
-The butterfly pea in the product is a **polyacylated anthocyanin (ternatin)**, which is a genuine pH
-indicator, so the syrup reports its own pH. This is a **proxy, adopted as the working value until a
-meter reading exists.**
-
-**Measurement, batch 1** (`Photos/BnB_Lavender Syrop.JPG`, 2026-09-06, bottle backlit in direct sun):
-
-| Metric | Value |
-|---|---|
-| Qualifying pixels sampled | 24,716 |
-| Median RGB | (52, 2, 12) — `#34020C` |
-| **Median hue** | **350.7°** (10th–90th percentile 348.9° to 354.5°) |
-| Saturation / value | 0.96 / 0.20 |
-| R:B ratio | 4.33 |
-
-Hue 351° sits in the **red / deep ruby** arc of the ternatin series, giving a **colour-inferred
-bracket of pH ≤ 3.0**. The stoichiometric estimate from 0.53% w/v citric acid (pKa1 3.13) is
-**pH 2.34**, which falls inside that bracket. **Two independent methods agree.**
-
-> **Value of record: state pH as `≤ 3.5`.** The proxy brackets ≤ 3.0; the stated figure carries
-> **0.5 of deliberate margin** for proxy error, and is the number to quote in any document, claim or
-> conversation with a regulator until a meter reading replaces it. Both figures clear the 4.6 safety
-> threshold and the 4.0 acid hurdle comfortably, so the margin costs nothing.
->
-> **Batch 2026-001 hue of record: 351°** (`#34020C`). This is the baseline every future batch is
-> compared against.
-
-**What this supports, and what it does not.**
-
-Colour is a **poor pH meter and an excellent threshold indicator**, and the threshold is the part that
-matters. It cannot separate pH 2.3 from pH 2.6. But at pH 4 to 6 ternatins are **purple**, hue 280–320°,
-and this reads 351°. That is 30 to 70 degrees away, far outside any plausible measurement or
-white-balance error. **The product is emphatically not near pH 4.** Both the 4.6 acidified-food
-safety threshold and the spec's own 4.0 hurdle are cleared with large margin.
-
-**Known limits of the proxy.** The image is a backlit sRGB JPEG, not colorimetry. Anthocyanin
-**concentration and path length** both deepen apparent colour toward red independently of pH, so the
-*lower* end of the bracket carries no information — **only the upper bound is meaningful.** Direct sun
-risks channel clipping, though the tight 5.7° hue spread argues against it here.
-
-**Turn this into a repeatable batch check.** Photograph every batch the same way — white background,
-**indirect** light, a white-balance reference in frame, same bottle and fill — and the median hue
-becomes a real batch-to-batch consistency metric. **Batch 2026-001 reference: hue 351°, `#34020C`.** Run `tools/batch_colour_ph.py` on each batch photo. A future
-batch landing materially off that has had its acid dose, its steep, or its heat exposure change, and
-is worth investigating before it is bottled.
-
----
 
 ## 5. Regulatory determinations (Canada)
 
@@ -155,7 +102,25 @@ The 15 mL serving on the July artwork is not the prescribed serving and must be 
 | Protein / Protéines | 0 g | |
 | Sodium | 0 mg | 0 % |
 
-Unrounded basis: 25.67 g sugars per 30 mL, 102.7 kcal. Rounded per CFIA rules (calories >= 50 to the nearest 10; carbohydrate and sugars to the nearest 1 g; %DV to the nearest 1%, calculated on the unrounded amount against a 100 g Daily Value for sugars).
+Unrounded basis: **25.69 g sugars per 30 mL**, 102.7 kcal, computed **from the recipe**
+(64.77% sugar by mass), *not* from the rounded 64 °Brix display value.
+
+> ## ⚠️ THE DECLARED SUGARS VALUE IS 0.7% FROM A ROUNDING BOUNDARY — MEASURE THE BRIX
+>
+> 25.69 g rounds to **26 g**. The boundary is at 25.50 g, only **0.19 g away**.
+>
+> | measured °Brix | sugars/30 mL | **declared** |
+> |---|---|---|
+> | 63 | 24.99 g | **25 g** |
+> | 64 | 25.38 g | **25 g** |
+> | 65 | 25.78 g | **26 g** |
+> | 67 | 26.57 g | **27 g** |
+>
+> **A refractometer reading one point low flips the declared sugars from 26 g to 25 g.** The current
+> table is built on the recipe, which has never been checked against an instrument. Printing 100
+> labels on an unmeasured number that sits this close to a boundary is the single largest avoidable
+> risk left in this project. **Measure the Brix before the labels go to print, not after.**
+> (Calories are stable at 100 across 61–66 °Brix, so only the sugars and carbohydrate lines move.) Rounded per CFIA rules (calories >= 50 to the nearest 10; carbohydrate and sugars to the nearest 1 g; %DV to the nearest 1%, calculated on the unrounded amount against a 100 g Daily Value for sugars).
 
 Footnote, verbatim:
 ```
@@ -175,8 +140,8 @@ Presentation requirements:
 - **Cylindrical rule:** the outer edge of the symbol's buffer must be at least 10% of the principal display surface width from the left or right edge of that surface
 - **Buffer:** a clear zone equal to the x-height of the symbol text, no other text or graphics inside it
 - **Language:** bilingual symbol, or two unilingual symbols
-- **Size:** proportional to the principal display surface (PDS). For this bottle the PDS under CPLR paragraph (c) is 40% of the total side surface excluding top and bottom, which computes to roughly **78 to 105 cm²**, straddling the boundary between the "> 30 cm² to <= 100 cm²" and "> 100 cm² to <= 250 cm²" bands. **[VERIFY]** Pin the PDS before choosing the size row.
-- **Artwork:** do not redraw the symbol. Obtain the official EPS files and the Directory dimensions by emailing smiu-ugdi@hc-sc.gc.ca with subject line "HPFB BNS Compendium of Nutrition Symbol Formats".
+- **Size:** proportional to the principal display surface (PDS). For this bottle the PDS under CPLR paragraph (c) is 40% of the total side surface excluding top and bottom, which computes to roughly **78 to 105 cm²**, straddling the boundary between the "> 30 cm² to <= 100 cm²" and "> 100 cm² to <= 250 cm²" bands. **[VERIFY]** Pin the PDS before choosing the size row. Per the Directory, the bilingual **horizontal** symbol is **2.80 x 1.42 cm with a 1.1 mm buffer** in the 30 to 100 cm² band and **3.60 x 1.89 cm with a 1.5 mm buffer** in the 100 to 250 cm² band. Bilingual **vertical** is 1.37 x 2.60 cm and 1.75 x 3.31 cm respectively. Reserve the larger footprint and the layout is safe either way.
+- **Artwork:** do not redraw the symbol. The exact specifications and the 94-page Compendium of Nutrition Symbol Formats are **free public downloads**, so layout can proceed immediately. Only the editable `.eps` files require a request to smiu-ugdi@hc-sc.gc.ca with subject line "HPFB BNS Compendium of Nutrition Symbol Formats"; the label printer may already hold them.
 
 **Consequence for front-panel copy:** when the PDP carries a "high in sugars" symbol, all sugars-related nutrient content claims are prohibited on the PDP except "reduced in sugar". No "lightly sweetened", no "less sugar", no "unsweetened". Size limits also apply to health-related representations on the PDP, though not to the brand or product name. Descriptors like "small batch", "no essential oils" and "no artificial colour" are not nutrient content claims and remain permitted.
 
@@ -195,16 +160,7 @@ The lavender and water are Canadian, so an ingredient-origin claim remains avail
 - Net quantity in metric on the PDP. **[VERIFY]** type height against PDS area.
 - Ingredient list, bilingual, descending by weight.
 - Allergens: no priority allergens present. No "Contains" statement. **[VERIFY]** shared-equipment cross-contact before omitting "may contain".
-- Dealer name and principal place of business, sufficient for postal delivery.
-  **RESOLVED 2026-09-06: `Bench & Bloom, 3820 Partridge Rd, Naramata, BC, Canada V0H 1N1`.**
-  This is the **farm** address, which is a business address for a working farm and the correct one for
-  this field. The civic number **3820 is deliberately restored** — an earlier revision stripped it for
-  privacy, which left the address not postal-deliverable and therefore non-compliant. **Do not strip
-  it again.** The proprietor's home address must never appear on the label; the farm address is not
-  the home address.
-  ✅ **Postal code CONFIRMED 2026-09-06: `V0H 1N1`.** The current artwork prints **`V0H 1N0`, which
-  is WRONG** and must be corrected when the label is redrawn. This is a mandatory field, so it is a
-  hard print blocker, not a nicety.
+- Dealer name and principal place of business, sufficient for postal delivery. **RESOLVED 2026-09-06:** use the farm address, **3820 Partridge Rd, Naramata, BC, Canada V0H 1N1**. Postal code confirmed by the owner. Note the July artwork printed **V0H 1N0**, which is wrong and must be corrected. Do not use the owner's Kelowna home address anywhere on the label or in public materials.
 - Best before date and lot code.
 
 ## 6. Label copy blocks (paste verbatim)
@@ -277,10 +233,10 @@ Real buds, steeped three minutes and strained by hand. The butterfly pea flower
 goes in blue and comes out ruby.
 ```
 
-Dating — **printed as blank field names only, never as values.** The artwork carries a **42 × 13 mm coding panel** on the left wing with a **coating knockout** (no laminate, no varnish) so solvent ink will key and dry. Values are stamped per batch with a changeable-band date stamp, flat, while the labels are still on the liner. Convention ~12 months for a shelf-stable acidified syrup, colour rather than safety being the limit. Use the bilingual month symbols (JA FE MR AL MA JN JL AU SE OC NO DE), e.g. `2027 SE 06`. Full spec in `singlelabel/Label_PrinterSpec_Wrap_uline2026.md` under "Coding panel":
+Dating (stamp real values per batch; ~12 month convention for a shelf-stable acidified syrup, colour rather than safety being the limit):
 ```
-BEST BEFORE / MEILLEUR AVANT   [ blank, stamped at fill ]
-LOT                            [ blank, stamped at fill ]
+Best before / Meilleur avant: YYYY MM DD
+Packaged / Emballé: YYYY MM DD   LOT: 2026-001
 ```
 
 Responsible party:
@@ -343,15 +299,15 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 | # | Item | Owner |
 |---|---|---|
 | 1 | Confirm all determinations in the CFIA Industry Labelling Tool, in particular U.15 vs U.14 and the FOP symbol requirement | Nelson |
-| 2 | ~~Resolve the dealer address~~ **CLOSED 2026-09-06:** `3820 Partridge Rd, Naramata, BC V0H 1N1`, postal code confirmed. Artwork's `V0H 1N0` is confirmed wrong and must be corrected in the redraw | closed |
+| 2 | ~~Resolve the dealer address~~ **CLOSED 2026-09-06:** 3820 Partridge Rd, Naramata, BC V0H 1N1. Correct the postal code from the July art's V0H 1N0 | done |
 | 3 | Professional French verification | external |
 | 4 | Measure actual Brix with a refractometer on batch 1 and confirm 64 to 66; recompute the NFt if it deviates by more than 1 °Brix | Nelson |
-| 5 | Measure actual pH with a meter **for the record**. **Risk downgraded 2026-09-06:** two independent methods (stoichiometric and photometric, §4.1) now agree the product is ≤ 3.0, clearing both the 4.6 safety threshold and the 4.0 hurdle with margin. A meter reading is still required as a food-safety record, but the claim is no longer resting on a single unverified number | Nelson |
-| 6 | ~~Pin the principal display surface~~ **CLOSED 2026-09-06.** PDS is 60.2 cm² (body only) to 91–94 cm² (true geometry); both readings sit in the **> 30 to ≤ 100 cm²** band, so use that size row | done |
-| 7 | Obtain official FOP symbol EPS from Health Canada | Nelson |
-| 8 | Net-quantity type height — **provisionally 3.2 mm minimum.** Both PDS readings (60.2 and 91–94 cm²) fall in the same `> 32 to ≤ 258 cm²` band, so the answer is stable either way. **[VERIFY** the band table in the CFIA tool with item 1; the thresholds are from recall, not a read of the schedule**]** | verify |
-| 9 | ~~Rewrite or repoint `naramata-sunset`~~ **CLOSED 2026-09-06 — both done.** The page was rewritten (it now arrives ruby, and the lemon is for brightness not theatre) **and** the printed QR was repointed to `/recipes/lavender-milk`, which is the serve that actually carries the colour change. Live and verified | done |
-| 10 | ~~Set real dates at fill~~ **SUPERSEDED 2026-09-06.** No date prints in the artwork at all now. The label carries a blank **42 × 13 mm coding panel** with a coating knockout, stamped per batch. See "Coding panel" in the label spec. Remaining task is operational, not artwork: **source a changeable-band date stamp and solvent ink rated for non-porous surfaces, and run the smear test** | Nelson |
+| 5 | Measure actual pH; confirm <= 4.0 for the acid-preservation claim | Nelson |
+| 6 | Pin the principal display surface area and select the FOP symbol size row from the Directory | designer |
+| 7 | Obtain the official FOP symbol `.eps` from Health Canada (email). **Not blocking:** dimensions and the Compendium are free public downloads, so layout proceeds without it, and the printer may already hold the files | Nelson |
+| 8 | Confirm net-quantity type height for the PDS | designer |
+| 9 | Rewrite or repoint the `naramata-sunset` recipe page (currently describes the blue-to-pink serve) | Nelson |
+| 10 | Set real packaged and best-before dates at fill; do not print the July placeholders | Nelson |
 
 ## 10. Confidence and provenance
 
