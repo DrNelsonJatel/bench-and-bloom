@@ -53,7 +53,8 @@ syrup reads floral, before it turns sharp or medicinal. With a bold lavandin lik
 as little as five to seven minutes.
 
 Store it in a sealed jar in the fridge for about a month. Or skip the steeping entirely: a bottle of
-[Bench & Bloom](/syrup) is this syrup, already dialled in, with our own estate-grown Grosso.
+[Bench & Bloom](/syrup) is this syrup, already dialled in, with our own estate-grown lavender,
+*Lavandula* × *intermedia* 'Grosso'.
 
 Once you have a batch, pour it into a [Naramata Sunset](/recipes/naramata-sunset), a
 [Lavender Gin Fizz](/recipes/lavender-gin-fizz) or a [Lavender Lemonade](/recipes/lavender-lemonade).
