@@ -60,6 +60,17 @@ say it explicitly, because ordering 2.5 in *external* gives a box the bottle wil
   glue and both present a clean flap for the seal sticker.
 - **Stock:** **18 to 24 pt SBS (solid bleached sulphate), white both sides, uncoated or matte.**
   24 pt if you want it to feel substantial; 18 pt is adequate and cheaper.
+> ### ⚠️ "No print" holds for the BOX. It does not survive contact with FBA.
+> An FBA-bound unit must additionally carry a hand-applied **FNSKU barcode label** (you are not in
+> Brand Registry, so stickerless is unavailable), an **expiry sticker in `MM-DD-YYYY`**, the expiry
+> again on the **outside of the bubble wrap**, and the expiry on the **outer box at 36 pt or larger**.
+> A three-pack sold as its own ASIN also needs **its own GTIN**, which is a barcode.
+>
+> None of that changes the box order — it is all applied afterwards — but it means the finished FBA
+> unit is not a clean unprinted box, and the labour is real: roughly **240 discrete sticker and wrap
+> applications** across 48 singles and 16 three-packs, about **80 minutes**, which the channel
+> costing explicitly does not model.
+
 - **Print:** **none.** Plain white. This is a deliberate cost and lead-time decision: unprinted stock
   cartons ship from inventory, custom-printed cartons carry a plate charge and a 1,000-unit minimum
   that a 48-bottle pilot cannot absorb.

@@ -164,7 +164,18 @@ ambiguity about whether the middle number is a month or a day, which a numeric f
 to declare explicitly. **[VERIFY** the exact permitted formats and whether an order declaration is
 still needed, in the CFIA Industry Labelling Tool, along with everything else in this file.**]**
 
-Lot format: **`YYYYMMDD-nn`**, e.g. **`20260915-01`** — the bottling date plus a sequence number. Record every
+Lot format: **`YYYYMMDD-nn`**, e.g. **`20260915-01`** — the bottling date plus a sequence number.
+
+> ### ⚠️ Amazon uses a different date format, and that is fine
+> **Amazon FBA accepts `MM-DD-YYYY` or `MM-YYYY` only.** Our coding panel prints the CFIA bilingual
+> convention, which Amazon does not accept. **Do not change the label to suit Amazon** — the CFIA
+> format is the legally required one and it stays.
+>
+> Amazon's own rule resolves it: **a sticker in their format is applied over the original date** at
+> prep. So an FBA-bound unit carries the printed CFIA date plus an Amazon-format sticker. Both are
+> correct in their own domain. Budget for a third sticker per FBA unit, on top of the brand seal and
+> the FNSKU label, and note Amazon also wants the date on the **outside of the bubble wrap** and on
+> the **outer box at 36 pt or larger**. Record every
 lot against its production sheet, Brix and pH reading in the batch log. That link is your traceability
 under SFCR and it is the whole point of the lot code.
 

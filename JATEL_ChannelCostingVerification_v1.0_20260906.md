@@ -58,3 +58,59 @@ unavailability, the glass-breakage exclusion, all Uline pricing, and peak fees.
 > "[High confidence, retrieved]" before self-correcting. This note is **not** independent
 > confirmation of the re-run. **The 270-day band is the one worth checking twice**, being the only
 > unverified claim that could kill the channel outright.
+
+---
+
+# Addendum — verification of v1.1 (2026-09-06)
+
+v1.1 is a genuine improvement. The verification-status section is honest about what is sourced,
+what is inferred and what is estimated, and the FBA fee corrections are material and in the right
+direction. Arithmetic recomputes clean: $7.40 × 1.035 = $7.66, $10.50 × 1.035 = $10.87, the $4.04
+consolidation saving, 53%, the 79% Toronto uplift, and the 41.5% fuel surcharge applied to the v1.0
+base rates. Three genuinely new and valuable findings: the expiry **date-format conflict**, the
+31 March 2026 **barcode rule change**, and the recommendation to **file the trademark**.
+
+## 1. The fee quotes rest on a superseded bottle weight
+
+v1.1 still uses **175 g glass + 6 g cap = 510 g filled**. Uline's own listing for S-23397 gives a
+unit weight of **0.46 lb (0.21 kg) = 209 g with the cap included and shipped attached**, so the
+filled bottle is **540 g**. That was verified after v1.1 was written.
+
+| | v1.1 | Corrected |
+|---|---|---|
+| Packaged single | 535 g | **565 g** |
+| Packaged three-pack | 1,620 g | **1,710 g** |
+
+**This matters more here than a 6% error normally would, because v1.1 itself identifies the single
+as band-sensitive.** It notes 535 g sits in the 500–600 g row at $7.40 base and warns that heavier
+bubble wrap tips it into 600–700 g at $7.71. At the corrected 565 g the headroom to that break is
+**35 g** — about one sheet of bubble wrap, which is mandatory for a fragile container over 120 mL.
+That is a coin flip, not a margin, and it costs **$0.32 per bottle** if it lands wrong.
+
+The three-pack moves 90 g. Standard-size rows step every 100 g in this range, so **$10.87 is not
+safe as quoted.**
+
+**The conclusion survives; the dollar figures do not.** Even if the three-pack fee rose a full
+dollar, consolidation would still save $3.70 per bottle, 48%, and remain the largest lever in the
+model. Requote both configurations at 565 g and 1,710 g.
+
+## 2. Three date formats, and a box that cannot carry them
+
+v1.1 correctly identifies that Amazon accepts `MM-DD-YYYY` or `MM-YYYY` while the label carries the
+CFIA bilingual convention. It is resolvable — Amazon's rule is to sticker over the original — but the
+follow-through is not costed. An FBA unit needs the brand seal, an FNSKU label, an expiry sticker,
+the expiry again outside the bubble wrap, and the expiry on the outer box at 36 pt.
+
+**That is incompatible with "plain white, no print" as written in the box spec**, and with the
+sticker spec's brand-only rule. Nothing has to be reordered, but roughly **240 hand applications,
+about 80 minutes**, sit in the "not modelled" column alongside labour. Both specs now say so.
+
+## 3. Two corrections from the v1.0 review that did not carry into v1.1
+
+- **Shrink band is still $0.03**, so COGS is still $4.60. S-17668 is **$26.00 per carton** on order
+  53425173: $0.052 to $0.104 per band. `pricing/bb_channel_model.py` has been corrected to $0.104
+  and reads $4.67; the document has not.
+- **The three-pack still has no GTIN of its own.** v1.1 discusses barcodes at length and says
+  "your GTIN must come directly from GS1… yours does" — singular. A three-pack sold as its own ASIN
+  is a distinct trade item and needs a second GTIN. Recommendation 3 ships the pilot as three-packs.
+  Still unbudgeted, still unscheduled.
