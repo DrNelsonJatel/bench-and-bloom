@@ -355,13 +355,13 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 
 | # | Item | Owner |
 |---|---|---|
-| 1 | Confirm all determinations in the CFIA Industry Labelling Tool, in particular U.15 vs U.14 and the FOP symbol requirement | Nelson |
+| 1 | Confirm all determinations in the CFIA Industry Labelling Tool. **For U.15 vs U.14 specifically, Health Canada's `food-aliment@hc-sc.gc.ca` is the better route** (the Table of Reference Amounts is theirs). In particular U.15 vs U.14 and the FOP symbol requirement | Nelson |
 | 2 | ~~Resolve the dealer address~~ **CLOSED 2026-09-06:** 3820 Partridge Rd, Naramata, BC V0H 1N1. Correct the postal code from the July art's V0H 1N0 | done |
 | 3 | Professional French verification | external |
 | 4 | Measure actual Brix with a refractometer on batch 1 and confirm 64 to 66; recompute the NFt if it deviates by more than 1 °Brix | Nelson |
 | 5 | Measure actual pH; confirm <= 4.0 for the acid-preservation claim | Nelson |
 | 6 | Pin the principal display surface area and select the FOP symbol size row from the Directory | designer |
-| 7 | Obtain the official FOP symbol `.eps` from Health Canada. **REQUEST SENT 2026-09-06** to smiu-ugdi@hc-sc.gc.ca, awaiting reply. **Blocks print, not layout:** published dimensions let the designer lay out the reserved space now, but the final artwork must carry the official EPS, never a redraw. Also asked which principal-display-surface basis applies, since 91–94 cm² sits near the 100 cm² band boundary | awaiting reply |
+| 7 | Obtain the official FOP symbol `.eps` from Health Canada. **SENT 2026-09-06; SMIU acknowledged, human reply promised within days. Address and topic confirmed correct.** Request sent to smiu-ugdi@hc-sc.gc.ca, awaiting reply. **Blocks print, not layout:** published dimensions let the designer lay out the reserved space now, but the final artwork must carry the official EPS, never a redraw. Also asked which principal-display-surface basis applies, since 91–94 cm² sits near the 100 cm² band boundary | awaiting reply |
 | 8 | Confirm net-quantity type height for the PDS | designer |
 | 9 | Rewrite or repoint the `naramata-sunset` recipe page (currently describes the blue-to-pink serve) | Nelson |
 | 10 | Set real packaged and best-before dates at fill; do not print the July placeholders | Nelson |

@@ -5,8 +5,19 @@
 **Purpose:** Obtain the official "High in sugars / Élevé en sucres" EPS and the size directory. This
 is the only external dependency blocking the label redraw.
 
-**Check before sending:** the address and subject line come from Health Canada's *Front-of-package
-nutrition symbol labelling guide for industry*. **[Moderate confidence — not independently verified.]**
+**✅ ADDRESS AND SUBJECT VERIFIED 2026-09-06.** SMIU's automated acknowledgement lists
+**"Front-of-Package (e.g., Compendium of Nutrition Symbol Formats)"** among the topics it handles, and
+promises a human reply "in the next few days". The earlier moderate-confidence flag is closed.
+
+> **The auto-reply's pre-market submission process does NOT apply to this product.** The online
+> application form, the cover-letter questions and the pre-submission consultation all govern food
+> additives, novel foods, infant formula, supplemented foods and similar. A lavender syrup is an
+> ordinary prepackaged food requiring **no pre-market approval**. We asked for artwork, not
+> authorization. **Do not file anything.**
+>
+> **Useful second address:** the same reply routes foods not requiring pre-market approval to
+> **`food-aliment@hc-sc.gc.ca`**. That is the right home for the **U.15 vs U.14 reference amount**
+> question, since the Table of Reference Amounts is a Health Canada document.
 
 ---
 
