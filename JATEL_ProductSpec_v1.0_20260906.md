@@ -27,7 +27,11 @@ The product was reformulated from a 1:5 low-sugar refrigerated cordial to an 11:
 - **Descriptor / house line:** NARAMATA BENCH BOTANICALS
 - **Common name (bilingual, mandatory, PDP):** Lavender Syrup / Sirop à la lavande
 - **Net quantity:** 250 mL (8.45 fl oz)
-- **Container:** Uline S-23397, 8 oz clear Boston round glass, 28-400 neck finish
+- **Container:** Uline S-23397, 8 oz clear Boston round glass, 28-400 neck finish.
+  **Cylindrical through the full label panel.** **Caps are included** with the bottle (carton marked
+  "W/CAP") — do **not** order 28-400 caps separately.
+- **Container cost, VERIFIED:** **$1.70/EA**, Uline order **53425173**, 2026-06-23, **48 EA received**
+  plus 1 CT of S-17668 shrink bands @ $26.00. Freight $41.85 = **$0.872/bottle**. Order total CA$167.38.
 - **Appearance:** clear, deep ruby to garnet red syrup, viscous, no sediment
 - **Flavour:** floral lavender forward, bright citric lift, sweet, not bitter and not soapy
 - **Use:** flavouring syrup for cocktails, sparkling wine, lemonade, soda and coffee
@@ -285,7 +289,7 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 | 3 | Professional French verification | external |
 | 4 | Measure actual Brix with a refractometer on batch 1 and confirm 64 to 66; recompute the NFt if it deviates by more than 1 °Brix | Nelson |
 | 5 | Measure actual pH; confirm <= 4.0 for the acid-preservation claim | Nelson |
-| 6 | Pin the principal display surface area and select the FOP symbol size row from the Directory | designer |
+| 6 | ~~Pin the principal display surface~~ **CLOSED 2026-09-06.** PDS is 60.2 cm² (body only) to 91–94 cm² (true geometry); both readings sit in the **> 30 to ≤ 100 cm²** band, so use that size row | done |
 | 7 | Obtain official FOP symbol EPS from Health Canada | Nelson |
 | 8 | Confirm net-quantity type height for the PDS | designer |
 | 9 | Rewrite or repoint the `naramata-sunset` recipe page (currently describes the blue-to-pink serve) | Nelson |

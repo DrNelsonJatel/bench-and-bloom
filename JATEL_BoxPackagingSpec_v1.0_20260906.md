@@ -13,7 +13,7 @@ All branding is carried by the seal sticker (`JATEL_SealStickerSpec_v1.0_2026090
 
 | Property | Value |
 |---|---|
-| Bottle | Uline **S-23397**, 8 oz clear Boston round glass |
+| Bottle | Uline **S-23397**, 8 oz clear Boston round glass. **Verified in hand**, order 53425173, 48 EA received 2026-06-23. **Caps included.** |
 | Neck finish | 28-400 |
 | Body diameter | **2.375 in** (60.3 mm) |
 | Overall height | **5.437 in** (138.1 mm) |
@@ -23,7 +23,13 @@ All branding is carried by the seal sticker (`JATEL_SealStickerSpec_v1.0_2026090
 
 **Filled weight ≈ 536 g.** Syrup 329 g (250 mL × 1.316 g/mL at 64.8 °Brix) + glass ~200 g **[EST]**
 + cap ~5 g + label ~2 g. **Weigh one empty bottle on a kitchen scale and correct the glass figure**,
-because it drives every shipping quote in section 5.
+because it drives every shipping quote in section 5. **You now have 48 of them in hand, so this is a
+thirty-second job and it is the last estimate holding up the shipping numbers.**
+
+**The body is a true cylinder** through the whole label panel, tapering only at the shoulder. That is
+what makes the 7.25 in wrap label work, and it is also why the square carton in section 2 carries a
+29% corner void. Do not treat the void as waste: it is exactly where cushioning goes, for free, and a
+round tube costs more, does not stack, and does not ship flat.
 
 > Note the syrup is ~25% heavier than the abandoned 1:5 formulation (329 g vs 264 g). Any shipping
 > cost carried over from the July pricing sheet is understated.

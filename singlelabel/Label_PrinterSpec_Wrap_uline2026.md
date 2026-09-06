@@ -289,8 +289,16 @@ copy is a solid draft — have it professionally verified.**
       **Consequence:** with the symbol on the PDP, all sugars-related nutrient content claims are
       prohibited there except "reduced in sugar". "Small batch", "no essential oils", "no artificial
       colour" and the tasting descriptors are not nutrient content claims and remain permitted.
-      **[VERIFY]** the principal display surface computes to roughly **78–105 cm²**, which straddles
-      a size-band boundary. Pin the PDS before the designer picks a size row.
+      **PDS PINNED (2026-09-06): use the `> 30 cm² to ≤ 100 cm²` size row.** The bottle is a
+      **Boston round — cylindrical through the full label panel** (confirmed against the physical
+      bottle from Uline order 53425173). Computing CPLR s.2(c) at 40% of the side area:
+      **straight body only → 60.2 cm²; full true geometry including shoulder and neck → 91–94 cm²
+      across every plausible segment split.** Both defensible readings land in the **same band**, so
+      the size row is settled and no longer blocks the designer. Only a crude "treat the whole bottle
+      as a full-diameter cylinder" reading reaches 104.7 cm², and that reading is wrong because it
+      counts the tapered shoulder and the 28 mm neck as if they were 60 mm across.
+      *Headroom to the 100 cm² boundary is ~6%, so if you want it airtight, measure the straight body
+      height and the shoulder height with calipers and I will recompute exactly.*
 
 **United States (FDA) — if you also sell on Amazon.com:**
 - ✓ **Net quantity is dual-declared** on the PDP — **"250 mL (8.45 fl oz)"** — satisfies FDA's
