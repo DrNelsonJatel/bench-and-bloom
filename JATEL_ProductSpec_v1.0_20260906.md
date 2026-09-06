@@ -146,7 +146,16 @@ The lavender and water are Canadian, so an ingredient-origin claim remains avail
 - Net quantity in metric on the PDP. **[VERIFY]** type height against PDS area.
 - Ingredient list, bilingual, descending by weight.
 - Allergens: no priority allergens present. No "Contains" statement. **[VERIFY]** shared-equipment cross-contact before omitting "may contain".
-- Dealer name and principal place of business, sufficient for postal delivery. **[VERIFY]** the current label shows "Partridge Rd" with the civic house number removed for privacy, which may not satisfy the requirement. Resolve before print.
+- Dealer name and principal place of business, sufficient for postal delivery.
+  **RESOLVED 2026-09-06: `Bench & Bloom, 3820 Partridge Rd, Naramata, BC, Canada V0H 1N1`.**
+  This is the **farm** address, which is a business address for a working farm and the correct one for
+  this field. The civic number **3820 is deliberately restored** — an earlier revision stripped it for
+  privacy, which left the address not postal-deliverable and therefore non-compliant. **Do not strip
+  it again.** The proprietor's home address must never appear on the label; the farm address is not
+  the home address.
+  ⚠️ **[VERIFY] postal code.** The current artwork prints **V0H 1N0**; the correct code is stated as
+  **V0H 1N1**. One of the two is wrong. Confirm on Canada Post's postal code lookup before print —
+  this is a mandatory field.
 - Best before date and lot code.
 
 ## 6. Label copy blocks (paste verbatim)
@@ -228,7 +237,7 @@ LOT                            [ blank, stamped at fill ]
 Responsible party:
 ```
 Prepared for / Préparé pour:
-Bench & Bloom, [civic address], Naramata, BC, Canada V0H 1N0
+Bench & Bloom, 3820 Partridge Rd, Naramata, BC, Canada V0H 1N1
 benchandbloom.com · hello@benchandbloom.com
 ```
 
@@ -285,7 +294,7 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 | # | Item | Owner |
 |---|---|---|
 | 1 | Confirm all determinations in the CFIA Industry Labelling Tool, in particular U.15 vs U.14 and the FOP symbol requirement | Nelson |
-| 2 | Resolve the dealer address: civic number, or another postal-deliverable form | Nelson |
+| 2 | ~~Resolve the dealer address~~ **CLOSED 2026-09-06:** `3820 Partridge Rd, Naramata, BC V0H 1N1`. **Postal code still needs a 10-second check** — artwork says V0H 1N0, stated address says V0H 1N1 | verify code |
 | 3 | Professional French verification | external |
 | 4 | Measure actual Brix with a refractometer on batch 1 and confirm 64 to 66; recompute the NFt if it deviates by more than 1 °Brix | Nelson |
 | 5 | Measure actual pH; confirm <= 4.0 for the acid-preservation claim | Nelson |

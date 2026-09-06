@@ -38,6 +38,9 @@ const FORBIDDEN = [
   // Brix and pH are calculated, not measured (product spec open items 4 and 5).
   // No public preservation claim until a refractometer and pH meter confirm them.
   ['unverified-preservation-claim', /shelf[- ]stable|ambient[- ]stable|does not need refrigerat/i, true],
+  // The proprietor's home address must never be published. The dealer address on
+  // label and site is the FARM: 3820 Partridge Rd, Naramata BC V0H 1N1.
+  ['home-address-must-not-ship', /Bernard\s*Ave|V1Y\s*6P7/i, true],
 ];
 
 const REQUIRED = [
