@@ -215,7 +215,7 @@ Real buds, steeped three minutes and strained by hand. The butterfly pea flower
 goes in blue and comes out ruby.
 ```
 
-Dating (stamp real values per batch; ~12 month convention for a shelf-stable acidified syrup, colour rather than safety being the limit):
+Dating — **printed as blank field names only, never as values.** The artwork carries a **42 × 13 mm coding panel** on the left wing with a **coating knockout** (no laminate, no varnish) so solvent ink will key and dry. Values are stamped per batch with a changeable-band date stamp, flat, while the labels are still on the liner. Convention ~12 months for a shelf-stable acidified syrup, colour rather than safety being the limit. Use the bilingual month symbols (JA FE MR AL MA JN JL AU SE OC NO DE), e.g. `2027 SE 06`. Full spec in `singlelabel/Label_PrinterSpec_Wrap_uline2026.md` under "Coding panel":
 ```
 BEST BEFORE / MEILLEUR AVANT   [ blank, stamped at fill ]
 LOT                            [ blank, stamped at fill ]
