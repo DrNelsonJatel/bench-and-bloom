@@ -75,7 +75,7 @@ Calculated from the formulation and cross-checked against ICUMSA sucrose density
 | Yield, 1x batch | 2.57 L (~10 x 250 mL bottles) | |
 | Sugar concentration | 0.856 g/mL | |
 | Citric acid concentration | 0.53% w/v | 13.5 g / 2,570 mL |
-| pH | **~2.3 to 2.5, working value. Bracketed ≤ 3.0** | Two independent estimates, see §4.1 |
+| pH | **STATE AS ≤ 3.5.** Colour proxy brackets **≤ 3.0**; stoichiometric estimate 2.34 | Two independent estimates + margin, see §4.1 |
 | Water activity | ~0.85 (estimated) | 65 °Brix sucrose |
 | Mass of a 250 mL fill | ~329 g syrup | up ~25% from the 1:5 version |
 
@@ -103,6 +103,14 @@ Hue 351° sits in the **red / deep ruby** arc of the ternatin series, giving a *
 bracket of pH ≤ 3.0**. The stoichiometric estimate from 0.53% w/v citric acid (pKa1 3.13) is
 **pH 2.34**, which falls inside that bracket. **Two independent methods agree.**
 
+> **Value of record: state pH as `≤ 3.5`.** The proxy brackets ≤ 3.0; the stated figure carries
+> **0.5 of deliberate margin** for proxy error, and is the number to quote in any document, claim or
+> conversation with a regulator until a meter reading replaces it. Both figures clear the 4.6 safety
+> threshold and the 4.0 acid hurdle comfortably, so the margin costs nothing.
+>
+> **Batch 2026-001 hue of record: 351°** (`#34020C`). This is the baseline every future batch is
+> compared against.
+
 **What this supports, and what it does not.**
 
 Colour is a **poor pH meter and an excellent threshold indicator**, and the threshold is the part that
@@ -118,7 +126,7 @@ risks channel clipping, though the tight 5.7° hue spread argues against it here
 
 **Turn this into a repeatable batch check.** Photograph every batch the same way — white background,
 **indirect** light, a white-balance reference in frame, same bottle and fill — and the median hue
-becomes a real batch-to-batch consistency metric. **Batch 1 reference: hue 351°, `#34020C`.** A future
+becomes a real batch-to-batch consistency metric. **Batch 2026-001 reference: hue 351°, `#34020C`.** Run `tools/batch_colour_ph.py` on each batch photo. A future
 batch landing materially off that has had its acid dose, its steep, or its heat exposure change, and
 is worth investigating before it is bottled.
 

@@ -19,3 +19,6 @@ node_modules/
 # planning artifacts stay local (not shipped)
 build/
 .vercel
+
+# batch QC log is a working record, not source
+batch_colour_log.csv

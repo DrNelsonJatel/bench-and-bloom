@@ -340,8 +340,9 @@ anywhere above 3 g sugars / 30 mL.**
 > refrigerated", which is now false and would misdescribe the product.
 >
 > **pH is now corroborated by two independent methods.** The butterfly pea is its own indicator: the
-> batch-1 photograph reads a median hue of **351°** (deep ruby), bracketing **pH ≤ 3.0**, and the
-> stoichiometric estimate is **2.34**. At pH 4 to 6 ternatins are purple, so the product is
+> batch-1 photograph reads a hue of **351°** (deep ruby), bracketing **pH ≤ 3.0**, and the
+> stoichiometric estimate is **2.34**. **State the pH as `≤ 3.5`**, carrying 0.5 of deliberate margin
+> for proxy error. At pH 4 to 6 ternatins are purple, so the product is
 > emphatically not near the 4.6 safety threshold. See §4.1 of the product spec.
 >
 > ⚠️ **Brix is still CALCULATED, not measured, and pH still needs a meter reading for the record.** Confirm
