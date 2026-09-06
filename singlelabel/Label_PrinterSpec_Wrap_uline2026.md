@@ -84,7 +84,7 @@ pilot run.
   target loads before generating the symbol.** 33-module symbol with a 4-module quiet zone; keep it
   ≥ 11 mm square in print and do **not** recolour or crop the quiet zone, or it may not scan.
 
-## Coding panel (date + lot) — **variable data, stamped at fill**
+## Coding panel (date + lot) — **APPROVED 2026-09-06. Variable data, stamped at fill**
 
 The artwork prints the **field names** and leaves the **values blank**. Only the operator's stamp
 changes between batches, so one print run serves every batch until the recipe or the law changes.
@@ -120,7 +120,7 @@ claim, story and this panel it runs to **84% committed**, leaving ~16% for gutte
 It fits — **but if anything has to give in layout, shorten the provenance story, not the coding
 panel.**
 
-**Do NOT put pH or °Brix on the label.** Neither is mandatory, neither means anything to a person
+**DECIDED 2026-09-06 — pH and °Brix do NOT go on the label.** Neither is mandatory, neither means anything to a person
 buying lavender syrup, and the Brix has never been checked against a refractometer — printing it
 would assert an unverified number on 100 labels. Both belong in the **batch record, keyed by the lot
 code**, which is exactly what the lot code is for. If you want that transparency public, the QR is
