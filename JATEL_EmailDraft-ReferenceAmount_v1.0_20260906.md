@@ -1,7 +1,14 @@
 # Email draft — Health Canada, reference amount U.14 vs U.15
 
 **Document:** JATEL_EmailDraft-ReferenceAmount_v1.0_20260906
-**Status:** ✅ **SENT 2026-09-06** from `hello@benchandbloom.com`. Awaiting reply.
+**Status:** ✅ **SENT 2026-09-06** from `hello@benchandbloom.com`. Acknowledged the same day;
+the Food and Nutrition Directorate states a target of **approximately two weeks** to respond.
+
+> ⏱ **This is now the longest pole on the label, ahead of the symbol EPS.** SMIU promised a reply on
+> the artwork "in the next few days"; this one is ~2 weeks. Since the answer sets the declared
+> serving size and therefore every value in the Nutrition Facts table — on the label **and** on the
+> published `/nutrition` page — the table cannot be finalised before roughly **2026-09-20**.
+> Plan the artwork around that date, not around the EPS.
 **Why it matters:** the answer sets the declared serving size and therefore every value in the
 Nutrition Facts table, on the label **and** on `benchandbloom.com/nutrition`. It does **not** affect
 whether the sugars symbol is required; that is triggered under either entry.
