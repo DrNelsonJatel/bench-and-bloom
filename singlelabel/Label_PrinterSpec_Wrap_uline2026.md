@@ -339,7 +339,12 @@ anywhere above 3 g sugars / 30 mL.**
 > **"Refrigerate after opening / Réfrigérer après ouverture"** and must **NOT** say "Keep
 > refrigerated", which is now false and would misdescribe the product.
 >
-> ⚠️ **Both the Brix and the pH behind that determination are CALCULATED, not measured.** Confirm
+> **pH is now corroborated by two independent methods.** The butterfly pea is its own indicator: the
+> batch-1 photograph reads a median hue of **351°** (deep ruby), bracketing **pH ≤ 3.0**, and the
+> stoichiometric estimate is **2.34**. At pH 4 to 6 ternatins are purple, so the product is
+> emphatically not near the 4.6 safety threshold. See §4.1 of the product spec.
+>
+> ⚠️ **Brix is still CALCULATED, not measured, and pH still needs a meter reading for the record.** Confirm
 > with a refractometer (expect 64–66 °Brix) and a pH meter (expect ≤ 4.0) on batch 1 **before**
 > printing an ambient best-before. If the measured Brix is more than 1 °Brix off, recompute the
 > Nutrition Facts table.

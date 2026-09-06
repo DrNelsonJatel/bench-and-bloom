@@ -75,13 +75,54 @@ Calculated from the formulation and cross-checked against ICUMSA sucrose density
 | Yield, 1x batch | 2.57 L (~10 x 250 mL bottles) | |
 | Sugar concentration | 0.856 g/mL | |
 | Citric acid concentration | 0.53% w/v | 13.5 g / 2,570 mL |
-| pH | ~2.5 (estimated) | 27 mM citric acid |
+| pH | **~2.3 to 2.5, working value. Bracketed ≤ 3.0** | Two independent estimates, see §4.1 |
 | Water activity | ~0.85 (estimated) | 65 °Brix sucrose |
 | Mass of a 250 mL fill | ~329 g syrup | up ~25% from the 1:5 version |
 
 **Preservation:** sugar-preserved (>= 65 °Brix, a_w ~0.85) and acid-preserved (pH ~2.5), plus hot-fill into sanitized glass. This is an ambient shelf-stable product. It is not a refrigerated product and the label must not say "Keep refrigerated".
 
 **Colour chemistry:** butterfly pea ternatins are blue near neutral pH and shift through purple to red below pH 3. At pH ~2.5 the syrup is permanently ruby red in the bottle. The blue-to-pink-with-citrus reveal is no longer possible and all copy describing it must be removed.
+
+### 4.1 pH by colour — butterfly pea as its own indicator
+
+The butterfly pea in the product is a **polyacylated anthocyanin (ternatin)**, which is a genuine pH
+indicator, so the syrup reports its own pH. This is a **proxy, adopted as the working value until a
+meter reading exists.**
+
+**Measurement, batch 1** (`Photos/BnB_Lavender Syrop.JPG`, 2026-09-06, bottle backlit in direct sun):
+
+| Metric | Value |
+|---|---|
+| Qualifying pixels sampled | 24,716 |
+| Median RGB | (52, 2, 12) — `#34020C` |
+| **Median hue** | **350.7°** (10th–90th percentile 348.9° to 354.5°) |
+| Saturation / value | 0.96 / 0.20 |
+| R:B ratio | 4.33 |
+
+Hue 351° sits in the **red / deep ruby** arc of the ternatin series, giving a **colour-inferred
+bracket of pH ≤ 3.0**. The stoichiometric estimate from 0.53% w/v citric acid (pKa1 3.13) is
+**pH 2.34**, which falls inside that bracket. **Two independent methods agree.**
+
+**What this supports, and what it does not.**
+
+Colour is a **poor pH meter and an excellent threshold indicator**, and the threshold is the part that
+matters. It cannot separate pH 2.3 from pH 2.6. But at pH 4 to 6 ternatins are **purple**, hue 280–320°,
+and this reads 351°. That is 30 to 70 degrees away, far outside any plausible measurement or
+white-balance error. **The product is emphatically not near pH 4.** Both the 4.6 acidified-food
+safety threshold and the spec's own 4.0 hurdle are cleared with large margin.
+
+**Known limits of the proxy.** The image is a backlit sRGB JPEG, not colorimetry. Anthocyanin
+**concentration and path length** both deepen apparent colour toward red independently of pH, so the
+*lower* end of the bracket carries no information — **only the upper bound is meaningful.** Direct sun
+risks channel clipping, though the tight 5.7° hue spread argues against it here.
+
+**Turn this into a repeatable batch check.** Photograph every batch the same way — white background,
+**indirect** light, a white-balance reference in frame, same bottle and fill — and the median hue
+becomes a real batch-to-batch consistency metric. **Batch 1 reference: hue 351°, `#34020C`.** A future
+batch landing materially off that has had its acid dose, its steep, or its heat exposure change, and
+is worth investigating before it is bottled.
+
+---
 
 ## 5. Regulatory determinations (Canada)
 
@@ -297,7 +338,7 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 | 2 | ~~Resolve the dealer address~~ **CLOSED 2026-09-06:** `3820 Partridge Rd, Naramata, BC V0H 1N1`, postal code confirmed. Artwork's `V0H 1N0` is confirmed wrong and must be corrected in the redraw | closed |
 | 3 | Professional French verification | external |
 | 4 | Measure actual Brix with a refractometer on batch 1 and confirm 64 to 66; recompute the NFt if it deviates by more than 1 °Brix | Nelson |
-| 5 | Measure actual pH; confirm <= 4.0 for the acid-preservation claim | Nelson |
+| 5 | Measure actual pH with a meter **for the record**. **Risk downgraded 2026-09-06:** two independent methods (stoichiometric and photometric, §4.1) now agree the product is ≤ 3.0, clearing both the 4.6 safety threshold and the 4.0 hurdle with margin. A meter reading is still required as a food-safety record, but the claim is no longer resting on a single unverified number | Nelson |
 | 6 | ~~Pin the principal display surface~~ **CLOSED 2026-09-06.** PDS is 60.2 cm² (body only) to 91–94 cm² (true geometry); both readings sit in the **> 30 to ≤ 100 cm²** band, so use that size row | done |
 | 7 | Obtain official FOP symbol EPS from Health Canada | Nelson |
 | 8 | Net-quantity type height — **provisionally 3.2 mm minimum.** Both PDS readings (60.2 and 91–94 cm²) fall in the same `> 32 to ≤ 258 cm²` band, so the answer is stable either way. **[VERIFY** the band table in the CFIA tool with item 1; the thresholds are from recall, not a read of the schedule**]** | verify |
