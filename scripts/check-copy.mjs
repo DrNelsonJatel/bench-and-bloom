@@ -59,6 +59,16 @@ const REQUIRED = [
   // "no essential oils" line on the same page. Keep that clean-label claim pinned.
   ['no-essential-oils claim still on /syrup', () =>
     /never add extracted essential oil|no essential oils/i.test(readFileSync(join(DIST, 'syrup', 'index.html'), 'utf8'))],
+  // /nutrition publishes figures that are NOT all instrument readings. Brix and pH are
+  // calculated. The page must keep saying so: presenting an estimate as a measurement is
+  // the specific failure this guard exists to prevent.
+  ['nutrition page built', () => existsSync(join(DIST, 'nutrition', 'index.html'))],
+  ['nutrition page flags unmeasured figures', () =>
+    /Not yet measured/i.test(readFileSync(join(DIST, 'nutrition', 'index.html'), 'utf8'))],
+  ['nutrition page states the calculated basis', () =>
+    /Recipe-calculated/i.test(readFileSync(join(DIST, 'nutrition', 'index.html'), 'utf8'))],
+  ['nutrition page discloses the sugars symbol', () =>
+    /High in sugars/i.test(readFileSync(join(DIST, 'nutrition', 'index.html'), 'utf8'))],
 ];
 
 let fails = 0;

@@ -13,6 +13,7 @@ const socials = Object.entries(SOCIAL).filter(([, url]) => url);
 
     <nav class="site-footer__nav" aria-label="Footer">
       {NAV.map((item) => <a href={item.href}>{item.label}</a>)}
+      <a href="/nutrition">Nutrition</a>
       <a href={`mailto:${SITE.email}`}>Contact</a>
     </nav>
   </div>

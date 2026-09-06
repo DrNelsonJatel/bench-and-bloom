@@ -1,0 +1,154 @@
+---
+import Base from '../layouts/Base.astro';
+import BuyButton from '../components/BuyButton.astro';
+import { SITE } from '../consts';
+
+const title = 'Nutrition & Specifications';
+const description =
+  'Nutrition Facts, ingredients and the full specification for Bench & Bloom lavender syrup: ' +
+  'sugars per serving, Brix, pH, storage and how each number was determined.';
+
+// Every figure carries how it was determined. Recipe-calculated is a CFIA-acceptable
+// basis for a sugar-and-water solution, but it is not an instrument reading, and the
+// difference is stated rather than smoothed over.
+const spec = [
+  { k: 'Net quantity',    v: '250 mL (8.45 fl oz)', how: 'Measured fill', ok: true },
+  { k: 'Ingredients',     v: 'Sugar, water, lavender, citric acid, butterfly pea flower', how: 'Recipe', ok: true },
+  { k: 'Sugar concentration', v: '≈ 64 °Brix', how: 'Recipe-calculated. Not yet confirmed with a refractometer', ok: false },
+  { k: 'pH',              v: '≤ 3.5', how: 'Two independent estimates: acid stoichiometry, and the butterfly pea read as its own indicator', ok: false },
+  { k: 'Colour',          v: 'Deep ruby', how: 'Measured from the batch photograph, hue 351°', ok: true },
+  { k: 'Storage',         v: 'Refrigerate after opening', how: 'Product specification', ok: true },
+  { k: 'Lavender',        v: "Lavandula × intermedia 'Grosso', estate grown", how: 'Grown on the Naramata Bench', ok: true },
+];
+---
+
+<Base title={title} description={description}>
+  <section class="section wrap">
+    <p class="eyebrow">The numbers</p>
+    <h1>Nutrition &amp; specifications.</h1>
+    <p class="lede" style="max-width:var(--measure);">
+      Everything we know about what is in the bottle, including the parts that are not
+      flattering and the parts we have not finished measuring.
+    </p>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap split">
+      <div>
+        <h2>Nutrition Facts</h2>
+        <div class="nft" role="table" aria-label="Nutrition Facts per 30 mL">
+          <p class="nft__title">Nutrition Facts<br /><span>Valeur nutritive</span></p>
+          <p class="nft__serving">Per 30 mL (2 tbsp)<br /><span>pour 30 mL (2 c. à soupe)</span></p>
+          <p class="nft__cal"><strong>Calories 100</strong></p>
+          <p class="nft__dvhead">% Daily Value*<br /><span>% valeur quotidienne*</span></p>
+          <dl class="nft__rows">
+            <div><dt>Fat / Lipides 0 g</dt><dd>0 %</dd></div>
+            <div><dt>Carbohydrate / Glucides 26 g</dt><dd></dd></div>
+            <div class="nft__indent"><dt>Sugars / Sucres 26 g</dt><dd>26 %</dd></div>
+            <div><dt>Protein / Protéines 0 g</dt><dd></dd></div>
+            <div><dt>Sodium 0 mg</dt><dd>0 %</dd></div>
+          </dl>
+          <p class="nft__foot">*5% or less is <strong>a little</strong>, 15% or more is <strong>a lot</strong><br />
+            <span>*5% ou moins c'est <strong>peu</strong>, 15% ou plus c'est <strong>beaucoup</strong></span></p>
+        </div>
+        <p class="fine">
+          Recipe-calculated. For a sugar-and-water solution the nutrition is essentially its
+          sugar content, so calculation is an accepted basis, but it is not a laboratory
+          analysis and we do not present it as one.
+        </p>
+      </div>
+
+      <div>
+        <h2>It is a syrup, and it is mostly sugar.</h2>
+        <p>
+          Twenty-six grams of sugar in a 30 mL serving is 26% of a day's value. That is high, and
+          the bottle carries Health Canada's front-of-package <strong>"High in sugars / Élevé en
+          sucres"</strong> symbol because of it.
+        </p>
+        <p>
+          We would rather say that plainly here than have you find it on the back of the bottle.
+          A cocktail syrup is sugar and water with something beautiful steeped through it. Ours is
+          lavender we grew. It is not a health food and we are not going to dress it up as one.
+        </p>
+        <p>
+          The serving is a bar measure, not a glassful. Two tablespoons builds a full drink.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section wrap">
+    <h2>Full specification</h2>
+    <p class="lede" style="max-width:var(--measure);">
+      Each figure with how we know it. Where we have not put an instrument on something yet,
+      it says so.
+    </p>
+    <div class="spec">
+      {spec.map((r) => (
+        <div class="spec__row">
+          <div class="spec__k">{r.k}</div>
+          <div class="spec__v">{r.v}</div>
+          <div class={r.ok ? 'spec__how' : 'spec__how spec__how--pending'}>{r.how}</div>
+        </div>
+      ))}
+    </div>
+    <p class="fine">
+      Two figures are calculated rather than measured, and are marked. A refractometer and a pH
+      meter close both on the first production batch. We will update this page with the readings
+      rather than quietly leaving the estimates in place.
+    </p>
+  </section>
+
+  <section class="section section--surface">
+    <div class="wrap center">
+      <h2>Questions we have not answered here?</h2>
+      <p class="lede" style="margin-inline:auto;">
+        Ask us directly. <a href={`mailto:${SITE.email}`}>{SITE.email}</a>
+      </p>
+      <div class="cta-row" style="justify-content:center;"><BuyButton /></div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .fine { font-size: 0.88rem; color: var(--ink-soft); max-width: var(--measure); margin-top: 1rem; }
+
+  /* Nutrition Facts panel, styled after the Canadian table. */
+  .nft {
+    background: #fff; color: #000; border: 1px solid #000; padding: 0.6rem 0.7rem;
+    max-width: 22rem; font-family: var(--font-body); font-size: 0.9rem; line-height: 1.25;
+  }
+  .nft p { margin: 0; }
+  .nft__title { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.01em; }
+  .nft__title span { font-size: 1.05rem; font-weight: 700; }
+  .nft__serving { padding-bottom: 0.3rem; border-bottom: 8px solid #000; }
+  .nft__serving span { color: #333; }
+  .nft__cal { font-size: 1.15rem; padding: 0.25rem 0; border-bottom: 4px solid #000; }
+  .nft__dvhead { text-align: right; font-weight: 700; font-size: 0.78rem; padding: 0.2rem 0; border-bottom: 1px solid #000; }
+  .nft__rows { margin: 0; }
+  .nft__rows > div {
+    display: flex; justify-content: space-between; gap: 1rem;
+    padding: 0.22rem 0; border-bottom: 1px solid #000;
+  }
+  .nft__rows dt { font-weight: 600; }
+  .nft__rows dd { margin: 0; font-weight: 700; }
+  .nft__indent dt { padding-left: 1.1rem; font-weight: 400; }
+  .nft__foot { font-size: 0.74rem; padding-top: 0.35rem; border-top: 5px solid #000; }
+  .nft__foot span { color: #333; }
+
+  /* Specification table */
+  .spec { margin-top: 1.75rem; border-top: 1px solid var(--line); }
+  .spec__row {
+    display: grid; gap: 0.25rem 1.5rem; padding: 0.9rem 0;
+    border-bottom: 1px solid var(--line); grid-template-columns: 1fr;
+  }
+  .spec__k { font-weight: 600; color: var(--lavender-deep); }
+  .spec__v { font-size: 1.02rem; }
+  .spec__how { font-size: 0.86rem; color: var(--ink-soft); }
+  .spec__how--pending::before {
+    content: 'Not yet measured — '; font-weight: 600; color: var(--gold-deep);
+  }
+  @media (min-width: 46rem) {
+    .spec__row { grid-template-columns: 12rem 1fr 18rem; align-items: baseline; }
+  }
+</style>
