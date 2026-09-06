@@ -300,9 +300,9 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 | 5 | Measure actual pH; confirm <= 4.0 for the acid-preservation claim | Nelson |
 | 6 | ~~Pin the principal display surface~~ **CLOSED 2026-09-06.** PDS is 60.2 cm² (body only) to 91–94 cm² (true geometry); both readings sit in the **> 30 to ≤ 100 cm²** band, so use that size row | done |
 | 7 | Obtain official FOP symbol EPS from Health Canada | Nelson |
-| 8 | Confirm net-quantity type height for the PDS | designer |
-| 9 | Rewrite or repoint the `naramata-sunset` recipe page (currently describes the blue-to-pink serve) | Nelson |
-| 10 | Set real packaged and best-before dates at fill; do not print the July placeholders | Nelson |
+| 8 | Net-quantity type height — **provisionally 3.2 mm minimum.** Both PDS readings (60.2 and 91–94 cm²) fall in the same `> 32 to ≤ 258 cm²` band, so the answer is stable either way. **[VERIFY** the band table in the CFIA tool with item 1; the thresholds are from recall, not a read of the schedule**]** | verify |
+| 9 | ~~Rewrite or repoint `naramata-sunset`~~ **CLOSED 2026-09-06 — both done.** The page was rewritten (it now arrives ruby, and the lemon is for brightness not theatre) **and** the printed QR was repointed to `/recipes/lavender-milk`, which is the serve that actually carries the colour change. Live and verified | done |
+| 10 | ~~Set real dates at fill~~ **SUPERSEDED 2026-09-06.** No date prints in the artwork at all now. The label carries a blank **42 × 13 mm coding panel** with a coating knockout, stamped per batch. See "Coding panel" in the label spec. Remaining task is operational, not artwork: **source a changeable-band date stamp and solvent ink rated for non-porous surfaces, and run the smear test** | Nelson |
 
 ## 10. Confidence and provenance
 
