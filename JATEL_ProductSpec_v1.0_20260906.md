@@ -280,7 +280,7 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 
 | # | Item | Owner |
 |---|---|---|
-| 1 | Confirm all determinations in the CFIA Industry Labelling Tool, in particular U.15 vs U.14 and the FOP symbol requirement | Nelson |
+| 1 | **U.15 vs U.14 SENT 2026-09-06** to `food-aliment@hc-sc.gc.ca`. Acknowledged; stated target **~2 weeks**, so expect a reply about **2026-09-20**. **This is now the critical path for the Nutrition Facts table**, ahead of the symbol EPS. Remaining for the CFIA Industry Labelling Tool session: net-quantity type height, whether a best-before is required at all (durable life >90 days), allergen/cross-contact wording, and the seal sticker's brand-only status | Nelson |
 | 2 | ~~Resolve the dealer address~~ **CLOSED 2026-09-06:** 3820 Partridge Rd, Naramata, BC V0H 1N1. Correct the postal code from the July art's V0H 1N0 | done |
 | 3 | Professional French verification | external |
 | 4 | Measure actual Brix with a refractometer on batch 1 and confirm 64 to 66; recompute the NFt if it deviates by more than 1 °Brix | Nelson |
