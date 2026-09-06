@@ -14,7 +14,7 @@ const description =
 const spec = [
   { k: 'Net quantity',    v: '250 mL (8.45 fl oz)', how: 'Measured fill', ok: true },
   { k: 'Ingredients',     v: 'Sugar, water, lavender, citric acid, butterfly pea flower', how: 'Recipe', ok: true },
-  { k: 'Sugar concentration', v: '≈ 64 °Brix', how: 'Recipe-calculated. Not yet confirmed with a refractometer', ok: false },
+  { k: 'Sugar concentration', v: '≈ 64 °Brix', how: 'Recipe-calculated. To be confirmed with a refractometer on the first production batch', ok: false },
   { k: 'pH',              v: '≤ 3.5', how: 'Two independent estimates: acid stoichiometry, and the butterfly pea read as its own indicator', ok: false },
   { k: 'Colour',          v: 'Deep ruby', how: 'Measured from the batch photograph, hue 351°', ok: true },
   { k: 'Storage',         v: 'Refrigerate after opening', how: 'Product specification', ok: true },
@@ -146,7 +146,7 @@ const spec = [
   .spec__v { font-size: 1.02rem; }
   .spec__how { font-size: 0.86rem; color: var(--ink-soft); }
   .spec__how--pending::before {
-    content: 'Not yet measured — '; font-weight: 600; color: var(--gold-deep);
+    content: 'Batch estimate — '; font-weight: 600; color: var(--gold-deep);
   }
   @media (min-width: 46rem) {
     .spec__row { grid-template-columns: 12rem 1fr 18rem; align-items: baseline; }

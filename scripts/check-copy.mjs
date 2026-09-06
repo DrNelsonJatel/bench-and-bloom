@@ -63,8 +63,8 @@ const REQUIRED = [
   // calculated. The page must keep saying so: presenting an estimate as a measurement is
   // the specific failure this guard exists to prevent.
   ['nutrition page built', () => existsSync(join(DIST, 'nutrition', 'index.html'))],
-  ['nutrition page flags unmeasured figures', () =>
-    /Not yet measured/i.test(readFileSync(join(DIST, 'nutrition', 'index.html'), 'utf8'))],
+  ['nutrition page flags estimated figures', () =>
+    /Batch estimate/i.test(readFileSync(join(DIST, 'nutrition', 'index.html'), 'utf8'))],
   ['nutrition page states the calculated basis', () =>
     /Recipe-calculated/i.test(readFileSync(join(DIST, 'nutrition', 'index.html'), 'utf8'))],
   ['nutrition page discloses the sugars symbol', () =>
