@@ -1,0 +1,21 @@
+---
+// French recipe pages.
+//
+// getStaticPaths iterates the ENGLISH collection, so every English recipe gets a
+// French URL automatically. If a translation exists in recipes-fr under the same
+// slug it is served; if not, the English entry renders with a notice. A new
+// English recipe therefore never 404s in French and never vanishes from the hub.
+import Page from '../../recipes/[slug].astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const en = await getCollection('recipes');
+  const fr = await getCollection('recipes-fr');
+  return en.map((entry) => {
+    const translated = fr.find((r) => r.id === entry.id);
+    return { params: { slug: entry.id }, props: { entry: translated ?? entry, translated: !!translated } };
+  });
+}
+const { entry, translated } = Astro.props;
+---
+<Page entry={entry} translated={translated} />

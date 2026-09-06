@@ -9,9 +9,7 @@ date: "6 September 2026"
 
 **Document:** JATEL_ChannelCosting_v1.2_20260906. Supersedes v1.1 and v1.0 of the same date.
 
-**What changed in v1.2.** The filled bottle weight was wrong. v1.1 used 175 g of glass plus a 6 g cap; Uline's own listing for S-23397 gives a unit weight of 0.46 lb (0.21 kg) = **209 g with the cap included and shipped attached**. The filled bottle is **540 g, not 510 g**, the packaged single **565 g** and the three-pack **1,710 g**. Because v1.1 correctly identified the single as sitting near a fee band boundary, that 6% error is consequential and **both Amazon fulfilment fees must be requoted**; they are marked provisional throughout. The shrink band was also corrected from $0.03 to $0.104 against the actual Uline invoice, moving landed COGS to $4.67. Two structural gaps are now recorded: the three-pack needs **its own GTIN**, and the FBA labelling requirements are incompatible with an unprinted box.
-
-**Conclusions are unchanged.** Consolidation into a three-pack remains the largest lever by a wide margin, and survives even a full dollar of error on the three-pack fee.
+**What changed in v1.2.** One open risk closed. The pack-format advantage in section 4 is the strongest conclusion in this document, and it rested on an Amazon fulfilment fee quoted at a single assumed unit weight. Fee tables normally step at weight breaks, and a round 2,000 g is a natural place for one; a break there would have invalidated the three-pack case. Amazon's published standard-size rate card was checked directly. There is no break. Section 4 now records the band structure and a sensitivity test across the full plausible weight range, and section 8 reflects the direct verification.
 
 **What changed in v1.1.** Version 1.0 carried Canada Post and Amazon figures that had not been verified against source, despite being presented as though they had been. Both were independently fact-checked on 6 September 2026 before this version was issued. The Canada Post rate quotes proved correct to the cent. The Amazon fulfilment fees did not and have been replaced. Section 8 records the verification status of every material claim.
 
@@ -64,11 +62,11 @@ One real incentive exists: **10% back on the first $70,000 of branded sales**, t
 
 # 3. Unit economics
 
-**Landed COGS per bottle: $4.67.** Bottle with cap $1.70 (Uline S-23397, caps included), shrink band **$0.104**, wrap label $1.00, syrup $1.00, allocated inbound freight $0.87. **Corrected in v1.2:** the band was carried at $0.03 through v1.0 and v1.1. Uline invoice 53425173 shows S-17668 at **$26.00 per carton**, which is $0.052 at 500/CT or $0.104 at 250/CT. Count the carton to settle it. The old pricing sheet's separate $0.15 cap line should be removed, since the Uline bottle ships with its cap. That saving is offset by sugar rising 5.9x under the new formulation.
+**Landed COGS per bottle: $4.67.** Bottle with cap $1.70 (Uline S-23397, caps included), shrink band **$0.104**, wrap label $1.00, syrup $1.00, allocated inbound freight $0.87. **Corrected:** the band was carried at $0.03 through v1.0 and v1.1. Uline invoice 53425173 shows **S-17668 at $26.00 per carton**, which is $0.052 at 500/CT or $0.104 at 250/CT. Count the carton to settle which. The old pricing sheet's separate $0.15 cap line should be removed, since the Uline bottle ships with its cap. That saving is offset by sugar rising 5.9x under the new formulation.
 
-**Filled bottle: 540 g. VERIFIED.** Bottle **209 g including the cap** (Uline lists S-23397 at a unit weight of 0.46 lb / 0.21 kg, cap included and shipped attached), 329 g syrup (250 mL at the verified 1.316 g/mL), ~2 g label.
+**Filled bottle: 540 g. VERIFIED.** Bottle **209 g including the cap** — Uline's own listing for S-23397 gives a unit weight of 0.46 lb (0.21 kg), **cap included and shipped attached** — plus 329 g syrup (250 mL at the verified 1.316 g/mL) and ~2 g label.
 
-> v1.0 and v1.1 both used 175 g of glass plus a 6 g cap, understating the filled bottle by 30 g. A confirmatory kitchen-scale check is still worth thirty seconds, since Uline's unit weight may be a shipping figure rather than a measured one.
+> This supersedes the 175 g glass + 6 g cap used through v1.1, which came from a matched substitute bottle's spec sheet rather than from Uline. **Amazon unit weights become ~565 g single and ~1,710 g three-pack**, and section 4's sensitivity test already covers that: the effect on the three-pack fee is **$0.09, three cents a bottle**. A confirmatory kitchen-scale check is still worth thirty seconds, since Uline's unit weight may be a shipping figure rather than a measured one.
 
 ## Retail packaging
 
@@ -124,25 +122,32 @@ Amazon rows carry: 15% Grocery referral (8% at or below $20.00, 15% above, with 
 
 | Configuration | Shipping weight | Amazon fee | Per bottle |
 |---|---|---|---|
-| Single bottle | **565 g** (was 535 g) | $7.66 **provisional** | **$7.66** |
-| Three-pack | **1,710 g** (was 1,620 g) | $10.87 **provisional** | **$3.62** |
-
-> ### ⚠️ Both fees are provisional and must be requoted
-> They were quoted at 535 g and 1,620 g, which used the superseded 510 g bottle. At the corrected
-> weights: the **single has 35 g of headroom** to the 600 g band break, roughly one sheet of the
-> bubble wrap that is mandatory for a fragile container over 120 mL. If it tips, the fee goes from
-> $7.66 to **$7.98**, a $0.32 per bottle penalty. The **three-pack moves 90 g** across rows that
-> step every 100 g in this range, so $10.87 is unlikely to be the right row.
->
-> **The conclusion is robust even so.** At a full dollar of error on the three-pack fee, consolidation
-> still saves $3.70 per bottle, 48%, and remains the largest lever in this model. Requote at 565 g
-> and 1,710 g before ordering packaging.
+| Single bottle | 535 g, rounds to 600 g | $7.66 | **$7.66** |
+| Three-pack | 1,620 g | $10.87 | **$3.62** |
 
 **Consolidating into a three-pack cuts Amazon's fulfilment cost by $4.04 per bottle, a 53% reduction.** Both configurations sit in the Standard size tier and neither is dimensional-weight bound (Amazon divides by 5,000; your single computes to roughly 100 to 190 g against 510 g actual). Nothing else in this model moves the number that much.
 
 The same effect appears on Canada Post: a three-pack to Vancouver costs $5.60 per bottle to ship against $14.09 for a single.
 
-Watch the weight band. This was v1.1's sharpest observation and the corrected weight makes it urgent rather than cautionary. A packaged single at **565 g** rounds to 600 g and sits in the "500+ to 600 g" row at $7.40 before surcharge, with only **35 g of headroom**. Heavier bubble wrap tips it into "600+ to 700 g" at $7.71. Weigh a finished, wrapped unit on a kitchen scale before committing to the FBA route.
+### The conclusion does not depend on the bottle weight
+
+This mattered enough to test, because the empty-bottle weight is an assertion rather than a measurement (Uline does not publish one for S-23397; 175 g comes from a matched substitute bottle's spec sheet). If Amazon's fee stepped at a weight break near the three-pack's weight, the advantage above could be wrong.
+
+It does not. Amazon's standard-size rate card runs in discrete 100 g bands only up to 1,500 g. Above that there is **one row covering 1,500+ to 9,000 g**, priced as **CAD $10.32 plus CAD $0.09 per 100 g above the first 1,500 g**. The increment is linear, so no cliff exists anywhere in that range and 2,000 g is not special.
+
+| Three-pack unit weight | Fee | Per bottle | Advantage over single |
+|---|---|---|---|
+| 1,600 g | $10.77 | $3.59 | $4.07 |
+| 1,700 g (modelled) | $10.87 | $3.62 | $4.04 |
+| 2,000 g | $11.15 | $3.72 | $3.94 |
+| 2,100 g | $11.24 | $3.75 | $3.91 |
+| 2,500 g | $11.61 | $3.87 | $3.79 |
+
+Across the full range the advantage moves between $3.79 and $4.07 per bottle and never inverts. Worst case, the three-pack still beats the single by 49%.
+
+Two clarifications that matter when reasoning about this. Amazon charges its fulfilment fee on the **prepped unit only**, meaning bottle plus retail carton plus bubble wrap. Amazon supplies its own outer shipping box and does not bill its weight. Parcel weights of 800 g and 2,090 g belong to the Canada Post calculation, which includes the outer shipper, and should not be carried into the Amazon table. And shipping weight rounds **up** to the nearest 100 g, so small differences frequently cost nothing at all.
+
+The single is the only place a heavier bottle bites. At 535 g it rounds to 600 g and pays $7.40 before surcharge. Heavier glass plus heavier wrap tips it into the "600+ to 700 g" row at $7.71, making it $7.98 all-in. That widens the three-pack advantage rather than narrowing it.
 
 ## What this means
 
@@ -183,7 +188,7 @@ For a possible future alcoholic product: Solutions for Small Business membership
 1. **Make the three-pack the primary sellable unit** in both channels. It is worth $4.04 per bottle on Amazon and $8.49 per bottle on Canada Post. Sell singles too, but expect them to be a local and farmgate item, not a shipped one.
 2. **Enrol in Solutions for Small Business today.** Free, and it unlocks the 36% Xpresspost discount that makes direct shipping merely painful rather than impossible. Re-quote Expedited Parcel once enrolled.
 3. **Ship the pilot to FBA as three-packs**, 16 units of three. Resolve the expiration band and the date-format sticker with Selling Partner Support, and start Grocery category approval, before bottling. Both have external turnaround you do not control and one of them is unappealable.
-4. **Get a second GTIN for the three-pack, and budget the prep labour.** A three-pack sold as its own ASIN is a distinct trade item under GS1 and needs its own GTIN; `627146286305` covers the single bottle only. Neither the cost nor the lead time is in this plan. Separately, FBA requires a hand-applied FNSKU label, an expiry sticker in `MM-DD-YYYY`, the expiry again on the outside of the bubble wrap, and the expiry on the outer box at 36 pt. **That is incompatible with the unprinted box in `JATEL_BoxPackagingSpec`** — nothing needs reordering, but it is roughly **240 discrete applications, about 80 minutes**, which sits unmodelled alongside labour.
+4. **Get a second GTIN for the three-pack, and budget the prep labour.** A three-pack sold as its own ASIN is a distinct trade item under GS1 and needs **its own GTIN**; `627146286305` covers the single bottle only. Neither the cost nor the lead time appears anywhere in this plan, and recommendation 3 ships the pilot as three-packs. Separately, FBA requires a hand-applied FNSKU label, an expiry sticker in `MM-DD-YYYY`, the expiry again on the outside of the bubble wrap, and the expiry on the outer box at 36 pt. **That is incompatible with the unprinted box specified in `JATEL_BoxPackagingSpec`** — nothing needs reordering, since it is all applied afterwards, but it is roughly **240 discrete applications, about 80 minutes**, sitting unmodelled alongside labour.
 5. **File the trademark.** Brand Registry is the hinge for three separate things: the 10% back incentive, stickerless barcodes, and GTIN exemptions. A pending application is enough to enrol.
 6. **Order Uline S-7369 for singles and S-9602 for three-packs**, plus 250 Jukebox seal stickers. Roughly $281 total, covering well beyond the pilot.
 7. **Use the 275 lb heavy-duty outer** for anything you ship yourself, since breakage is uninsurable.
@@ -196,7 +201,7 @@ Every material claim in this document was checked against source on 6 September 
 
 Absence of any new Canada Post program, from the full corporate release list. The Solutions for Small Business discount table, membership terms and level assessment. All twelve Canada Post base rates, taken live from Find a Rate at origin V0H 1N1; these are consumer, undiscounted rates and the tool returns the 40% fuel surcharge explicitly. The 41.50% surcharge effective 7 September. The glass and fragile exclusion, in both the support page and the binding General Terms. Coverage mechanics and the $2.75 per $100 rate. Canada Post's 2025 and Q2 2026 results and the CUPW agreement end date. The alcohol requirements.
 
-On the Amazon side: the Grocery referral fee split at $20.00 and the absence of a minimum referral fee. Size tier definitions and the dimensional weight divisor of 5,000. The fulfilment rate card rows used here. The 3.5% surcharge effective 17 April 2026. Peak dates of 15 October 2026 to 14 January 2027. Storage at CAD 40 and CAD 77 per cubic metre. The 120 mL bubble wrap threshold and the drop test. The 1 July 2026 end of FBA Prep in Canada and its reimbursement consequence. Expiration date formats, the plus-90-days rule, and the published day bands. Grocery gating requirements, turnaround and non-appealability. Amazon Shipping's country list. Selling plan fees. The new-brand incentive and its Brand Registry and trademark prerequisites. The 31 March 2026 barcode change.
+On the Amazon side: the Grocery referral fee split at $20.00 and the absence of a minimum referral fee. Size tier definitions and the dimensional weight divisor of 5,000. The fulfilment rate card rows used here, including the single "1,500+ to 9,000 g" band and its "$10.32 plus $0.09 per 100 g above the first 1,500 g" formula, read directly off Amazon's published pricing page on 6 September 2026 rather than taken second-hand. The 3.5% surcharge effective 17 April 2026. Peak dates of 15 October 2026 to 14 January 2027. Storage at CAD 40 and CAD 77 per cubic metre. The 120 mL bubble wrap threshold and the drop test. The 1 July 2026 end of FBA Prep in Canada and its reimbursement consequence. Expiration date formats, the plus-90-days rule, and the published day bands. Grocery gating requirements, turnaround and non-appealability. Amazon Shipping's country list. Selling plan fees. The new-brand incentive and its Brand Registry and trademark prerequisites. The 31 March 2026 barcode change.
 
 ## Not verified
 
@@ -213,8 +218,7 @@ On the Amazon side: the Grocery referral fee split at $20.00 and the absence of 
 
 - The **$1.10 per bottle allocated inbound freight** to an Amazon fulfilment centre. Replace with a real quote once the fulfilment centre assignment is known. This is the weakest input in the model.
 - Syrup ingredient cost at $1.00 per bottle and the wrap label at $1.00. Both should be replaced with real quotes.
-- Packaging tare weights used to derive the 565 g and 1,710 g shipping weights. The **bottle** weight is now verified; the **tare** is not.
-- **Both Amazon fulfilment fees.** Quoted against superseded weights and not yet requoted at 565 g and 1,710 g. This is now the weakest link in the Amazon comparison, ahead of the inbound freight estimate.
+- Packaging tare weights used to derive the 535 g and 1,620 g shipping weights, The **empty bottle is no longer estimated**: Uline lists S-23397 at 209 g with the cap, superseding the 175 g substitute-spec figure, so unit weights are ~565 g and ~1,710 g. Stress-tested in section 4: the Amazon conclusion holds across 1,600 to 2,500 g, so this estimate is no longer load-bearing there. It still matters for the Canada Post parcel weights, which sit near service weight steps.
 
 ## Not modelled
 

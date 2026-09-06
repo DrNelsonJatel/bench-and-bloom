@@ -28,12 +28,19 @@ SHIP_MAT_3 = 0.49 + 1.80 + 0.25   # 3 pouches + heavy-duty 8x8x6 + void
 
 # ---------- Amazon (amazon.ca, Sept 2026, incl. 3.5% fuel/logistics surcharge) ----------
 REFERRAL       = 0.15            # Grocery, >$20.00
-# ⚠️ SHIPPING WEIGHTS BELOW ARE NOW UNDERSTATED. With a 540 g filled bottle the single is
-# ~830 g and the three-pack ~2,090 g, not 800 / 2,000. FBA fee tables step at weight breaks
-# and 2,000 g is exactly where one tends to sit. If there is a break at 2 kg the three-pack
-# fee is wrong and the pack-format advantage needs requoting. UNRESOLVED.
-FBA_FEE_1      = 8.23            # standard size, quoted at 800 g -- recheck at ~830 g
-FBA_FEE_3      = 11.15           # standard size, quoted at 2000 g -- RECHECK at ~2090 g
+# FBA fees are charged on the PREPPED UNIT -- bottle + retail carton + bubble wrap -- NOT on
+# a shipper. Amazon supplies its own outer box. Do not confuse these with the Canada Post
+# parcel weights below, which DO include a shipper you buy. (I made exactly that mistake.)
+#   Amazon unit:  single ~565 g, three-pack ~1,710 g  (at the verified 209 g bottle)
+#   CP parcel:    single ~830 g, three-pack ~2,090 g  (includes the outer carton)
+#
+# Above 1,500 g the standard-size card is a LINEAR FORMULA, not a step table:
+#   CAD 10.32 + 0.09 per 100 g above 1,500 g, up to 9,000 g.
+# So there is no band break at 2 kg and the three-pack fee cannot jump anywhere in range.
+# Stress-tested 1,600 g to 2,500 g: the per-bottle advantage moves only $3.79 to $4.07 and
+# never inverts. The pack-format conclusion is insensitive to bottle weight.
+FBA_FEE_1      = 7.66            # standard size, 565 g unit rounds to the 500-600 g row
+FBA_FEE_3      = 10.96           # 1,710 g unit: (10.32 + 0.09*3) * 1.035
 FBA_STORE_1    = 0.07            # per unit-month, off-peak
 FBA_STORE_3    = 0.17
 FBA_PREP_1     = 0.19            # self-applied bubble bag; FBA Prep ended in CA 2026-07-01
