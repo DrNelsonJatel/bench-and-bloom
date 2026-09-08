@@ -87,7 +87,7 @@ const REQUIRED = [
   // file it still builds (it falls back), but these rules make the gap visible.
   ['all 16 French recipe pages built', () =>
     readdirSync(join(DIST, 'fr', 'recipes')).filter((d) =>
-      existsSync(join(DIST, 'fr', 'recipes', d, 'index.html'))).length >= 17],
+      existsSync(join(DIST, 'fr', 'recipes', d, 'index.html'))).length >= 16],
   ['French recipe renders French, not a fallback', () =>
     /Lait à la lavande/.test(readFileSync(join(DIST, 'fr', 'recipes', 'lavender-milk', 'index.html'), 'utf8'))],
   ['French recipe chrome is translated', () =>
