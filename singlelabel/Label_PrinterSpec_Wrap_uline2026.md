@@ -390,9 +390,15 @@ copy is a solid draft — have it professionally verified.**
       **Placement:** principal display panel, **upper half** (PDP height ≥ width), with a clear
       buffer equal to the symbol's x-height, and the buffer's outer edge at least 10% of the
       principal display surface width in from the left or right edge.
-      **Do NOT redraw the symbol.** Obtain the official EPS and the size directory from Health
-      Canada: email **smiu-ugdi@hc-sc.gc.ca**, subject *"HPFB BNS Compendium of Nutrition Symbol
-      Formats"*.
+      **Do NOT redraw the symbol.** ✅ **OBTAINED 2026-09-08** — Health Canada supplied a zip of
+      **280 .eps files** covering every acceptable variation, plus the public **Compendium of
+      Nutrition Symbol Formats**. Use those, never a redraw.
+      ⚠️ **Health Canada declined the sizing question and does not review labels for compliance.**
+      They routed "how to determine the PDS of your product" to **AskCFIA**
+      (`inspection.canada.ca/en/about-cfia/contact-us/ask-cfia`). **This does not block the layout:**
+      both defensible PDS readings — 60.2 cm² body-only and 91–94 cm² true geometry — fall in the
+      **same `> 30 to ≤ 100 cm²` band**, so the size row is unchanged whichever basis CFIA confirms.
+      Ask them anyway, for the file.
       **Consequence:** with the symbol on the PDP, all sugars-related nutrient content claims are
       prohibited there except "reduced in sugar". "Small batch", "no essential oils", "no artificial
       colour" and the tasting descriptors are not nutrient content claims and remain permitted.
