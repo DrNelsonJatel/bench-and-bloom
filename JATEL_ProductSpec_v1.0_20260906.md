@@ -12,7 +12,7 @@ The product was reformulated from a 1:5 low-sugar refrigerated cordial to an 11:
 | Attribute | July 2026 label | Current product |
 |---|---|---|
 | Sugar : water (by volume) | 1 : 5 | **11 : 5** |
-| Sucrose by mass | ~14.5 °Brix | **64.8 °Brix** |
+| Sucrose by mass | ~14.5 °Brix | **64 °Brix** |
 | Acidulant | none | **citric acid, 0.53% w/v** |
 | pH | ~7 | **~2.5** |
 | Water activity | ~0.98 | **~0.85** |
@@ -65,19 +65,41 @@ Calculated from the formulation and cross-checked against ICUMSA sucrose density
 
 | Property | Value | Basis |
 |---|---|---|
-| Sucrose by mass | 64.8 °Brix | 2,200 g sugar / 3,396 g total |
-| Total soluble solids (refractometer) | ~65.2 °Brix | includes citric acid |
+| Sucrose by mass | 64 °Brix | 2,200 g sugar / 3,396 g total |
+| Total soluble solids (refractometer) | ~65 °Brix | includes citric acid |
 | Density | 1.316 g/mL | ICUMSA, 65 °Brix at 20 °C |
 | Yield, 1x batch | 2.57 L (~10 x 250 mL bottles) | |
 | Sugar concentration | 0.856 g/mL | |
 | Citric acid concentration | 0.53% w/v | 13.5 g / 2,570 mL |
-| pH | ~2.5 (estimated) | 27 mM citric acid |
+| pH | **STATE AS ≤ 3.5.** Colour proxy brackets **≤ 3.0**; stoichiometric estimate 2.34 | Two independent methods + margin, §4.1 |
 | Water activity | ~0.85 (estimated) | 65 °Brix sucrose |
 | Mass of a 250 mL fill | ~329 g syrup | up ~25% from the 1:5 version |
 
 **Preservation:** sugar-preserved (>= 65 °Brix, a_w ~0.85) and acid-preserved (pH ~2.5), plus hot-fill into sanitized glass. This is an ambient shelf-stable product. It is not a refrigerated product and the label must not say "Keep refrigerated".
 
 **Colour chemistry:** butterfly pea ternatins are blue near neutral pH and shift through purple to red below pH 3. At pH ~2.5 the syrup is permanently ruby red in the bottle. The blue-to-pink-with-citrus reveal is no longer possible and all copy describing it must be removed.
+
+### 4.1 pH by colour — butterfly pea as its own indicator
+
+The butterfly pea is a polyacylated anthocyanin (ternatin), a genuine pH indicator, so the syrup
+reports its own pH. Working value until a meter reading exists.
+
+**Batch 2026-001** (`Photos/BnB_Lavender Syrop.JPG`), measured with `tools/batch_colour_ph.py`:
+35,503 qualifying pixels, median `#34020C`, **hue of record 351°** (spread 5.7°, R = 0.999),
+saturation 0.96, clipping 0.00%.
+
+Hue 351° sits in the **red / deep ruby** arc, bracketing **pH ≤ 3.0**. The stoichiometric estimate is
+**2.34**, inside that bracket. **Two independent methods agree.**
+
+> **Value of record: state pH as `≤ 3.5`**, carrying 0.5 of margin for proxy error.
+
+Colour is a **poor pH meter and an excellent threshold indicator**. At pH 4–6 ternatins are purple,
+hue 280–320°, and this reads 351°, so the product is emphatically not near pH 4. Limits: a backlit
+sRGB JPEG is not colorimetry, and concentration deepens colour toward red independently of pH, so
+**only the upper bound carries information**. Re-baseline on a protocol photo: white background,
+**indirect** light, white-balance card, same fill.
+
+---
 
 ## 5. Regulatory determinations (Canada)
 
@@ -102,7 +124,13 @@ The 15 mL serving on the July artwork is not the prescribed serving and must be 
 | Protein / Protéines | 0 g | |
 | Sodium | 0 mg | 0 % |
 
-Unrounded basis: 25.67 g sugars per 30 mL, 102.7 kcal. Rounded per CFIA rules (calories >= 50 to the nearest 10; carbohydrate and sugars to the nearest 1 g; %DV to the nearest 1%, calculated on the unrounded amount against a 100 g Daily Value for sugars).
+Unrounded basis: **25.69 g sugars per 30 mL**, computed **from the recipe**, not from the rounded
+64 °Brix display value.
+
+> ⚠️ **THE DECLARED SUGARS VALUE IS 0.7% FROM A ROUNDING BOUNDARY.** 25.69 g rounds to **26 g**; the
+> boundary is 25.50 g, **0.19 g away**. At a measured 64 °Brix it is 25.38 g and declares as **25 g**.
+> A refractometer reading one point low flips the label. Calories hold at 100 across 61–66 °Brix, so
+> only sugars and carbohydrate move. **Measure the Brix before the labels print, not after.** Rounded per CFIA rules (calories >= 50 to the nearest 10; carbohydrate and sugars to the nearest 1 g; %DV to the nearest 1%, calculated on the unrounded amount against a 100 g Daily Value for sugars).
 
 Footnote, verbatim:
 ```
@@ -215,10 +243,16 @@ Real buds, steeped three minutes and strained by hand. The butterfly pea flower
 goes in blue and comes out ruby.
 ```
 
-Dating (stamp real values per batch; ~12 month convention for a shelf-stable acidified syrup, colour rather than safety being the limit):
+Dating — **printed as blank field names only, never as values.** The artwork carries a
+**51 × 12.5 mm coding panel** on the left wing with a **coating knockout** (no laminate, no varnish)
+so solvent ink will key and dry. Values are stamped per batch, flat, while the labels are still on
+the liner. ~12 month convention; colour rather than safety is the limit. Bilingual month symbols
+(JA FE MR AL MA JN JL AU SE OC NO DE). **Lot format `YYYYMMDD-nn`**, so the lot carries the bottling
+date and no separate bottled-date line is needed. **DECIDED 2026-09-06: pH and °Brix are NOT printed
+on the label** — they live in the batch record, keyed by the lot.
 ```
-Best before / Meilleur avant: YYYY MM DD
-Packaged / Emballé: YYYY MM DD   LOT: 2026-001
+BEST BEFORE / MEILLEUR AVANT   [ blank, stamped at fill ]    e.g. 2027 SE 15
+LOT                            [ blank, stamped at fill ]    e.g. 20260915-01
 ```
 
 Responsible party:
@@ -284,12 +318,12 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 | 2 | ~~Resolve the dealer address~~ **CLOSED 2026-09-06:** 3820 Partridge Rd, Naramata, BC V0H 1N1. Correct the postal code from the July art's V0H 1N0 | done |
 | 3 | Professional French verification | external |
 | 4 | Measure actual Brix with a refractometer on batch 1 and confirm 64 to 66; recompute the NFt if it deviates by more than 1 °Brix | Nelson |
-| 5 | Measure actual pH; confirm <= 4.0 for the acid-preservation claim | Nelson |
-| 6 | Pin the principal display surface area and select the FOP symbol size row from the Directory | designer |
+| 5 | Measure actual pH with a meter **for the record**. **Risk downgraded:** two independent methods (stoichiometric 2.34, and the batch photo's hue of **351°** read through the butterfly pea, §4.1) agree the product is **≤ 3.0**, clearing both the 4.6 safety threshold and the 4.0 hurdle with margin | Nelson |
+| 6 | ~~Pin the principal display surface~~ **CLOSED 2026-09-06.** 60.2 cm² (body only) to 91–94 cm² (true geometry); both readings sit in the **> 30 to ≤ 100 cm²** band, so use that size row | done |
 | 7 | Obtain the official FOP symbol `.eps` from Health Canada (email). **Not blocking:** dimensions and the Compendium are free public downloads, so layout proceeds without it, and the printer may already hold the files | Nelson |
-| 8 | Confirm net-quantity type height for the PDS | designer |
-| 9 | Rewrite or repoint the `naramata-sunset` recipe page (currently describes the blue-to-pink serve) | Nelson |
-| 10 | Set real packaged and best-before dates at fill; do not print the July placeholders | Nelson |
+| 8 | Net-quantity type height — **provisionally 3.2 mm minimum**; both PDS readings fall in the same `> 32 to ≤ 258 cm²` band. **[VERIFY** the band table with item 1**]** | verify |
+| 9 | ~~Rewrite or repoint `naramata-sunset`~~ **CLOSED — both done.** Page rewritten (arrives ruby; the lemon is for brightness) **and** the printed QR repointed to `/recipes/lavender-milk`. Live and verified | done |
+| 10 | ~~Set real dates at fill~~ **SUPERSEDED.** No date prints in the artwork; the label carries a blank coding panel stamped per batch. Remaining task is operational: source a changeable-band date stamp and **solvent ink rated for non-porous surfaces**, and run the smear test | Nelson |
 
 ## 10. Confidence and provenance
 
