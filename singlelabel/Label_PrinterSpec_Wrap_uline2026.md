@@ -390,6 +390,22 @@ copy is a solid draft — have it professionally verified.**
       **Placement:** principal display panel, **upper half** (PDP height ≥ width), with a clear
       buffer equal to the symbol's x-height, and the buffer's outer edge at least 10% of the
       principal display surface width in from the left or right edge.
+      ### ✅ THE EXACT FILE, IDENTIFIED
+      **`singlelabel/fop-symbol/5.6(BH).eps`** — *Figure 5.6(BH)*, **Sugars**, **Bilingual
+      Horizontal**, PDS band **> 30 cm² to ≤ 100 cm²**. **2.80 cm × 1.42 cm** (EPS BoundingBox
+      80 × 41 pt). Place it at that size; do not rescale.
+
+      | File | What it is | Use |
+      |---|---|---|
+      | `5.6(BH).eps` | **English first** — "High in / Élevé en", "Sugars / Sucres" | **USE THIS.** Matches the label, which leads English throughout |
+      | `5.6(HB).eps` | French first — "Élevé en / High in", "Sucres / Sugars" | Alternative if a Quebec-first run is ever wanted |
+      | `5.6(BV).eps` | Bilingual **vertical**, same band | Only if the layout demands a vertical block |
+
+      Preview: `singlelabel/fop-symbol/PREVIEW_5.6_bilingual.png`. Naming decodes as
+      *Item* = PDS band (5 = our band), *decimal* = nutrient set (**.6 = sugars alone**),
+      *suffix* = format. Full set of 280 files is in the Health Canada zip; only these three are
+      committed.
+
       **Do NOT redraw the symbol.** ✅ **OBTAINED 2026-09-08** — Health Canada supplied a zip of
       **280 .eps files** covering every acceptable variation, plus the public **Compendium of
       Nutrition Symbol Formats**. Use those, never a redraw.
@@ -399,6 +415,14 @@ copy is a solid draft — have it professionally verified.**
       both defensible PDS readings — 60.2 cm² body-only and 91–94 cm² true geometry — fall in the
       **same `> 30 to ≤ 100 cm²` band**, so the size row is unchanged whichever basis CFIA confirms.
       Ask them anyway, for the file.
+
+      ### ⚠️ The symbol collides with the brand lockup
+      With a ~2 mm buffer the symbol occupies **32 × 18 mm**, which is **51% of the front panel's
+      width and 57% of the height of the upper half** — and the upper half is exactly where the
+      sprig mark and the **Bench & Bloom** wordmark currently sit. The symbol's placement is
+      prescribed and mandatory; the lockup's is not. **Budget ~18 mm of vertical space in the top
+      half of the PDP and move the lockup down or shrink it.** It clears the 10%-of-PDS edge rule
+      comfortably (32 mm inside a 50.6 mm window), so the constraint is vertical, not horizontal.
       **Consequence:** with the symbol on the PDP, all sugars-related nutrient content claims are
       prohibited there except "reduced in sugar". "Small batch", "no essential oils", "no artificial
       colour" and the tasting descriptors are not nutrient content claims and remain permitted.
