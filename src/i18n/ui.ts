@@ -54,8 +54,13 @@ export const ui = {
     recipes: {
       eyebrow: 'Mix it', title: 'Lavender, made for the glass.',
       lede: 'Gin, vodka, sparkling or zero-proof. It pours a deep ruby, and stirred into warm milk it blooms to lavender violet. Start with the base syrup, then take it anywhere.',
-      englishOnly: 'Individual recipes are currently available in English only.',
+      tagSignature: 'Signature', tagMocktail: 'Mocktail or cocktail', tagCocktail: 'Cocktail',
+      grpSignature: 'Signature serves', grpSignatureNote: 'Our own, named for the bench. Watch it bloom.',
+      grpClassics: 'The classics', grpVodka: 'Vodka', grpNoAlc: 'No alcohol',
     },
+    recipe: { base: 'The base', ingredients: 'Ingredients', method: 'Method', makes: 'Makes',
+              next: 'Next pour', relatedAria: 'Related recipes',
+              cta: 'Skip the steeping. Ours is already dialled in.' },
     fr: { draft: '' },
   },
 
@@ -108,8 +113,13 @@ export const ui = {
     recipes: {
       eyebrow: 'À mélanger', title: 'La lavande, faite pour le verre.',
       lede: "Gin, vodka, mousseux ou sans alcool. Il se verse d'un rubis profond et, mélangé au lait chaud, il fleurit en violet lavande. Commencez par le sirop, puis allez où vous voulez.",
-      englishOnly: "Les recettes individuelles ne sont offertes qu'en anglais pour l'instant.",
+      tagSignature: 'Signature', tagMocktail: 'Avec ou sans alcool', tagCocktail: 'Cocktail',
+      grpSignature: 'Nos verres signature', grpSignatureNote: "Les nôtres, nommés pour la terrasse. Regardez-les fleurir.",
+      grpClassics: 'Les classiques', grpVodka: 'Vodka', grpNoAlc: 'Sans alcool',
     },
+    recipe: { base: 'La base', ingredients: 'Ingrédients', method: 'Préparation', makes: 'Donne',
+              next: 'À verser ensuite', relatedAria: 'Recettes associées',
+              cta: "Sautez l'infusion. Le nôtre est déjà ajusté." },
     fr: { draft: 'Traduction française provisoire, en cours de révision.' },
   },
 } as const;

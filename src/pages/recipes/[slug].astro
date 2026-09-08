@@ -3,6 +3,8 @@ import Base from '../../layouts/Base.astro';
 import BuyButton from '../../components/BuyButton.astro';
 import { getCollection, render } from 'astro:content';
 import { SITE } from '../../consts';
+import { langFromUrl, localizePath } from '../../i18n/config';
+import { useTranslations } from '../../i18n/utils';
 
 export async function getStaticPaths() {
   const recipes = await getCollection('recipes');
@@ -13,8 +15,14 @@ const { entry } = Astro.props;
 const { data } = entry;
 const { Content } = await render(entry);
 
-// Resolve related slugs to titles for the cross-links.
-const all = await getCollection('recipes');
+const lang = langFromUrl(Astro.url);
+// Resolve related slugs to titles in the reader's language, falling back to English.
+const all = lang === 'fr'
+  ? await (async () => {
+      const [en, fr] = [await getCollection('recipes'), await getCollection('recipes-fr')];
+      return en.map((e) => fr.find((r) => r.id === e.id) ?? e);
+    })()
+  : await getCollection('recipes');
 const related = (data.related ?? [])
   .map((slug) => all.find((r) => r.id === slug))
   .filter(Boolean);
@@ -40,7 +48,12 @@ const recipeLd = {
 // Drop undefined keys so the JSON-LD stays clean.
 Object.keys(recipeLd).forEach((k) => recipeLd[k] === undefined && delete recipeLd[k]);
 
-const eyebrow = data.kind === 'anchor' ? 'The base' : data.kind === 'mocktail' ? 'Mocktail or cocktail' : data.spirit ?? 'Cocktail';
+const t = useTranslations(lang);
+const SPIRIT_FR: Record<string, string> = { Gin: 'Gin', Vodka: 'Vodka', 'Sparkling wine': 'Vin mousseux' };
+const spiritLabel = (s?: string) => (s && lang === 'fr' ? SPIRIT_FR[s] ?? s : s);
+const eyebrow = data.kind === 'anchor' ? t('recipe.base')
+  : data.kind === 'mocktail' ? t('recipes.tagMocktail')
+  : spiritLabel(data.spirit) ?? t('recipes.tagCocktail');
 ---
 
 <Base title={data.title} description={data.description}>
@@ -56,12 +69,12 @@ const eyebrow = data.kind === 'anchor' ? 'The base' : data.kind === 'mocktail' ?
     <section class="section wrap recipe">
       <div class="recipe__grid">
         <div class="recipe__card">
-          <h2>Ingredients</h2>
-          {data.servings && <p class="recipe__meta">Makes {data.servings}</p>}
+          <h2>{t('recipe.ingredients')}</h2>
+          {data.servings && <p class="recipe__meta">{t('recipe.makes')} {data.servings}</p>}
           <ul class="recipe__ingredients">
             {data.ingredients.map((i) => <li>{i}</li>)}
           </ul>
-          <h2>Method</h2>
+          <h2>{t('recipe.method')}</h2>
           <ol class="recipe__steps">
             {data.steps.map((s) => <li>{s}</li>)}
           </ol>
@@ -70,17 +83,17 @@ const eyebrow = data.kind === 'anchor' ? 'The base' : data.kind === 'mocktail' ?
         <div class="recipe__notes">
           <Content />
           <div class="recipe__cta">
-            <p class="recipe__cta-line">Skip the steeping. Ours is already dialled in.</p>
+            <p class="recipe__cta-line">{t('recipe.cta')}</p>
             <BuyButton />
           </div>
         </div>
       </div>
 
       {related.length > 0 && (
-        <nav class="recipe__related" aria-label="Related recipes">
-          <p class="eyebrow">Next pour</p>
+        <nav class="recipe__related" aria-label={t('recipe.relatedAria')}>
+          <p class="eyebrow">{t('recipe.next')}</p>
           <ul>
-            {related.map((r) => <li><a href={`/recipes/${r.id}`}>{r.data.title}</a></li>)}
+            {related.map((r) => <li><a href={localizePath(`/recipes/${r.id}`, lang)}>{r.data.title}</a></li>)}
           </ul>
         </nav>
       )}

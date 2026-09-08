@@ -83,6 +83,17 @@ const REQUIRED = [
     /lang-toggle/.test(readFileSync(join(DIST, 'index.html'), 'utf8'))],
   ['hreflang alternates present', () =>
     /hreflang="fr-CA"/.test(readFileSync(join(DIST, 'index.html'), 'utf8'))],
+  // All 16 recipes are translated. If a new English recipe is added without a French
+  // file it still builds (it falls back), but these rules make the gap visible.
+  ['all 16 French recipe pages built', () =>
+    readdirSync(join(DIST, 'fr', 'recipes')).filter((d) =>
+      existsSync(join(DIST, 'fr', 'recipes', d, 'index.html'))).length >= 17],
+  ['French recipe renders French, not a fallback', () =>
+    /Lait à la lavande/.test(readFileSync(join(DIST, 'fr', 'recipes', 'lavender-milk', 'index.html'), 'utf8'))],
+  ['French recipe chrome is translated', () =>
+    /Ingrédients/.test(readFileSync(join(DIST, 'fr', 'recipes', 'lavender-milk', 'index.html'), 'utf8'))],
+  ['French related links stay in French', () =>
+    /href="\/fr\/recipes\//.test(readFileSync(join(DIST, 'fr', 'recipes', 'lavender-milk', 'index.html'), 'utf8'))],
 ];
 
 let fails = 0;

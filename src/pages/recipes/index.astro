@@ -6,7 +6,15 @@ import { useTranslations } from '../../i18n/utils';
 const lang = langFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const recipes = (await getCollection('recipes')).sort((a, b) => a.data.order - b.data.order);
+const en = await getCollection('recipes');
+// French entries are matched by slug. Grouping and ordering still key off the ENGLISH
+// data (spirit is a data key, not display text), so a recipe without a translation keeps
+// its place in the hub and simply renders its English title.
+const fr = lang === 'fr' ? await getCollection('recipes-fr') : [];
+const pick = (e: any) => fr.find((r) => r.id === e.id) ?? e;
+const recipes = en.map((e) => ({ ...e, data: { ...e.data, ...pick(e).data,
+  spirit: e.data.spirit, kind: e.data.kind, order: e.data.order, signature: e.data.signature } }))
+  .sort((a, b) => a.data.order - b.data.order);
 const anchor = recipes.find((r) => r.data.kind === 'anchor');
 const drinks = recipes.filter((r) => r.data.kind !== 'anchor');
 
@@ -17,14 +25,19 @@ const vodka = rest.filter((r) => r.data.spirit === 'Vodka');
 const noalc = rest.filter((r) => r.data.kind === 'mocktail');
 
 const groups = [
-  { label: 'Signature serves', note: 'Our own, named for the bench. Watch it bloom.', items: signatures },
-  { label: 'The classics', note: 'Gin', items: gin },
-  { label: 'Vodka', note: 'Vodka', items: vodka },
-  { label: 'No alcohol', note: 'Mocktail or cocktail', items: noalc },
+  { label: t('recipes.grpSignature'), note: t('recipes.grpSignatureNote'), items: signatures },
+  { label: t('recipes.grpClassics'), note: 'Gin', items: gin },
+  { label: t('recipes.grpVodka'), note: 'Vodka', items: vodka },
+  { label: t('recipes.grpNoAlc'), note: t('recipes.tagMocktail'), items: noalc },
 ].filter((g) => g.items.length);
 
+// spirit is a data key kept in English for grouping; translate it only for display.
+const SPIRIT_FR: Record<string, string> = { Gin: 'Gin', Vodka: 'Vodka', 'Sparkling wine': 'Vin mousseux' };
+const spiritLabel = (s?: string) => (s && lang === 'fr' ? SPIRIT_FR[s] ?? s : s);
 const tag = (r: any) =>
-  r.data.signature ? 'Signature' : r.data.kind === 'mocktail' ? 'Mocktail or cocktail' : r.data.spirit ?? 'Cocktail';
+  r.data.signature ? t('recipes.tagSignature')
+  : r.data.kind === 'mocktail' ? t('recipes.tagMocktail')
+  : spiritLabel(r.data.spirit) ?? t('recipes.tagCocktail');
 
 const title = 'Lavender Cocktails & Recipes';
 const description =
@@ -40,7 +53,6 @@ const description =
       <h1>{t('recipes.title')}</h1>
       <p class="hero__lede">
         {t('recipes.lede')}
-        {lang !== 'en' && <><br /><small style="opacity:.75">{t('recipes.englishOnly')}</small></>}
       </p>
     </div>
   </section>
