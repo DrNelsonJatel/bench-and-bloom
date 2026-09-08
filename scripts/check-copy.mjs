@@ -34,7 +34,11 @@ const FORBIDDEN = [
   // CFIA origin rules: cane sugar is ~65% of this product by mass and is not grown
   // in Canada, so "Product of Canada" fails the 2% non-Canadian test. The correct
   // claim is "Made in Canada from domestic and imported ingredients".
-  ['disallowed-origin-product-of-canada', /Product of Canada|Produit du Canada/i, true],
+  // "Product of Canada" fails CFIA's 2% test (cane sugar is ~65% by mass). The site
+  // may DISCUSS why it does not use the claim; it must never assert it.
+  ['disallowed-origin-product-of-canada', /(?!.*rather than)(?!.*plutôt que).*\b(Product of Canada|Produit du Canada)\b/i, true],
+  // The Buy BC mark is LICENSED. It must not appear until the licence is granted.
+  ['unlicensed-buy-bc-mark', /buy-bc\.svg|alt="Buy BC"/i, true],
   // Brix and pH are calculated, not measured (product spec open items 4 and 5).
   // No public preservation claim until a refractometer and pH meter confirm them.
   ['unverified-preservation-claim', /shelf[- ]stable|ambient[- ]stable|does not need refrigerat/i, true],

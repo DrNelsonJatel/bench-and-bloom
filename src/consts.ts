@@ -30,6 +30,14 @@ export const AMAZON_URL = '';
 // When AMAZON_URL is set, the same "Buy now" button links to the store.
 export const AVAILABILITY = 'First batch coming soon';
 
+// Buy BC logo licence (B.C. Ministry of Agriculture). FREE, but the logo is
+// LICENSED: it may not appear anywhere until the licence is granted, exactly like
+// the Bee Friendly Farming mark. Eligibility is 51% of direct production cost
+// originating in B.C., and we compute to ~51.3% — but ONLY if the label and the
+// packaging are both bought in B.C. Flip `licensed` to true once the licence is in
+// hand and the logo block appears on /syrup in both languages.
+export const BUY_BC = { licensed: false, applyUrl: 'https://buybc.gov.bc.ca/join-buy-bc/' } as const;
+
 // Primary navigation (real routes, Phase 1).
 export const NAV = [
   { href: '/syrup', label: 'The Syrup' },

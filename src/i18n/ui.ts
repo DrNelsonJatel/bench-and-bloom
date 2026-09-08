@@ -35,6 +35,11 @@ export const ui = {
       whatEyebrow: 'What is in it', whatTitle: 'Five ingredients. Nothing to hide.',
       useEyebrow: 'How to use it', useTitle: 'Floral, not fussy.',
       soonTitle: 'First batch coming soon.',
+      originEyebrow: 'Where it comes from',
+      originTitle: 'Grown and made in British Columbia.',
+      originBody: 'The lavender is grown on our own half-acre on the Naramata Bench, and the syrup is steeped, strained and bottled here in the Okanagan. Not imported, not contract-made somewhere else, not a label on someone else\'s product.',
+      originHonest: 'The cane sugar is imported, because sugar cane does not grow in Canada. So the bottle reads "Made in Canada from domestic and imported ingredients" rather than "Product of Canada". That is the honest claim, and it is the one we use.',
+      originAlt: 'Rows of lavender on the Naramata Bench in evening light',
     },
     nutrition: {
       eyebrow: 'The numbers', title: 'Nutrition & specifications.',
@@ -94,6 +99,11 @@ export const ui = {
       whatEyebrow: "Ce qu'il contient", whatTitle: 'Cinq ingrédients. Rien à cacher.',
       useEyebrow: "Comment l'utiliser", useTitle: 'Floral, sans chichis.',
       soonTitle: 'Premier lot bientôt disponible.',
+      originEyebrow: 'D\'où il vient',
+      originTitle: 'Cultivé et produit en Colombie-Britannique.',
+      originBody: 'La lavande pousse sur notre propre demi-acre du Naramata Bench, et le sirop est infusé, filtré et embouteillé ici même, dans l\'Okanagan. Rien d\'importé, rien de fabriqué à contrat ailleurs, pas une étiquette posée sur le produit de quelqu\'un d\'autre.',
+      originHonest: 'Le sucre de canne, lui, est importé : la canne à sucre ne pousse pas au Canada. La bouteille porte donc la mention « Fait au Canada avec des ingrédients canadiens et importés » plutôt que « Produit du Canada ». C\'est la mention honnête, et c\'est celle que nous utilisons.',
+      originAlt: 'Rangées de lavande sur le Naramata Bench dans la lumière du soir',
     },
     nutrition: {
       eyebrow: 'Les chiffres', title: 'Valeur nutritive et spécifications.',
