@@ -248,8 +248,7 @@ Dating — **printed as blank field names only, never as values.** The artwork c
 so solvent ink will key and dry. Values are stamped per batch, flat, while the labels are still on
 the liner. ~12 month convention; colour rather than safety is the limit. Bilingual month symbols
 (JA FE MR AL MA JN JL AU SE OC NO DE). **Lot format `YYYYMMDD-nn`**, so the lot carries the bottling
-date and no separate bottled-date line is needed. **DECIDED 2026-09-06: pH and °Brix are NOT printed
-on the label** — they live in the batch record, keyed by the lot.
+date and no separate bottled-date line is needed. **DECIDED 2026-09-06: pH and °Brix are NOT printed on the label** — they live in the batch record, keyed by the lot.
 ```
 BEST BEFORE / MEILLEUR AVANT   [ blank, stamped at fill ]    e.g. 2027 SE 15
 LOT                            [ blank, stamped at fill ]    e.g. 20260915-01
