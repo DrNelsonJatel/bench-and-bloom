@@ -124,7 +124,7 @@ The 15 mL serving on the July artwork is not the prescribed serving and must be 
 | Carbohydrate / Glucides | 26 g | (no %DV) |
 | Sugars / Sucres | 26 g | **26 %** |
 | Protein / Protéines | 0 g | |
-| Sodium | 0 mg | 0 % |
+| ~~Sodium~~ | not shown: 0 mg, so listed in the statement below | |
 
 Unrounded basis: **25.69 g sugars per 30 mL**, computed **from the recipe**, not from the rounded
 64 °Brix display value.
@@ -139,6 +139,13 @@ Footnote, verbatim:
 *5% or less is a little, 15% or more is a lot
 *5% ou moins c'est peu, 15% ou plus c'est beaucoup
 ```
+
+**Format: bilingual simplified (Health Canada Directory of NFt Formats, Figures 6.1(B) to 6.4(B)).** Allowed because 6 or more of Calories and the core nutrients are 0. Only Calories, fat, carbohydrate, sugars (non-zero) and protein are listed; every other core nutrient is named in this mandatory statement, verbatim from the Directory with "sugars" removed because sugars are declared:
+```
+Not a significant source of saturated fat, trans fat, fibre, cholesterol, sodium, potassium, calcium or iron.
+Source négligeable de lipides saturés, lipides trans, fibres, cholestérol, sodium, potassium, calcium et fer.
+```
+Artwork: `singlelabel/artwork/JATEL_NutritionFacts-Fig6.2B_v1.0_20261003.svg` (46 × 52 mm) and the larger Fig6.1B (52 × 58 mm). Use the largest figure that fits 15% of the available display surface [VERIFY ADS with AskCFIA].
 
 ### 5.3 Front-of-package nutrition symbol: REQUIRED
 
@@ -209,7 +216,11 @@ Origin claim, bilingual, **on the front panel** (owner decision 2026-10-03; move
 ```
 Made in Canada from domestic and imported ingredients
 Fait au Canada avec des ingrédients canadiens et importés
+Lavender grown on our Naramata estate
+Lavande cultivée sur notre domaine de Naramata
 ```
+
+The last two lines are a separate **ingredient-origin claim** (CFIA permits a truthful claim about one ingredient, e.g. "Contains Canadian blueberries"). Owner decision 2026-10-03, replacing a requested "Made in Canada from Canadian grown estate lavender", which CFIA does not allow because every "Made in Canada" claim must carry the imported-ingredients qualifier.
 
 Front-of-package symbol: "High in sugars / Élevé en sucres", upper half of the PDP.
 
@@ -219,11 +230,11 @@ Nutrition Facts table per section 5.2.
 
 Ingredients (order verified by weight: sugar 2,200 g > water 1,183 g > lavender ~50 g > citric acid ~13.5 g > butterfly pea ~2 g):
 ```
-Ingredients: Sugar, water, lavender (Lavandula ×intermedia 'Grosso'),
-citric acid, butterfly pea flower (Clitoria ternatea).
+Ingredients: Sugar, water, lavender (Lavandula), citric acid,
+butterfly pea flower (Clitoria ternatea).
 
-Ingrédients : Sucre, eau, lavande (Lavandula ×intermedia 'Grosso'),
-acide citrique, fleur de pois bleu (Clitoria ternatea).
+Ingrédients : Sucre, eau, lavande (Lavandula), acide citrique,
+fleur de pois bleu (Clitoria ternatea).
 ```
 
 Clean-label line (all three claims remain true):
@@ -265,10 +276,12 @@ LOT                            [ blank, stamped at fill ]    e.g. 20260915-01
 
 Responsible party:
 ```
-Prepared for / Préparé pour:
+Prepared by / Préparé par:
 Bench & Bloom, 3820 Partridge Rd, Naramata, BC, Canada V0H 1N1
-benchandbloom.com · hello@benchandbloom.com
+BenchandBloom.com
 ```
+
+"Prepared by" (owner decision 2026-10-03; Bench & Bloom makes the product itself). Ingredient list names the lavender as genus only, *(Lavandula)* (owner decision 2026-10-03; the cultivar stays in §3 and on the front tasting line). Web address printed as **BenchandBloom.com** (owner decision 2026-10-03).
 
 Origin: **moved to the front panel 2026-10-03.** Not repeated on the wing.
 

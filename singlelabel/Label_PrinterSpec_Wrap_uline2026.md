@@ -71,7 +71,7 @@ pilot run.
   ouverture"** and a ~12-month dated life. **Colour, not safety, is the limit on shelf life:**
   anthocyanins are at their most stable below pH 3.5, so the ruby holds far better than the old blue
   did. Stamp the real packaged/best-before dates + lot per batch.
-- **Ingredients (5, current product — ORDER HAS CHANGED, sugar now leads by weight):** sugar, water, lavender (*Lavandula* ×*intermedia* 'Grosso'), citric acid,
+- **Ingredients (5, current product — ORDER HAS CHANGED, sugar now leads by weight):** sugar, water, lavender (*Lavandula*), citric acid,
   butterfly pea flower (*Clitoria ternatea*) — bilingual, descending by weight, binomials italicised.
   (At 11:5 **sugar is the largest component at ~65% by mass**, so it leads the list. Citric acid
   remains in the product and must be declared; the lavender and butterfly pea are strained out but
@@ -90,7 +90,7 @@ The artwork prints the **field names** and leaves the **values blank**. Only the
 changes between batches, so one print run serves every batch until the recipe or the law changes.
 
 ### Geometry
-- **Panel: 51 × 12.5 mm**, on the **left wing**, above the "Prepared for" block.
+- **Panel: 51 × 12.5 mm**, on the **left wing**, above the "Prepared by" block.
 - **Pure ground, no artwork behind it.** Chalk White `#F7F3EE` or pure white. Nothing screened, no
   rules crossing it, no drop shadow. Ink needs maximum contrast and a clean key.
 - Two lines, each with a pre-printed bilingual field name and a blank value zone:
@@ -245,7 +245,7 @@ Each wing is **60.5 × 63.5 mm = 3,841 mm²**.
 | QR code → `/recipes/lavender-milk` | left | 169 mm² | **Keep.** Cheapest square on the label and it carries the colour-change demo |
 | Clean-label trio EN/FR | right | 423 mm² | Keep if the right wing allows. It is the real differentiator |
 | "How to use" EN/FR | right | 423 mm² | **Cut.** The QR goes to recipes, which does this better |
-| Origin: "Made in Canada from domestic and imported ingredients" EN/FR | ~~left~~ **front PDP** | 0 mm² on the wings | **On the front (owner decision 2026-10-03).** Moved off the left wing; the full qualified sentence, never bare "Made in Canada" |
+| Origin: "Made in Canada from domestic and imported ingredients" EN/FR | ~~left~~ **front PDP** | 0 mm² on the wings | **On the front (owner decision 2026-10-03).** Moved off the left wing; the full qualified sentence, never bare "Made in Canada"; followed by the ingredient-origin claim "Lavender grown on our Naramata estate / Lavande cultivée sur notre domaine de Naramata" (2026-10-03) |
 | Provenance story | left | 726 mm² | **Cut.** Largest single item, and the website tells it far better |
 
 **All of Tier 3: left wing 73%, right wing 94%.** (Was 84% before the origin claim moved to the front on 2026-10-03; 423 / 3,841 mm² = 11%.)
@@ -271,7 +271,7 @@ bilingual.
 - **Centre = FRONT / Principal Display Panel:** sprig mark, "Bench & Bloom", descriptor, common name
   (EN + FR), tasting line, **origin claim (EN + FR)**, net quantity. Framed by two thin gold rules.
 - **Right wing → curves to the back:** Nutrition Facts, ingredients (EN/FR), how to use.
-- **Left wing → curves to the back:** provenance story, **blank coding panel (date + lot)**, "Prepared for" address,
+- **Left wing → curves to the back:** provenance story, **blank coding panel (date + lot)**, "Prepared by" address, **BenchandBloom.com**,
   website, **UPC barcode + QR code** (the origin claim moved to the front panel 2026-10-03)
   (QR → repoint to `/recipes/lavender-milk`, the serve that now carries the colour change).
 - The two wings meet at the **rear seam/window**. Orient the bottle PDP-forward when applying.
@@ -357,7 +357,7 @@ copy is a solid draft — have it professionally verified.**
 > which Amazon.ca is. The narrow exemptions (local foods sold only in the producing area, specialty/
 > test-market foods) do **not** apply, and Quebec adds its own French requirements. Removing French
 > would risk CFIA non-compliance and Amazon delisting. (The dealer name/address itself need not be
-> translated beyond "Prepared for / Préparé pour".)
+> translated beyond "Prepared by / Préparé par".)
 >
 > **Common name dropped "Simple"** → now **"Lavender Syrup / Sirop à la lavande"** (cleaner/more
 > premium per label-expert feedback), aligned across the label and the website. The Amazon listing
@@ -370,7 +370,7 @@ copy is a solid draft — have it professionally verified.**
 - ✓ **Net quantity** on the PDP in metric — **250 mL** — **[VERIFY type height** for the PDP area]
 - ✓ Ingredient list, **bilingual, descending by weight** — **[VERIFY order against your recipe]**
 - ✓ Nutrition Facts table, **bilingual** — **recipe-calculated (per 30 mL / 2 tbsp: 100 cal, 26 g carb, 26 g sugars / 26% DV, 0 fat/protein/sodium)**
-- ✓ Dealer name + principal place of business — **"Prepared for / Préparé pour: Bench & Bloom,
+- ✓ Dealer name + principal place of business — **"Prepared by / Préparé par: Bench & Bloom,
       3820 Partridge Rd, Naramata, BC, Canada V0H 1N1"**. This is the **farm** address. The civic
       number **3820 is required and must stay**: an earlier revision removed it for privacy, which
       made the address undeliverable and the field non-compliant. **Never substitute a home address
@@ -459,7 +459,7 @@ copy is a solid draft — have it professionally verified.**
 
 **Nutrition Facts are RECIPE-CALCULATED** for the **11:5 sugar:water (by volume), 64 °Brix,
 acidified, ambient-stable product, per 30 mL (2 tbsp) serving:** Calories 100, Carbohydrate 26 g,
-Sugars 26 g (26% DV), Fat/Protein 0 g, Sodium 0 mg. Unrounded basis 25.67 g sugars and 102.7 kcal per
+Sugars 26 g (26% DV), Fat/Protein 0 g; sodium (0 mg) is not shown and is named in the "Not a significant source" statement (simplified format). Unrounded basis 25.67 g sugars and 102.7 kcal per
 30 mL; rounded per CFIA rules (calories >50 to the nearest 10, carbohydrate and sugars to the nearest
 1 g, %DV to the nearest 1% computed on the unrounded amount against a 100 g DV for sugars).
 **The serving is prescribed, not chosen** — 2 tbsp follows from the 30 mL reference amount.

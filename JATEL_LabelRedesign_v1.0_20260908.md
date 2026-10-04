@@ -49,13 +49,14 @@ Panel **63.2 × 63.5 mm** (front third of the 7.25 in wrap), ground Chalk White 
 | From | To | Zone | Status |
 |---|---|---|---|
 | 0.0 | 18.0 | **FOP sugars symbol + buffer** | **mandatory, prescribed position** |
-| 18.0 | 32.0 | **Brand lockup (horizontal)** | redesigned |
-| 32.0 | 43.0 | Common name, EN then FR | mandatory |
-| 43.0 | 50.0 | Tasting line | optional |
-| 50.0 | 55.5 | **Origin claim, EN then FR** | voluntary, owner decision 2026-10-03 |
-| 55.5 | 62.5 | Net quantity, 250 mL (8.45 fl oz) | mandatory, min 3.2 mm type |
+| 18.0 | 31.0 | **Brand lockup (horizontal)** | redesigned |
+| 31.0 | 41.0 | Common name, EN then FR | mandatory |
+| 41.0 | 47.0 | Tasting line | optional |
+| 47.0 | 56.5 | **Origin claim EN/FR + lavender-origin claim EN/FR** (4 lines, line-height 1.2) | voluntary, owner decisions 2026-10-03 |
+| 56.5 | 63.0 | Net quantity, 250 mL (8.45 fl oz) | mandatory, min 3.2 mm type |
 
-**62.5 of 63.5 mm used, 1.0 mm spare.** The origin claim (2026-10-03) was paid for by taking 1 mm
+**63.0 of 63.5 mm used, 0.5 mm spare** (after the lavender-origin lines, 2026-10-03; measured clear gaps: tasting to origin 1.0 mm, origin to net quantity 2.2 mm).
+Earlier state, for the record: 62.5 of 63.5 mm used, 1.0 mm spare. The origin claim (2026-10-03) was paid for by taking 1 mm
 from the lockup zone, 3 mm from the common-name zone and 1 mm from the net-quantity zone; every
 element kept its size. Measured on the render: 1.6 mm clear above the claim, 2.4 mm below it.
 There is no slack. Anything else added to the front panel has to displace something already there.
@@ -79,6 +80,8 @@ Small batch · estate lavender · Naramata Bench
 Grosso lavender + butterfly pea · earthy and warm
 Made in Canada from domestic and imported ingredients       ← Inter 1.8 mm, Onyx
 Fait au Canada avec des ingrédients canadiens et importés   ← same size as the EN line
+Lavender grown on our Naramata estate                       ← ingredient-origin claim, same size
+Lavande cultivée sur notre domaine de Naramata
 250 mL (8.45 fl oz)               ← dual declaration, metric first
 ```
 

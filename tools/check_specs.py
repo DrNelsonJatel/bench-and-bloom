@@ -64,6 +64,10 @@ REQUIRED = [
      r"Made in Canada from domestic and imported ingredients", "qualified origin claim on the front (EN)"),
     ("singlelabel/redesign/BenchAndBloom_FrontPanel_v2.html",
      r"Fait au Canada avec des ingrédients canadiens et importés", "qualified origin claim on the front (FR)"),
+    ("singlelabel/redesign/BenchAndBloom_FrontPanel_v2.html",
+     r"Lavender grown on our Naramata estate", "lavender-origin claim on the front (EN)"),
+    ("singlelabel/redesign/BenchAndBloom_FrontPanel_v2.html",
+     r"Lavande cultivée sur notre domaine de Naramata", "lavender-origin claim on the front (FR)"),
 ]
 
 fails = 0
@@ -131,7 +135,7 @@ for fn in ["BenchAndBloom_FrontPanel_v2.html", "BenchAndBloom_FrontPanel_v2_meas
     ok = not bare
     print(f"  [{'PASS' if ok else 'FLAG'}] {fn}: no bare 'Made in Canada' ({len(bare)} found)")
     if not ok: flag(f"{fn}: bare Made in Canada claim")
-    for bad in ["Product of Canada", "Produit du Canada", "Keep refrigerated", "per 15 mL"]:
+    for bad in ["Product of Canada", "Produit du Canada", "Keep refrigerated", "per 15 mL", "Made in Canada from Canadian"]:
         if bad.lower() in css.lower():
             flag(f"{fn}: forbidden text on the front panel: {bad}")
 
