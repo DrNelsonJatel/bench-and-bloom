@@ -25,9 +25,9 @@
 > math, stock, adhesive, finish, fonts, palette, barcode handling. Sections marked *(physical)* are
 > unchanged and can be used as-is.
 
-Hand this file **plus `Label_benchandbloom_Final_uline2026_Wrap.svg`** to the label printer
+⛔ **No print file exists yet.** Hand this file plus the **redrawn** wrap (not yet built) to the label printer
 (StickerYou / Jukebox / Avery WePrint / a local trade printer). The `.png` / `.jpg` in this folder
-are **previews only** — print from the **SVG** (vector, infinite resolution).
+are July-era previews of the superseded 1:5 product. **Do not print from any existing SVG, PDF or PNG.**
 
 This replaces the old two-label set. **Why one wrap:** without a benchtop labeller, getting two
 separate labels square and aligned on opposite faces by hand is fiddly. A single wrap is applied in
@@ -362,8 +362,8 @@ copy is a solid draft — have it professionally verified.**
 > **Common name dropped "Simple"** → now **"Lavender Syrup / Sirop à la lavande"** (cleaner/more
 > premium per label-expert feedback), aligned across the label and the website. The Amazon listing
 > **title** aligns to **"Lavender Syrup"** too; keep **"lavender simple syrup"** only in the Amazon
-> **backend search keywords** (invisible to shoppers) to retain search intent. **Civic house number
-> removed** from the address (privacy) — postal code + town + website/email keep it contactable.
+> **backend search keywords** (invisible to shoppers) to retain search intent. **Civic house number: KEEP IT.** An earlier revision
+> removed it for privacy; that made the mandatory address undeliverable. 3820 stays (see the dealer line below).
 
 **Canada — present on the label:**
 - ✓ Common name, **bilingual**, on the PDP — "Lavender Syrup / Sirop à la lavande"
@@ -377,7 +377,7 @@ copy is a solid draft — have it professionally verified.**
       here.** ✅ **Postal code confirmed `V0H 1N1`.** ⛔ **The existing artwork prints `V0H 1N0`,
       which is WRONG.** Correct it in the redraw — a wrong postal code in a mandatory field is a
       compliance failure, not a typo.
-- ✓ Best-before + lot code fields (`YYYY MM DD` / `LOT 2026-001`) — **fill in real values per batch**
+- ✓ Best-before + lot code fields (`2027 SE 15` / `LOT 20260915-01`), **stamped per batch in the blank coding panel, never printed in the art**
 - ✓ Allergens: sugar/water/lavender/butterfly-pea carry **no priority allergens** → no "Contains"
       line. **[VERIFY]** add "may contain" **only if** shared-equipment cross-contact is real.
 - ⛔ **Front-of-pack "High in sugars / Élevé en sucres" symbol — REQUIRED. This is the single
@@ -464,7 +464,7 @@ Sugars 26 g (26% DV), Fat/Protein 0 g, Sodium 0 mg. Unrounded basis 25.67 g suga
 1 g, %DV to the nearest 1% computed on the unrounded amount against a 100 g DV for sugars).
 **The serving is prescribed, not chosen** — 2 tbsp follows from the 30 mL reference amount.
 **If the recipe changes, recompute, and note the FOP symbol is already required and stays required
-anywhere above 3 g sugars / 30 mL.**
+anywhere at or above 10 g sugars / 30 mL (10% DV of 100 g).**
 
 > ⚠️ **FOOD SAFETY — this is now an AMBIENT, SHELF-STABLE product, and the reasons have changed.**
 > At 64 °Brix water activity is ~0.85 and pH is ~2.5, so preservation is carried by **two hurdles,
@@ -487,7 +487,7 @@ anywhere above 3 g sugars / 30 mL.**
 - [ ] **[VERIFY]** all items above in the CFIA Industry Labelling Tool (worth the hour for a real run)
 - [ ] Nutrition Facts **rebuilt** for 11:5 / 64 °Brix on the 30 mL serving — recompute if measured Brix differs by >1
 - [ ] **"Refrigerate after opening"** present; **"Keep refrigerated" REMOVED**; best-before ~12 months
-- [ ] **Coding panel present and BLANK** (42 × 13 mm, left wing); no date or lot baked into the artwork
+- [ ] **Coding panel present and BLANK** (51 × 12.5 mm, left wing); no date or lot baked into the artwork
 - [ ] **Coating knockout** specified in the coding panel — no laminate, no varnish in that window
 - [ ] **Solvent, non-porous-rated ink** sourced; smear-tested at 60 s and at 24 h, cold and ambient
 - [ ] **FOP "High in sugars" symbol placed** in the upper half of the PDP, from the official Health Canada EPS
@@ -513,7 +513,7 @@ anywhere above 3 g sugars / 30 mL.**
       clears the shrink band
 
 ## Ordering (read before you upload)
-- **Send the printer:** `Label_benchandbloom_PRINTREADY_uline2026.svg` — **guides removed, all fonts
+- ⛔ **Nothing is ready to send.** When the redraw exists, send its press-ready export: **guides removed, all fonts
   outlined** (Fraunces + Inter → vector), so nothing prints wrong and no font needs supplying.
 - **Set the FINISHED / die-cut size to `7.25in × 2.75in`.** The file is `7.5in × 3.0in` because that
   **includes the 0.125in bleed** — it is **not** the finished size. If you enter 7.5×3.0 as the
@@ -523,8 +523,9 @@ anywhere above 3 g sugars / 30 mL.**
 - Quantity: order ~2× your bottle count (hand-application wastes a few).
 
 ## Files in this folder
-- `Label_benchandbloom_PRINTREADY_uline2026.svg` — **SEND THIS TO THE PRINTER** (guides removed, fonts outlined, vector)
-- `Label_benchandbloom_PRINTREADY_uline2026_600dpi.png` — 600-dpi raster backup (correct fonts, no guides)
-- `Label_benchandbloom_Final_uline2026_Wrap.svg` — **editable master** (keeps text + guides; edit here, then re-export press-ready)
+- `Label_benchandbloom_PRINTREADY_uline2026.svg` — ⛔ **SUPERSEDED July 1:5 artwork. DO NOT PRINT.**
+- `Label_benchandbloom_PRINTREADY_uline2026_600dpi.png` — ⛔ SUPERSEDED July raster. DO NOT PRINT
+- `Label_benchandbloom_Final_uline2026_Wrap.svg` — July editable master, ⛔ SUPERSEDED: redraw against this v2 spec, do not patch
 - `Label_benchandbloom_Final_uline2026_Wrap.png` / `.jpg` — previews only (show guides — not for print)
 - `Label_PrinterSpec_Wrap_uline2026.md` / `.pdf` — this spec
+- `redesign/BenchAndBloom_FrontPanel_v2*` — **current front panel** (2026-10-03: origin claim, 4.5 mm net quantity). FOP symbol is a raster proxy; place the EPS for print

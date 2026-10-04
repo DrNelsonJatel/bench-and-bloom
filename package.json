@@ -11,7 +11,8 @@
     "vercel-build": "astro build && node scripts/check-copy.mjs",
     "preview": "astro preview",
     "check": "astro check",
-    "check:copy": "node scripts/check-copy.mjs"
+    "check:copy": "node scripts/check-copy.mjs",
+    "check:specs": "python3 tools/check_specs.py"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.3.0",

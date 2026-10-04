@@ -28,6 +28,13 @@ FORBIDDEN = [
     # so the July-vs-current comparison rows do not trip it
     ("stale-fop-not-required", r"(?!.*REQUIRED).*symbol[^.]{0,40}not\s+required",
                                "the sugars symbol IS required"),
+    ("wrong-fop-trigger",      r"above\s*3\s*g\s*sugars", "FOP trigger is 10 g sugars / 30 mL (10% DV)"),
+    ("civic-number-removed",   r"Civic house number\s*\*{0,2}\s*$|number\s+removed\*{0,2}\s+from the address",
+                               "3820 is mandatory and stays"),
+    ("old-coding-panel-size",  r"42\s*×\s*13\s*mm", "coding panel is 51 × 12.5 mm"),
+    ("old-art-send-to-printer", r"(?!.*(SUPERSEDED|DO NOT)).*(SEND THIS TO THE PRINTER|Send the printer:\*\*\s*`Label_)",
+                               "the July artwork must never be sent to a printer"),
+    ("stale-pds-straddle",     r"78 to 105 cm", "PDS pinned at 60.2–94 cm², one band"),
 ]
 # Context words that legitimise a forbidden match (before/after tables, supersession notes).
 EXCUSE = re.compile(r"supersed|July artwork|previously|was wrong|~~|abandoned|prior version|"
@@ -80,6 +87,53 @@ for rel, pat, why in REQUIRED:
     if not (p.exists() and re.search(pat, p.read_text(), re.I)):
         flag(f"{rel}  MISSING required fact: {why}  ({pat})")
 print("  required-fact scan complete")
+
+# ---- Front panel geometry, read straight from the source the PDF is printed from ----
+print("="*76); print("FRONT PANEL GEOMETRY  (singlelabel/redesign/BenchAndBloom_FrontPanel_v2*.html)"); print("="*76)
+INTER_CAP = 0.727          # Inter cap/numeral height as a fraction of font size (font metrics)
+NET_MIN_MM = 3.2           # CPLR numeral height for a PDS > 32 to <= 258 cm²
+PANEL_H = 63.5
+for fn in ["BenchAndBloom_FrontPanel_v2.html", "BenchAndBloom_FrontPanel_v2_measured.html"]:
+    p = ROOT / "singlelabel/redesign" / fn
+    if not p.exists():
+        flag(f"missing front panel source: {fn}"); continue
+    css = p.read_text()
+    def rule(sel):
+        m = re.search(r"\." + re.escape(sel) + r"\{([^}]*)\}", css)
+        return m.group(1) if m else ""
+    def mm(sel, prop):
+        m = re.search(prop + r":\s*([\d.]+)mm", rule(sel))
+        return float(m.group(1)) if m else None
+    net = mm("net", "font-size")
+    if net is None:
+        flag(f"{fn}: .net font-size not found")
+    else:
+        h = net * INTER_CAP
+        ok = h >= NET_MIN_MM
+        print(f"  [{'PASS' if ok else 'FLAG'}] {fn}: net quantity numerals {h:.2f} mm (font {net} mm) vs min {NET_MIN_MM} mm")
+        if not ok: flag(f"{fn}: net quantity numerals below {NET_MIN_MM} mm")
+    zones = ["z-fop", "z-lock", "z-name", "z-tast", "z-orig", "z-net"]
+    hs = [mm(z, "height") for z in zones]
+    if None in hs:
+        flag(f"{fn}: zone heights missing: {[z for z,h in zip(zones,hs) if h is None]}")
+    else:
+        tot = sum(hs); ok = tot <= PANEL_H
+        print(f"  [{'PASS' if ok else 'FLAG'}] {fn}: zones sum {tot:.1f} of {PANEL_H} mm")
+        if not ok: flag(f"{fn}: zones overflow the panel")
+        ok = hs[0] >= 18 and hs[0] <= PANEL_H / 2
+        print(f"  [{'PASS' if ok else 'FLAG'}] {fn}: FOP zone {hs[0]} mm (>= 18 mm, within the upper half)")
+        if not ok: flag(f"{fn}: FOP zone too small or outside the upper half")
+    order = [css.find(f'class="zone {z}') for z in zones]
+    ok = -1 not in order and order == sorted(order)
+    print(f"  [{'PASS' if ok else 'FLAG'}] {fn}: zone order symbol > lockup > name > tasting > origin > net")
+    if not ok: flag(f"{fn}: zone order changed or a zone is missing")
+    bare = re.findall(r"Made in Canada(?! from)", css)
+    ok = not bare
+    print(f"  [{'PASS' if ok else 'FLAG'}] {fn}: no bare 'Made in Canada' ({len(bare)} found)")
+    if not ok: flag(f"{fn}: bare Made in Canada claim")
+    for bad in ["Product of Canada", "Produit du Canada", "Keep refrigerated", "per 15 mL"]:
+        if bad.lower() in css.lower():
+            flag(f"{fn}: forbidden text on the front panel: {bad}")
 
 print(f"\n{fails} FLAG(s).")
 sys.exit(1 if fails else 0)
