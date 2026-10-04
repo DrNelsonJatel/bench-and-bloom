@@ -110,7 +110,9 @@ The product is item **U.15** of the Health Canada Table of Reference Amounts for
 - **Reference amount: 30 mL**
 - **Serving of stated size, prescribed by column 3A: 2 tbsp (30 mL)**
 
-The 15 mL serving on the July artwork is not the prescribed serving and must be changed. (Alternative reading: item U.14, "syrups used as toppings", reference amount 60 mL. U.15 is the correct fit for a cocktail and coffee syrup. Confirm in the CFIA Industry Labelling Tool.)
+The 15 mL serving on the July artwork is not the prescribed serving and must be changed.
+
+**CONFIRMED by Health Canada, 2026-09-17.** Bureau of Nutritional Sciences, replying to the 2026-09-06 enquiry: *"We'd like to confirm that item U.15, with a reference amount of 30 mL, is the most appropriate for your product."* The alternative reading (item U.14, "syrups used as toppings", 60 mL) is closed. **No figure in this document changes**, because the spec was already written on U.15.
 
 ### 5.2 Nutrition Facts table (recipe-calculated, per 30 mL)
 
@@ -160,7 +162,8 @@ Presentation requirements:
 CFIA requires that all or virtually all major ingredients, processing and labour be Canadian, with non-Canadian material under 2% of the product. Cane sugar is named by CFIA as an ingredient not grown in Canada, and here it is ~65% of the product by mass. Citric acid and butterfly pea flower are also imported.
 
 - **Remove:** "Product of Canada / Produit du Canada"
-- **Replace with:** "Made in Canada from domestic and imported ingredients / Fait au Canada avec des ingrédients canadiens et importés"
+- **Replace with:** "Made in Canada from domestic and imported ingredients / Fait au Canada avec des ingrédients canadiens et importés", printed on the **front panel** (decided 2026-10-03)
+- **Never shorten it to "Made in Canada".** The bare claim needs the last substantial transformation in Canada *and* the qualifier whenever imported ingredients are present; the qualifier is not optional here
 
 The lavender and water are Canadian, so an ingredient-origin claim remains available and truthful, for example "Lavender grown on the Naramata Bench".
 
@@ -200,6 +203,12 @@ Grosso lavender + butterfly pea · ruby red, no artificial colour
 Net quantity:
 ```
 250 mL (8.45 fl oz)
+```
+
+Origin claim, bilingual, **on the front panel** (owner decision 2026-10-03; moved from the left wing). Never the bare "Made in Canada": the qualifier is part of the claim and stays on the same line, same size:
+```
+Made in Canada from domestic and imported ingredients
+Fait au Canada avec des ingrédients canadiens et importés
 ```
 
 Front-of-package symbol: "High in sugars / Élevé en sucres", upper half of the PDP.
@@ -261,11 +270,7 @@ Bench & Bloom, 3820 Partridge Rd, Naramata, BC, Canada V0H 1N1
 benchandbloom.com · hello@benchandbloom.com
 ```
 
-Origin:
-```
-Made in Canada from domestic and imported ingredients
-Fait au Canada avec des ingrédients canadiens et importés
-```
+Origin: **moved to the front panel 2026-10-03.** Not repeated on the wing.
 
 Codes (carry forward unchanged from the July artwork):
 - GS1 UPC, GTIN **627146286305**, true black bars on plain white, quiet zones intact, do not scale below 80%
@@ -313,7 +318,7 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 
 | # | Item | Owner |
 |---|---|---|
-| 1 | **U.15 vs U.14 SENT 2026-09-06** to `food-aliment@hc-sc.gc.ca`. Acknowledged; stated target **~2 weeks**, so expect a reply about **2026-09-20**. **This is now the critical path for the Nutrition Facts table**, ahead of the symbol EPS. **Route PDS and labelling-requirement questions to AskCFIA** (`inspection.canada.ca/en/about-cfia/contact-us/ask-cfia`); Health Canada declined them on 2026-09-08 and does not review labels for compliance. Remaining for the CFIA Industry Labelling Tool session: **how to determine the PDS**, net-quantity type height, whether a best-before is required at all (durable life >90 days), allergen/cross-contact wording, and the seal sticker's brand-only status | Nelson |
+| 1 | ~~U.15 vs U.14~~ **CLOSED 2026-09-17.** Health Canada (Bureau of Nutritional Sciences) confirmed **U.15, 30 mL** in reply to the 2026-09-06 enquiry. The Nutrition Facts table is off the critical path and §5.2 stands as written. Still open in this row: **route PDS and labelling-requirement questions to AskCFIA** (`inspection.canada.ca/en/about-cfia/contact-us/ask-cfia`); Health Canada declined them on 2026-09-08 and does not review labels for compliance. Remaining for the CFIA Industry Labelling Tool session: **how to determine the PDS**, net-quantity type height, whether a best-before is required at all (durable life >90 days), allergen/cross-contact wording, and the seal sticker's brand-only status | Nelson |
 | 2 | ~~Resolve the dealer address~~ **CLOSED 2026-09-06:** 3820 Partridge Rd, Naramata, BC V0H 1N1. Correct the postal code from the July art's V0H 1N0 | done |
 | 3 | Professional French verification | external |
 | 4 | Measure actual Brix with a refractometer on batch 1 and confirm 64 to 66; recompute the NFt if it deviates by more than 1 °Brix | Nelson |
@@ -326,7 +331,8 @@ Design consideration: the syrup is now ruby red behind a lavender-violet brand p
 
 ## 10. Confidence and provenance
 
-- **[High confidence, retrieved]** Reference amount 30 mL (item U.15), serving 2 tbsp; FOP thresholds 10% DV for reference amounts <= 30 g/mL; FOP full exemption list; FOP placement, buffer, size hierarchy and PDP claim restrictions; "Product of Canada" 2% rule and the "Made in Canada from domestic and imported ingredients" qualifier; CPLR definition of principal display surface.
+- **[Confirmed by the regulator]** Reference amount 30 mL (item U.15), serving 2 tbsp: Health Canada, Bureau of Nutritional Sciences, email 2026-09-17.
+- **[High confidence, retrieved]** FOP thresholds 10% DV for reference amounts <= 30 g/mL; FOP full exemption list; FOP placement, buffer, size hierarchy and PDP claim restrictions; "Product of Canada" 2% rule and the "Made in Canada from domestic and imported ingredients" qualifier; CPLR definition of principal display surface.
 - **[High confidence, calculated]** Brix, density, yield, sugar concentration, per-serving sugars and calories, CFIA rounding. Density cross-check independently confirms the Brix figure.
 - **[Moderate confidence, calculated]** pH ~2.5 and water activity ~0.85. Both are estimates from concentration, not measurements. Items 4 and 5 above exist to close this.
 - **[Moderate confidence, training]** Butterfly pea anthocyanin colour response to pH. The 2026-09-06 photograph of the finished batch confirms the direction and magnitude empirically.

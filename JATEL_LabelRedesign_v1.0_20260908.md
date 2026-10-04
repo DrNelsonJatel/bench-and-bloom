@@ -49,13 +49,22 @@ Panel **63.2 × 63.5 mm** (front third of the 7.25 in wrap), ground Chalk White 
 | From | To | Zone | Status |
 |---|---|---|---|
 | 0.0 | 18.0 | **FOP sugars symbol + buffer** | **mandatory, prescribed position** |
-| 18.0 | 33.0 | **Brand lockup (horizontal)** | redesigned |
-| 33.0 | 47.0 | Common name, EN then FR | mandatory |
-| 47.0 | 54.0 | Tasting line | optional |
-| 54.0 | 62.0 | Net quantity, 250 mL (8.45 fl oz) | mandatory, min 3.2 mm type |
+| 18.0 | 32.0 | **Brand lockup (horizontal)** | redesigned |
+| 32.0 | 43.0 | Common name, EN then FR | mandatory |
+| 43.0 | 50.0 | Tasting line | optional |
+| 50.0 | 55.5 | **Origin claim, EN then FR** | voluntary, owner decision 2026-10-03 |
+| 55.5 | 62.5 | Net quantity, 250 mL (8.45 fl oz) | mandatory, min 3.2 mm type |
 
-**62.0 of 63.5 mm used, 1.5 mm spare.** There is no slack. Anything added to the front panel has to
-displace something already there.
+**62.5 of 63.5 mm used, 1.0 mm spare.** The origin claim (2026-10-03) was paid for by taking 1 mm
+from the lockup zone, 3 mm from the common-name zone and 1 mm from the net-quantity zone; every
+element kept its size. Measured on the render: 1.6 mm clear above the claim, 2.4 mm below it.
+There is no slack. Anything else added to the front panel has to displace something already there.
+
+**Net quantity type height fixed 2026-10-03.** The 3.2 mm minimum applies to the height of the
+numerals, not the font size. At the original 4.0 mm Inter the numerals were ~2.9 mm (fail). Now
+**4.5 mm font → 3.27 mm numerals** (Inter cap height 0.727 em; 3.39 mm measured on the render
+including anti-aliasing). Margin is only ~0.07 mm, so **never set it below 4.5 mm**, and outlining
+the type for print must not rescale it.
 
 The symbol clears the CPLR edge rule comfortably: its buffer sits **32 mm** wide inside a **50.6 mm**
 window (10% of PDS inset each side), leaving 18.6 mm spare. **The constraint is vertical, not
@@ -68,8 +77,16 @@ Lavender Syrup                    ← Fraunces, EN common name
 Sirop à la lavande                ← Inter, FR common name
 Small batch · estate lavender · Naramata Bench
 Grosso lavender + butterfly pea · earthy and warm
+Made in Canada from domestic and imported ingredients       ← Inter 1.8 mm, Onyx
+Fait au Canada avec des ingrédients canadiens et importés   ← same size as the EN line
 250 mL (8.45 fl oz)               ← dual declaration, metric first
 ```
+
+**Origin claim (added 2026-10-03).** "Product of Canada" is not available: imported cane sugar is
+~65% of the product, far past CFIA's 2% limit. "Made in Canada" is only permitted **with** the
+qualifier, so the full sentence is the claim. Keep EN and FR at the same size, and never set the
+qualifier smaller than "Made in Canada". Moving it to the front frees the 423 mm² it held on the
+left wing.
 
 "earthy and warm" replaces the retired blue-to-pink colour hook and matches the site. No sugars-related
 nutrient content claim appears, which is **required**: with the symbol on the PDP, all such claims are
@@ -99,8 +116,9 @@ because the Nutrition Facts table alone is 1,596 mm².
 
 ## 7. Open before this can go to print
 
-1. **The reference amount.** U.15 vs U.14, with Health Canada since 2026-09-06, ~2 weeks. It sets the
-   serving size and therefore the whole Nutrition Facts table. **Nothing final can be drawn first.**
+1. ~~**The reference amount.**~~ **CLOSED 2026-09-17.** Health Canada confirmed **U.15, 30 mL**, so
+   the serving is **2 tbsp (30 mL)** and the Nutrition Facts table in §5.2 of the product spec is
+   final. **The wings can now be drawn.**
 2. **Measure the Brix.** The declared sugars sits 0.19 g from a rounding boundary; 64 °Brix declares
    25 g, not 26 g.
 3. **Confirm the PDS basis** with AskCFIA. Not blocking — both readings land in the same size band.

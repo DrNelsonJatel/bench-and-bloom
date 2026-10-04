@@ -12,7 +12,7 @@
 > | Brix | ~14.5 | **64** |
 > | pH | ~7 | **~2.5** (citric acid, 0.53% w/v) |
 > | Colour in bottle | blue | **deep ruby / garnet** |
-> | Serving | 15 mL | **30 mL** (Table of Reference Amounts item U.15) |
+> | Serving | 15 mL | **30 mL** (Table of Reference Amounts item U.15, confirmed by Health Canada 2026-09-17) |
 > | Nutrition | 10 cal / 2 g sugars | **100 cal / 26 g sugars / 26% DV** |
 > | FOP symbol | not required | **REQUIRED**, and it needs upper-half PDP space |
 > | Storage | Keep refrigerated | **Refrigerate after opening** |
@@ -245,10 +245,10 @@ Each wing is **60.5 × 63.5 mm = 3,841 mm²**.
 | QR code → `/recipes/lavender-milk` | left | 169 mm² | **Keep.** Cheapest square on the label and it carries the colour-change demo |
 | Clean-label trio EN/FR | right | 423 mm² | Keep if the right wing allows. It is the real differentiator |
 | "How to use" EN/FR | right | 423 mm² | **Cut.** The QR goes to recipes, which does this better |
-| Origin: "Made in Canada…" EN/FR | left | 423 mm² | **Cut.** Voluntary, and an awkward claim with imported sugar leading |
+| Origin: "Made in Canada from domestic and imported ingredients" EN/FR | ~~left~~ **front PDP** | 0 mm² on the wings | **On the front (owner decision 2026-10-03).** Moved off the left wing; the full qualified sentence, never bare "Made in Canada" |
 | Provenance story | left | 726 mm² | **Cut.** Largest single item, and the website tells it far better |
 
-**All of Tier 3: left wing 84%, right wing 94%.**
+**All of Tier 3: left wing 73%, right wing 94%.** (Was 84% before the origin claim moved to the front on 2026-10-03; 423 / 3,841 mm² = 11%.)
 
 ### Recommended build
 **Tier 1 + Tier 2 + QR + clean-label trio** → left wing **54%**, right wing **82%**.
@@ -269,10 +269,10 @@ bilingual.
 
 ## Layout (how it reads on the bottle)
 - **Centre = FRONT / Principal Display Panel:** sprig mark, "Bench & Bloom", descriptor, common name
-  (EN + FR), tasting line, net quantity. Framed by two thin gold rules.
+  (EN + FR), tasting line, **origin claim (EN + FR)**, net quantity. Framed by two thin gold rules.
 - **Right wing → curves to the back:** Nutrition Facts, ingredients (EN/FR), how to use.
 - **Left wing → curves to the back:** provenance story, **blank coding panel (date + lot)**, "Prepared for" address,
-  website, **"Made in Canada from domestic and imported ingredients"**, **UPC barcode + QR code**
+  website, **UPC barcode + QR code** (the origin claim moved to the front panel 2026-10-03)
   (QR → repoint to `/recipes/lavender-milk`, the serve that now carries the colour change).
 - The two wings meet at the **rear seam/window**. Orient the bottle PDP-forward when applying.
 
@@ -383,7 +383,8 @@ copy is a solid draft — have it professionally verified.**
 - ⛔ **Front-of-pack "High in sugars / Élevé en sucres" symbol — REQUIRED. This is the single
       biggest change and it is a PDP relayout, not a patch.** The product is item **U.15** of the
       Health Canada *Table of Reference Amounts for Food* ("syrups used as ingredients"), reference
-      amount **30 mL**, prescribed serving **2 tbsp (30 mL)**. Because the reference amount is
+      amount **30 mL**, prescribed serving **2 tbsp (30 mL)**. **Health Canada confirmed U.15 in
+      writing on 2026-09-17**, so this is settled, not an interpretation. Because the reference amount is
       **≤ 30 mL, the trigger is 10% DV, not the default 15%.** At **26% DV** the product exceeds it
       by 2.6x. The Division 18 "sweetening agents sold as such" exemption (sugar, honey, maple, table
       syrup) does **not** reach a compounded botanical flavouring syrup.

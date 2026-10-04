@@ -52,6 +52,11 @@ REQUIRED = [
     ("singlelabel/Label_PrinterSpec_Wrap_uline2026.md", r"REQUIRED",       "sugars symbol required"),
     ("singlelabel/Label_PrinterSpec_Wrap_uline2026.md", r"lavender-milk",  "QR repointed"),
     ("singlelabel/Label_PrinterSpec_Wrap_uline2026.md", r"Made in Canada", "origin claim"),
+    # the front panel carries the origin claim; the qualifier is part of the claim, never optional
+    ("singlelabel/redesign/BenchAndBloom_FrontPanel_v2.html",
+     r"Made in Canada from domestic and imported ingredients", "qualified origin claim on the front (EN)"),
+    ("singlelabel/redesign/BenchAndBloom_FrontPanel_v2.html",
+     r"Fait au Canada avec des ingrédients canadiens et importés", "qualified origin claim on the front (FR)"),
 ]
 
 fails = 0

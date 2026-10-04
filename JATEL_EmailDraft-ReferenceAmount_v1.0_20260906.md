@@ -1,5 +1,10 @@
 # Email draft — Health Canada, reference amount U.14 vs U.15
 
+> **ANSWERED 2026-09-17.** Bureau of Nutritional Sciences, Health Canada: *"We'd like to confirm
+> that item U.15, with a reference amount of 30 mL, is the most appropriate for your product."*
+> Reference amount **30 mL**, serving **2 tbsp (30 mL)**. Sent 2026-09-06, answered in 11 days.
+> Kept for the record and for the audit trail on the Nutrition Facts table.
+
 **Document:** JATEL_EmailDraft-ReferenceAmount_v1.0_20260906
 **Status:** ✅ **SENT 2026-09-06** from `hello@benchandbloom.com`. Acknowledged the same day;
 the Food and Nutrition Directorate states a target of **approximately two weeks** to respond.
@@ -56,6 +61,55 @@ Bench & Bloom
 3820 Partridge Rd, Naramata, BC  V0H 1N1
 hello@benchandbloom.com · 250.308.9449
 ```
+
+---
+
+## Reply received, verbatim
+
+**From:** Nut Labelling / Etiquetage (HC/SC) <nut.labelling-etiquetage@hc-sc.gc.ca>
+**To:** Nelson Jatel; bns; food
+**Received:** 2026-09-17, 11:14 AM PT
+**Subject:** RE: Reference amount for a flavouring syrup: U.14 or U.15?
+**Classification:** Unclassified / Non classifie
+
+```
+Hello Nelson,
+
+Thank you for your email and for taking the time to verify the correct reference
+amount for your product to help ensure it meets the nutrition labelling
+requirements. We'd like to confirm that item U.15, with a reference amount of
+30 mL, is the most appropriate for your product.
+
+Sincerely,
+
+Bureau of Nutritional Sciences | Bureau des sciences de la nutrition
+Health Canada | Sante Canada
+```
+
+**Routing note.** The enquiry was sent to `food-aliment@hc-sc.gc.ca` on 2026-09-06 and was answered by
+the Bureau of Nutritional Sciences from `nut.labelling-etiquetage@hc-sc.gc.ca`, copying `bns` and
+`food`. Turnaround was 11 days against a stated target of approximately two weeks. Use the
+`nut.labelling-etiquetage` address directly for any further nutrition labelling question.
+
+### One correction to the enquiry, for the record
+
+The sent email stated that the U.14/U.15 choice "does not change whether the front-of-package
+'High in sugars / Eleve en sucres' symbol is required". The conclusion is correct for this product,
+but the reasoning was not: the threshold itself moves with the reference amount.
+
+| Reference amount | FOP sugars threshold | Sugars per serving that triggers the symbol |
+|---|---|---|
+| U.14, 60 mL | 15% DV | 15 g per 60 mL |
+| **U.15, 30 mL (confirmed)** | **10% DV** | **10 g per 30 mL** |
+
+Health Canada applies the lower 10% DV threshold to prepackaged foods with a reference amount of
+30 g or mL or less, on the rationale that small-reference-amount foods are often concentrated sources
+of nutrients of concern. At 26% DV the product clears either bar, so the outcome is unchanged, but the
+spec and the printer spec are right to state the trigger as 10%, not 15%.
+
+**Source:** Health Canada, *Summary of amendments: Regulations amending certain regulations made under
+the Food and Drugs Act (nutrition symbols, other labelling provisions, vitamin D and hydrogenated fats
+or oils)*. https://www.canada.ca/en/health-canada/services/food-nutrition/nutrition-labelling/front-package/summary-amendments-gazette-nutrition-symbols-labelling.html
 
 ---
 
