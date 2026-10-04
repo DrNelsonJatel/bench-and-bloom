@@ -4,7 +4,7 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 CH="/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
-N=JATEL_LabelWrap_v3.0_20261003
+N=JATEL_LabelWrap_v3.1_20261003
 SRC="file://$PWD/Label_BenchAndBloom_Wrap_v3.html"
 
 # 600 dpi raster: 190.5 mm = 720 CSS px; x 6.25 = 4500 px. 76.2 mm = 288 CSS px -> 1800 px.
@@ -33,7 +33,7 @@ pg = r.pages[0]; mm = 72 / 25.4; W, H = 190.5 * mm, 76.2 * mm
 pg.mediabox = RectangleObject([0, 0, W, H]); pg.bleedbox = RectangleObject([0, 0, W, H])
 b = 3.175 * mm
 pg.trimbox = RectangleObject([b, b, W - b, H - b])
-w.add_page(pg); w.add_metadata({"/Title": "Bench & Bloom Lavender Syrup 250 mL wrap label v3",
+w.add_page(pg); w.add_metadata({"/Title": "Bench & Bloom Lavender Syrup 250 mL wrap label v3.1 (sugars symbol top-right)",
                                  "/Subject": "Trim 184.15 x 69.85 mm, bleed 3.175 mm"})
 w.write(f"{n}_print.pdf")
 # Vector dieline: trim rectangle in a spot colour named CutContour, separate file

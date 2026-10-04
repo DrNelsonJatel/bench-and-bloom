@@ -75,9 +75,12 @@ T = lambda v: v + BLEED   # trim coordinate -> document coordinate
 FX0, FX1 = 60.5, 123.7
 FCX = (FX0 + FX1) / 2
 FOP_W, FOP_H, FOP_BUF = 28.0, 14.2, 1.1         # 5.6(BH), PDS band >30 to <=100 cm2
+# v3.1 (owner decision 2026-10-03): symbol top-right, as in FrontPanel_v3. Right edge 8.4 mm in from the
+# front-panel edge, so even the spec's 2.0 mm buffer [VERIFY] ends 6.4 mm in (>= 10% of 63.2 = 6.32 mm).
+FOP_RIGHT_GAP, FOP_BUF_SPEC = 8.4, 2.0
 y = SAFE + FOP_BUF
 front = []
-front.append(("fop", FCX - FOP_W / 2, y, FOP_W, FOP_H, b64(ART / "JATEL_FOPSymbol-Sugars-5.6BH_v1.0_20261003.svg", "image/svg+xml")))
+front.append(("fop", FX1 - FOP_RIGHT_GAP - FOP_W, y, FOP_W, FOP_H, b64(ART / "JATEL_FOPSymbol-Sugars-5.6BH_v1.0_20261003.svg", "image/svg+xml")))
 y += FOP_H + FOP_BUF
 GAP = 0.5
 y += GAP
@@ -155,7 +158,8 @@ body.append(f'<div class="a ing" id="ingredients" style="left:{T(LX0):.3f}mm;wid
             '<p><b>Ingrédients :</b> Sucre, eau, lavande (Lavandula), acide citrique, fleur de pois bleu (Clitoria ternatea).</p></div>')
 body.append(img("upc", LX0, ROW_TOP, UPC_W, UPC_H, b64(ART / "JATEL_UPC-627146286305_100pct_v1.0_20261003.svg", "image/svg+xml")))
 qr_x = LX1 - QR
-body.append(img("qr", qr_x, ROW_TOP, QR, QR, b64(ART / "JATEL_QR-LavenderMilk_v1.0_20261003.svg", "image/svg+xml")))
+# v3.1: QR to the general recipes page https://benchandbloom.com/recipes (owner decision 2026-10-03)
+body.append(img("qr", qr_x, ROW_TOP, QR, QR, b64(ART / "JATEL_QR-Recipes_v1.0_20261003.svg", "image/svg+xml")))
 body.append(f'<div class="a small" id="qrcap" style="left:{T(qr_x):.3f}mm;top:{T(ROW_TOP+QR+0.6):.3f}mm;width:{QR:.3f}mm;text-align:center">Recipes<br>Recettes</div>')
 
 # guides (only shown with ?guides)
@@ -191,6 +195,8 @@ const f = R.fop, fb = {{x0:f.x0-{FOP_BUF}, y0:f.y0-{FOP_BUF}, x1:f.x1+{FOP_BUF},
 for (const i of ids) if (i!=='fop' && ov(fb, R[i])) out.checks.push([`FOP buffer intruded by ${{i}}`, false]);
 out.checks.push(['FOP in upper half of the front panel', f.y1 <= {SAFE} + {TRIM_H-2*SAFE}/2]);
 out.checks.push(['FOP >=10% inset from front-panel edges', f.x0-{FOP_BUF} >= {FX0}+0.1*{FX1-FX0} && f.x1+{FOP_BUF} <= {FX1}-0.1*{FX1-FX0}]);
+out.checks.push(['FOP >=10% inset with the spec 2.0 mm buffer', f.x0-{FOP_BUF_SPEC} >= {FX0}+0.1*{FX1-FX0} && f.x1+{FOP_BUF_SPEC} <= {FX1}-0.1*{FX1-FX0}]);
+out.checks.push(['FOP right-aligned (right edge {FOP_RIGHT_GAP} mm in from the front-panel edge)', Math.abs(({FX1} - f.x1) - {FOP_RIGHT_GAP}) < 0.05]);
 const gaps = [['ingredients above code row', R.upc.y0 - R.ingredients.y1], ['dealer above ingredients', R.ingredients.y0 - R.dealer.y1],
   ['coding above dealer', R.dealer.y0 - R.coding.y1], ['origin above net qty', R.netqty.y0 - R.origin.y1], ['tasting above origin', R.origin.y0 - R.tasting.y1],
   ['nft above storage', R.storage.y0 - R.nft.y1], ['upc beside qr', R.qr.x0 - R.upc.x1]];
@@ -200,7 +206,7 @@ document.getElementById('qa').textContent = JSON.stringify(out);
 if (location.search.includes('guides')) document.getElementById('guides').style.display='block';
 """
 
-html = f"""<!doctype html><html><head><meta charset="utf-8"><title>Bench &amp; Bloom wrap v3</title><style>{css}</style></head>
+html = f"""<!doctype html><html><head><meta charset="utf-8"><title>Bench &amp; Bloom wrap v3.1</title><style>{css}</style></head>
 <body><div class="doc">{''.join(body)}<div id="guides" class="guides" style="display:none">{''.join(g)}</div></div>
 <pre id="qa" style="display:none"></pre><script>{qa}</script></body></html>"""
 (HERE / "Label_BenchAndBloom_Wrap_v3.html").write_text(html, encoding="utf-8")

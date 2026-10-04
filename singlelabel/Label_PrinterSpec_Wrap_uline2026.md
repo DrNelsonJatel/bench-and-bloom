@@ -77,11 +77,11 @@ pilot run.
   remains in the product and must be declared; the lavender and butterfly pea are strained out but
   are still declared by their as-added weight.)
   Clean-label trio stated: **no essential oils, no artificial colour, no synthetic flavour.**
-- **QR code** (left wing, beside the UPC) → **`benchandbloom.com/recipes/lavender-milk`**.
-  ⚠️ **Repointed.** It previously pointed at `/recipes/naramata-sunset`, which described a
+- **QR code** (left wing, beside the UPC) → **`benchandbloom.com/recipes`** (general recipes page; owner decision 2026-10-03, wrap v3.1, file `singlelabel/artwork/JATEL_QR-Recipes_v1.0_20261003.svg`).
+  ⚠️ **Repointed twice.** It previously pointed at `/recipes/naramata-sunset`, which described a
   blue-to-pink serve the product can no longer perform. The colour change now happens in milk, and
-  `/recipes/lavender-milk` is the serve that demonstrates it. **Both pages are live; verify the new
-  target loads before generating the symbol.** 33-module symbol with a 4-module quiet zone; keep it
+  `/recipes/lavender-milk` (previously used, v1.0 and v1.1) is the serve that demonstrates it; the general page now links to it. **Both pages are live; verify the new
+  target loads before generating the symbol.** 29-module symbol (version 3, error correction M) with a 4-module quiet zone; keep it
   ≥ 11 mm square in print and do **not** recolour or crop the quiet zone, or it may not scan.
 
 ## Coding panel (date + lot) — **APPROVED 2026-09-06. Variable data, stamped at fill**
@@ -242,7 +242,7 @@ Each wing is **60.5 × 63.5 mm = 3,841 mm²**.
 ### Tier 3 — optional brand content. Cut first, add back in this order.
 | Element | Wing | Area | Verdict |
 |---|---|---|---|
-| QR code → `/recipes/lavender-milk` | left | 169 mm² | **Keep.** Cheapest square on the label and it carries the colour-change demo |
+| QR code → `/recipes` (general recipes page; previously `/recipes/lavender-milk`) | left | 169 mm² | **Keep.** Cheapest square on the label; the recipes page leads to the colour-change demo |
 | Clean-label trio EN/FR | right | 423 mm² | Keep if the right wing allows. It is the real differentiator |
 | "How to use" EN/FR | right | 423 mm² | **Cut.** The QR goes to recipes, which does this better |
 | Origin: "Made in Canada from domestic and imported ingredients" EN/FR | ~~left~~ **front PDP** | 0 mm² on the wings | **On the front (owner decision 2026-10-03).** Moved off the left wing; the full qualified sentence, never bare "Made in Canada"; followed by the ingredient-origin claim "Lavender grown on our Naramata estate / Lavande cultivée sur notre domaine de Naramata" (2026-10-03) |
@@ -496,7 +496,7 @@ anywhere at or above 10 g sugars / 30 mL (10% DV of 100 g).**
 - [ ] **"Product of Canada" REMOVED**, replaced with "Made in Canada from domestic and imported ingredients"
 - [ ] **All blue-to-pink colour copy removed**; the syrup is ruby
 - [ ] **Measure Brix and pH** on batch 1 before committing to an ambient best-before
-- [ ] **QR repointed** to `/recipes/lavender-milk`
+- [ ] **QR repointed** to `/recipes` (general recipes page; previously `/recipes/lavender-milk`)
 - [ ] ⛔ **Print derivatives are STALE.** The 2026-07-02 exports (`...PRINTREADY....pdf` / `.png` /
       `.svg`) all render the 1:5 refrigerated product: blue-era copy, 15 mL nutrition table, no FOP
       symbol, "Keep refrigerated", "Product of Canada", July dates. **Do not send any of them to a

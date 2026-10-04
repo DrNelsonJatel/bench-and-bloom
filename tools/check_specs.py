@@ -57,7 +57,7 @@ REQUIRED = [
     ("singlelabel/Label_PrinterSpec_Wrap_uline2026.md", r"51 × 12\.5 mm",  "coding panel size"),
     ("singlelabel/Label_PrinterSpec_Wrap_uline2026.md", r"coating knockout", "the ink-on-BOPP fix"),
     ("singlelabel/Label_PrinterSpec_Wrap_uline2026.md", r"REQUIRED",       "sugars symbol required"),
-    ("singlelabel/Label_PrinterSpec_Wrap_uline2026.md", r"lavender-milk",  "QR repointed"),
+    ("singlelabel/Label_PrinterSpec_Wrap_uline2026.md", r"\*\*`benchandbloom\.com/recipes`\*\*", "QR to the general recipes page (2026-10-03)"),
     ("singlelabel/Label_PrinterSpec_Wrap_uline2026.md", r"Made in Canada", "origin claim"),
     # the front panel carries the origin claim; the qualifier is part of the claim, never optional
     ("singlelabel/redesign/BenchAndBloom_FrontPanel_v2.html",
@@ -97,7 +97,7 @@ print("="*76); print("FRONT PANEL GEOMETRY  (singlelabel/redesign/BenchAndBloom_
 INTER_CAP = 0.727          # Inter cap/numeral height as a fraction of font size (font metrics)
 NET_MIN_MM = 3.2           # CPLR numeral height for a PDS > 32 to <= 258 cm²
 PANEL_H = 63.5
-for fn in ["BenchAndBloom_FrontPanel_v2.html", "BenchAndBloom_FrontPanel_v2_measured.html"]:
+for fn in ["BenchAndBloom_FrontPanel_v2.html", "BenchAndBloom_FrontPanel_v2_measured.html", "BenchAndBloom_FrontPanel_v3.html"]:
     p = ROOT / "singlelabel/redesign" / fn
     if not p.exists():
         flag(f"missing front panel source: {fn}"); continue
@@ -127,6 +127,23 @@ for fn in ["BenchAndBloom_FrontPanel_v2.html", "BenchAndBloom_FrontPanel_v2_meas
         ok = hs[0] >= 18 and hs[0] <= PANEL_H / 2
         print(f"  [{'PASS' if ok else 'FLAG'}] {fn}: FOP zone {hs[0]} mm (>= 18 mm, within the upper half)")
         if not ok: flag(f"{fn}: FOP zone too small or outside the upper half")
+    # Sugars symbol side inset: the clear buffer's outer edge must be >= 10% of the PDS width from the
+    # left and right edges of the panel (LabelGenSpec v1.2 §5.2). Symbol 28.0 mm wide, buffer ~2.0 mm.
+    PANEL_W, SYM_W, BUF = 63.2, 28.0, 2.0
+    z = rule("z-fop")
+    pad = re.search(r"padding:\s*([\d.]+)mm\s+([\d.]+)mm\s+([\d.]+)\s*(?:mm)?\s+([\d.]+)\s*(?:mm)?", z)
+    pr = float(pad.group(2)) if pad else 0.0
+    pl = float(pad.group(4)) if pad else 0.0
+    if "justify-content:flex-end" in z:
+        right_gap, left_gap = pr, PANEL_W - pr - SYM_W
+    elif "justify-content:flex-start" in z:
+        left_gap, right_gap = pl, PANEL_W - pl - SYM_W
+    else:  # centred (the .zone default)
+        left_gap = right_gap = (PANEL_W - pl - pr - SYM_W) / 2 + pl
+    inset = min(left_gap, right_gap) - BUF
+    ok = inset >= 0.10 * PANEL_W
+    print(f"  [{'PASS' if ok else 'FLAG'}] {fn}: sugars symbol buffer {inset:.2f} mm from the nearer side edge (>= {0.10*PANEL_W:.2f} mm)")
+    if not ok: flag(f"{fn}: sugars symbol buffer inside the 10% side margin")
     order = [css.find(f'class="zone {z}') for z in zones]
     ok = -1 not in order and order == sorted(order)
     print(f"  [{'PASS' if ok else 'FLAG'}] {fn}: zone order symbol > lockup > name > tasting > origin > net")
@@ -138,6 +155,44 @@ for fn in ["BenchAndBloom_FrontPanel_v2.html", "BenchAndBloom_FrontPanel_v2_meas
     for bad in ["Product of Canada", "Produit du Canada", "Keep refrigerated", "per 15 mL", "Made in Canada from Canadian"]:
         if bad.lower() in css.lower():
             flag(f"{fn}: forbidden text on the front panel: {bad}")
+
+# The printed QR encodes https://benchandbloom.com/recipes (static, no redirect service). Every printed
+# label breaks if that page is renamed or removed, so its source must exist.
+print("="*76); print("QR TARGET"); print("="*76)
+qr_page = ROOT / "src/pages/recipes/index.astro"
+ok = qr_page.exists()
+print(f"  [{'PASS' if ok else 'FLAG'}] printed QR target page exists: {qr_page.relative_to(ROOT)} (serves /recipes)")
+if not ok: flag("the page the printed QR points to (/recipes) is missing")
+
+# ---- Print build vs specs: the QR target and the symbol placement must agree everywhere ----
+print("="*76); print("PRINT BUILD CONSISTENCY  (spec v1.2, printer spec, singlelabel/v3 build)"); print("="*76)
+gen = (ROOT / "JATEL_LabelGenSpec_v1.2_20261003.md").read_text()
+build = (ROOT / "singlelabel/v3/build_wrap_v3.py").read_text()
+prn = (ROOT / "singlelabel/Label_PrinterSpec_Wrap_uline2026.md").read_text()
+m_spec = re.search(r"Encodes exactly \*\*`([^`]+)`\*\*", gen)
+m_file = re.search(r'b64\(ART / "(JATEL_QR-[^"]+\.svg)"', build)
+url_spec = m_spec.group(1) if m_spec else None
+url_file = None
+if m_file:
+    t = re.search(r"<title>QR: ([^<]+)</title>", (ROOT / "singlelabel/artwork" / m_file.group(1)).read_text())
+    url_file = t.group(1).strip() if t else None
+m_prn = re.search(r"QR code\*\* \(left wing, beside the UPC\) → \*\*`([^`]+)`\*\*", prn)
+url_prn = ("https://" + m_prn.group(1)) if m_prn else None
+ok = url_spec is not None and url_spec == url_file == url_prn
+print(f"  [{'PASS' if ok else 'FLAG'}] QR URL agrees: spec v1.2 {url_spec} | build file {m_file.group(1) if m_file else None} -> {url_file} | printer spec {url_prn}")
+if not ok: flag("QR URL differs between the generation spec, the QR file used by the build, and the printer spec")
+gap_build = re.search(r"FOP_RIGHT_GAP, FOP_BUF_SPEC = ([\d.]+), ([\d.]+)", build)
+v3 = (ROOT / "singlelabel/redesign/BenchAndBloom_FrontPanel_v3.html").read_text()
+gap_panel = re.search(r"\.z-fop\{[^}]*padding:\s*[\d.]+mm\s+([\d.]+)mm", v3)
+ok = bool(gap_build and gap_panel) and float(gap_build.group(1)) == float(gap_panel.group(1))
+print(f"  [{'PASS' if ok else 'FLAG'}] sugars symbol right gap: print build {gap_build.group(1) if gap_build else None} mm = panel of record {gap_panel.group(1) if gap_panel else None} mm")
+if not ok: flag("sugars symbol position in the print build differs from FrontPanel_v3")
+nm = re.search(r"^N=(\S+)", (ROOT / "singlelabel/v3/render_v3.sh").read_text(), re.M)
+missing = [suf for suf in ["_print.pdf", "_600dpi.png", "_600dpi.jpg", "_CMYK_600dpi.tif", "_dieline.pdf", "_PROOF-guides.png"]
+           if not nm or not (ROOT / "singlelabel/v3" / f"{nm.group(1)}{suf}").exists()]
+ok = bool(nm) and not missing
+print(f"  [{'PASS' if ok else 'FLAG'}] current print files present for {nm.group(1) if nm else None}" + (f" (missing {missing})" if missing else ""))
+if not ok: flag("current print files missing")
 
 print(f"\n{fails} FLAG(s).")
 sys.exit(1 if fails else 0)
