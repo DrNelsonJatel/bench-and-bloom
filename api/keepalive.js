@@ -41,15 +41,27 @@ export async function GET(request) {
       headers: { ...headers, 'content-type': 'application/json' },
       body: '{}',
     });
-    // RPC not created yet (SQL not applied): fall back to the old read so the
-    // ping never lapses, but log it loudly.
+    // RPC missing (scripts/keepalive.sql not applied, or dropped): still run the
+    // old read so some activity lands, but report FAILURE. A read alone drew a
+    // pause warning, so it must never look healthy.
     if (res.status === 404) {
-      console.error('keepalive: keepalive_ping() missing, apply scripts/keepalive.sql; falling back to read');
+      console.error('keepalive: FLAG keepalive_ping() missing, apply scripts/keepalive.sql; fell back to a read');
       res = await fetch(`${url}/rest/v1/subscribers?select=id&limit=1`, { headers });
+      return json(502, { ok: false, status: res.status, error: 'heartbeat rpc missing' });
     }
-    // Non-2xx surfaces as a failed cron invocation in the Vercel logs.
-    if (!res.ok) console.error(`keepalive: Supabase returned ${res.status}`);
-    return json(res.ok ? 200 : 502, { ok: res.ok, status: res.status });
+    if (!res.ok) {
+      console.error(`keepalive: FLAG Supabase returned ${res.status}`);
+      return json(502, { ok: false, status: res.status });
+    }
+    // A 2xx is not proof of a write: the RPC returns the heartbeat timestamp,
+    // which must be fresh (same check as .github/workflows/keepalive.yml).
+    const ts = String(await res.json());
+    const age = (Date.now() - Date.parse(ts)) / 1000;
+    if (!(age >= -60 && age < 120)) {
+      console.error(`keepalive: FLAG heartbeat timestamp ${ts} is ${age}s old`);
+      return json(502, { ok: false, error: 'stale heartbeat', heartbeat: ts });
+    }
+    return json(200, { ok: true, heartbeat: ts });
   } catch (e) {
     console.error('keepalive: Supabase unreachable', e);
     return json(502, { ok: false, error: 'unreachable' });
